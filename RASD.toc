@@ -1,0 +1,54 @@
+\contentsline {section}{\numberline {1}Introduction}{3}
+\contentsline {subsection}{\numberline {1.1}Purpose}{3}
+\contentsline {subsection}{\numberline {1.2}Actual system}{3}
+\contentsline {subsection}{\numberline {1.3}Scope}{3}
+\contentsline {subsection}{\numberline {1.4}Actors}{3}
+\contentsline {subsection}{\numberline {1.5}Goals}{4}
+\contentsline {subsection}{\numberline {1.6}Domain properties}{4}
+\contentsline {section}{\numberline {2}Overall Description}{6}
+\contentsline {subsection}{\numberline {2.1}Product perspective}{6}
+\contentsline {subsection}{\numberline {2.2}User characteristics}{6}
+\contentsline {subsection}{\numberline {2.3}Constraints}{6}
+\contentsline {subsubsection}{\numberline {2.3.1}Regulatory policies}{6}
+\contentsline {subsubsection}{\numberline {2.3.2}Hardware limitations}{6}
+\contentsline {subsubsection}{\numberline {2.3.3}Interfaces to other applications}{6}
+\contentsline {subsubsection}{\numberline {2.3.4}Parallel operations}{6}
+\contentsline {subsubsection}{\numberline {2.3.5}Documents related}{6}
+\contentsline {subsection}{\numberline {2.4}Assumptions}{7}
+\contentsline {subsection}{\numberline {2.5}Future possible implementations}{7}
+\contentsline {section}{\numberline {3}Specific Requirements}{8}
+\contentsline {subsection}{\numberline {3.1}External interfaces requirements}{8}
+\contentsline {subsubsection}{\numberline {3.1.1}User interfaces}{8}
+\contentsline {subsubsection}{\numberline {3.1.2}API interfaces}{8}
+\contentsline {subsubsection}{\numberline {3.1.3}Hardware interfaces}{8}
+\contentsline {subsubsection}{\numberline {3.1.4}Software interfaces}{8}
+\contentsline {subsubsection}{\numberline {3.1.5}Communication interfaces}{8}
+\contentsline {subsection}{\numberline {3.2}Functional requirements}{8}
+\contentsline {subsection}{\numberline {3.3}Non-functional requirements}{9}
+\contentsline {subsubsection}{\numberline {3.3.1}Performance requirements}{9}
+\contentsline {subsubsection}{\numberline {3.3.2}Design constraints}{9}
+\contentsline {subsubsection}{\numberline {3.3.3}Software system attributes}{9}
+\contentsline {subsubsection}{\numberline {3.3.4}Security}{9}
+\contentsline {section}{\numberline {4}Scenarios Identifying}{10}
+\contentsline {subsection}{\numberline {4.1}Scenario 1 [PASSWORD RECOVERY]}{10}
+\contentsline {subsection}{\numberline {4.2}Scenario 2 [ADD INFORMATION TO PROFILE]}{10}
+\contentsline {subsection}{\numberline {4.3}Scenario 3 []}{10}
+\contentsline {subsection}{\numberline {4.4}Scenario 4}{10}
+\contentsline {subsection}{\numberline {4.5}Scenario 5}{10}
+\contentsline {section}{\numberline {5}UML Models}{11}
+\contentsline {subsection}{\numberline {5.1}Use Case}{11}
+\contentsline {subsection}{\numberline {5.2}Class diagram}{11}
+\contentsline {subsection}{\numberline {5.3}Sequence diagram}{11}
+\contentsline {subsection}{\numberline {5.4}Statechart diagram}{11}
+\contentsline {section}{\numberline {6}ALLOY Modeling}{12}
+\contentsline {subsection}{\numberline {6.1}Data type}{12}
+\contentsline {subsection}{\numberline {6.2}Abstract entity implementation and signature}{12}
+\contentsline {subsection}{\numberline {6.3}Fact}{12}
+\contentsline {subsection}{\numberline {6.4}Assert}{12}
+\contentsline {subsection}{\numberline {6.5}Predicates}{12}
+\contentsline {subsection}{\numberline {6.6}Result}{12}
+\contentsline {subsection}{\numberline {6.7}Generated world}{12}
+\contentsline {section}{\numberline {7}Appendix}{13}
+\contentsline {subsection}{\numberline {7.1}Glossary}{13}
+\contentsline {subsection}{\numberline {7.2}Software and tool used}{13}
+\contentsline {subsection}{\numberline {7.3}Hours of work}{13}
