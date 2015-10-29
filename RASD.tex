@@ -1,0 +1,252 @@
+\documentclass[18pt,oneside,a4paper, titlepage]{article}
+
+\usepackage[pdftex]{graphicx}
+
+\begin{document}
+\begin{figure}[t]
+	\centering
+	\includegraphics[scale=0.35]{logo-polimi.png}
+\end{figure}
+\title{\textbf{myTaxiService}\\\textbf{R}equirement \textbf{A}nalysis and \textbf{S}pecification \textbf{D}ocument\\
+	Politecnico di Milano}	
+\author{Cattaneo Michela Gaia, matr. 791685\\Barlocco Mattia, matr. 792735 }
+\date{November 6, 2015}
+\maketitle
+
+\newpage
+\tableofcontents
+
+\newpage
+\section{Introduction}
+	
+	\subsection{Purpose}
+		This document represent the Requirement Analysis and Specification Document (RASD). This document aims at describing the system in terms of functional and non-functional requirements, modeling the system according to the real needs of the customer and showing the constraints and the limit of the software. This document serves as a contractual basis between the customer and the developer.
+	
+	\subsection{Actual system}
+		The government of a large city has commissioned a system that is able to manage and optimize the taxi service.
+	
+	\subsection{Scope}
+		The system aims at simplifying the passengers access and guaranteeing a fair management of taxi queues.
+		In order to manage the queue optimization, the city is divided in zones, each one associated to a taxi queue, and the system computes the taxi distribution basing on their GPSs information.	\\	
+		The system allows the user of the application to request a taxi in an area of the city, even without logging in. As soon as a taxi driver takes the request, the application notifies the user of the ID of the incoming taxi and the waiting time. In addition, the user can register, by filling in a form, and make reservations: he only needs to indicate the origin and destination of the ride and the exact time (at least 2 hours in advance) and the system reports that a taxi will be there to pick him up.\\
+		On the other hand, the taxi driver always has to notify his availability and let the system know if he is going to take a certain request by a passenger. If the driver is not able to confirm, the system will forward the request to the second in queue and move this taxi driver in the last position of the queue.
+	
+	\subsection{Actors}
+		The actors participating in the system are:
+	\begin{itemize}
+		\item Visitor: a person who can see the home page of the application, he can register, look up for information about the system and request a taxi, after giving name and phone number. 
+		\item Passenger: a regular registered user who wants to use the application in order to request a taxi in a specific zone or make a reservation for a given time.
+		\item Taxi Driver: a registered user who logged in with a specific ID. This area is reserved to taxi drivers who needs to use the application in order to inform the system of their availability or about what request they are going to take care of.
+	\end{itemize}
+	
+	\subsection{Goals}
+	A user should be able to:
+	\begin{itemize}
+		\item Request a taxi.
+		\item Payment method.
+		\item Check the waiting time.
+		\item Visualize the information about the system.
+		\item Sign up into the system.
+	\end{itemize}
+	A passenger should be able to:
+	\begin{itemize}
+		\item Reserve a taxi by specifying the origin and the destination of the ride, at least two hour before the ride.
+	\end{itemize}
+	The taxi driver should be logged in with a specific ID and should be able to:
+	\begin{itemize}
+		\item Change his state from available to unavailable and vice versa.
+		\item Visualize the queue of his area.
+		\item Answer positively or negatively to the request that the system forwards to him.
+		\item Visualize the position of the user he needs to reach.
+	\end{itemize}
+	The system should be able to:
+	\begin{itemize}
+		\item Assign each taxi to the queue of the designated area, based on GPS position.
+		\item Forward the request to the first taxi in the queue.
+		\item If the first taxi of the queue doesn't take the request, the system will send the request to the second taxi of the queue and, at the same time the first taxi will be moved in the last position of the queue.
+		\item If the passenger wants to reserve a taxi, the system will forward the request to the first available taxi in the area ten minutes before the ride.
+	\end{itemize}
+	
+	\subsection{Domain properties}
+	We suppose that the following properties hold in the analyzed domain.
+	\begin{itemize}
+		\item We assume that there are not previous implementations managing this service.
+		\item If a visitor requests a taxi, he will already be where the taxi driver expects him to be.
+		\item If a passenger reserves a taxi, he will be where and when the taxi driver expects him to be.
+		\item If a passenger reserves a taxi, he will not cancel the reservation less than 2 hours earlier.
+		\item If a taxi driver inform the system that he is available, he actually is.
+		\item If a taxi driver notifies that he is going to take a certain request, he will always do.
+		\item When a taxi driver finishes a ride, he instantly changes his state from unavailable to available.
+		\item If a user requests a service from the system, it will be within the borders of the city.
+		
+	\end{itemize}
+
+
+\newpage
+\section{Overall Description}
+	\subsection{Product perspective}
+	The product consists in a web application and a mobile app, based on the web. There is a server part, that manages all the requests of the users and the answers and the availability of the taxi drivers, computing their zone distribution. There are several clients (visitors, passengers or taxi drivers) interacting with the server by using a graphical user interface, but there is no implementation of interfaces for administration, in fact the application is only user-based.
+	
+	\subsection{User characteristics}
+	The user can be a person who wants to request a taxi or access the application in order to use additional functionalities, such as make a reservation or easily request a taxi without having to give his information every time he exploits the service.
+	The application is used also by the taxi drivers who needs to receive the requests of the customers and to interact with the system, responding to the calls and updating their availability and their GPS position .
+	The user must have access to the Internet.
+	
+	\subsection{Constraints}
+		\subsubsection{Regulatory policies}
+		The system must ensure the privacy of the users, without publishing their personal information. 
+		\subsubsection{Hardware limitations}
+		The system doesn't work if the smartphone is not powerful enough or it has not the GPS detector.
+		\subsubsection{Interfaces to other applications}
+		The system interfaces with two applications:
+		\begin{itemize}
+			\item Google maps to determine the area of a taxi or the position of a user.
+			\item Facebook if a user wants to sign in with his Facebook account.
+		\end{itemize}
+		\subsubsection{Parallel operations}
+			The system supports parallel operations of different clients accessing the application and making requests or reservations of taxis.
+		
+		\subsubsection{Documents related}
+			\begin{itemize}
+				\item Requirements and Analysis Specification Document (RASD).
+				\item Design Document (DD).
+				\item User's Manual.
+				\item Testing report.
+			\end{itemize}
+		
+		\subsection{Assumptions}
+			\begin{itemize}
+				\item User can only make one request or reservation at a time.
+				\item The system changes the state of a taxi driver from available to unavailable if he responds positively to a request, but not vice versa.
+				\item If the passenger makes a reservation less then two hours in advance the system will not accept it.
+				\item The system is able to manage the taxi queues in a way that there is always a taxi driver available for the reservation within ten minutes before the ride.
+				\item The taxi driver has two minutes to respond to the request.
+				\item The profile of the passengers are private, no other users can visualize it.
+				\item The taxi driver receives the phone number and the position of the user if he take the request.
+			\end{itemize}
+			
+		\subsection{Future possible implementations}
+			The application must be open to future implementations. 
+			Future possible implementations are:
+			\begin{itemize}
+				\item Taxi sharing: this is an additional functionality that allows different passengers to share the taxi with other passengers. The system must be notified that the passenger wants to use the taxi sharing option and it will ask him to indicate the destination of this rides. When it is all settled, the system is able to check if there are other persons in the same area that wants to reach the same destination, informing the taxi driver and the passengers. This can be a convenient solution, as the cost of the ride would be equally shared among the passengers.
+				\item Price transparency: this is an additional functionality that allows the passenger to calculate the price of the ride in advance, inserting its origin and destination.
+				\item Meet the driver: this is an additional functionality that lets the passenger know which taxi driver has answered his request. The system will send the passenger the profile of the designated driver with his name and data, so that the he would be able to recognize him or even call or text him if necessary.
+				\item Give us feedback: this is an additional functionality that allows the passenger to rate the driver after the ride and leave comments about it.
+				\item Easy to pay: this is an additional functionality that allows the passenger to automatically pay with the credit card associated with his account. The system will send him an e-mail with the receipt of payment.
+			\end{itemize}
+
+\newpage
+\section{Specific Requirements}
+	\subsection{External interfaces requirements}
+		\subsubsection{User interfaces}
+		\subsubsection{API interfaces}
+		\subsubsection{Hardware interfaces}
+		This project does not support any hardware interfaces.
+		\subsubsection{Software interfaces}
+		\subsubsection{Communication interfaces}
+	\subsection{Functional requirements}
+		\begin{enumerate}
+			\item \textbf{Registration of the visitor.}
+				The visitor exploits the sign up functionality, he fills in the registration form, by inserting his personal information. Some fields are mandatory, such as: name, surname, password, e-mail address and telephone number.
+			\item \textbf{E-mail confirmation.}
+				It is necessary to confirm the e-mail address, following the link provided in the e-mail received after the registration and before the first log in.
+			\item \textbf{Look up information about the system.}
+				The user can see the data of the system, in particular the description of the application, the contacts of the managers of the system and information about the investors.
+			\item \textbf{Log in of the passenger.}
+				The passenger inserts username and password in an input form.
+			\item \textbf{Log in of the taxi driver.}
+				The taxi driver inserts e-mail, ID and password in an input form.
+			\item \textbf{Retrieve password.}
+				The system allows the user or the taxi driver to recover his password by receiving a recover e-mail.
+			\item \textbf{Request a taxi.}
+				The user can make taxi requests enabling the GPS position so that the system can determine his position and can send the call to the first taxi driver of the queue of the designated area. 
+				The visitor can exploit this service in the home page of the application, inserting his name and telephone number.
+				The passenger can use this service without inserting any further information.
+			\item \textbf{Reserve a taxi.}
+				The passenger can reserve a taxi by indicating the origin and the destination and the time of the ride.
+			\item \textbf{Payment method.}
+				The user can choose whether to use cash or credit card as payment method. The visitor needs to provide his credit card data every time he chooses this second method, while the passenger only needs to add his credit card data only if this is the first time he chooses this payment method. The system deduct the money from the credit card only when the ride is over, sending also the receipt of the payment by e-mail.
+			\item \textbf{View or modify the profile.}
+				The passenger can see or modify his profile. He can edit or add his profile picture, other personal information and the credit card data. He can also update his personal information.
+			\item \textbf{Notification panel.(user)}
+				Perchè un pannello notifiche? basterebbe che l'app rimanesse in attesa di un taxi con un loading screen e che uscisse la risposta nel caso qualcuno prenda la chiamata. COME SCRIVERE QUESTA COSA?
+			\item \textbf{Waiting time panel.}
+				The user can see the waiting time panel from the time he makes the request of a taxi until the taxi arrives. This consists in a display showing the time the user has to wait till the taxi arrival.
+				
+			\item \textbf{Availability button.}
+				The taxi driver can switch his state from available to unavailable and vice versa. He sets his state available when he has just finished a ride or in general when he is able to take a request from a user. He doesn't need to set his state unavailable when he takes a call, as it is already managed by the system, but this setting is necessary when he is not able to take requests or when he finishes work.
+			\item \textbf{Notification and position panel.(taxi)}
+				The taxi driver can see the requests by a user as notifications. The system sends him a notification with the information on the user and his position, the taxi driver can accept the request or refuse it.
+			\item \textbf{Position in the queue.}
+				The taxi driver can see his position in the queue in his area, so that he is always able to know if there can be any incoming requests. The system constantly updates (every minute) the position of all drivers of all areas.
+			
+			
+		\end{enumerate}
+	\subsection{Non-functional requirements}
+		\subsubsection{Performance requirements}
+		\subsubsection{Design constraints}
+		\subsubsection{Software system attributes}
+		\subsubsection{Security}
+
+\newpage
+\section{Scenarios Identifying}
+	\subsection{Scenario 1 [PASSWORD RECOVERY]}
+		USER1 has registered in the application when he visited the city a few months ago, now he is back and needs to make a taxi reservation for the afternoon. But USER1 is really absent-minded and is not able to remember his password. He is very happy to see the button "password recovery" and he press it: this leads to another page where the system tells him that an e-mail for the recovery has been sent to his e-mail address. He checks his inbox and follows the link to set his new password. Now he can easily log in and make his reservation.
+		
+	\subsection{Scenario 2 [ADD INFORMATION TO PROFILE]}
+		USER2 often uses myTaxiService for the taxi requests, as it is a fast and reliable service. He is a very lazy person and does not want to register, as the application allows visitors to easily request a taxi, but he is very tired of inserting his credit card data every time he is out of cash, so he finally make up his mind. He registers and he adds his credit card data to his profile along with a funny profile picture of a kitten. He is satisfied and he can request or reserve a taxi without even worry about the money spent.
+	
+	\subsection{Scenario 3 []}
+		USER3 
+	\subsection{Scenario 4}
+	\subsection{Scenario 5}
+
+\newpage
+\section{UML Models}
+	\subsection{Use Case}
+	\subsection{Class diagram}
+	\subsection{Sequence diagram}
+	\subsection{Statechart diagram}
+
+\newpage
+\section{ALLOY Modeling}
+	\subsection{Data type}
+	\subsection{Abstract entity implementation and signature}
+	\subsection{Fact}
+	\subsection{Assert}
+	\subsection{Predicates}
+	\subsection{Result}
+	\subsection{Generated world}
+
+\newpage
+\section{Appendix}
+	\subsection{Glossary}
+		In order to avoid ambiguity, some words, that will be often used in this document, will be given a precise definition of what will be the meaning in the contest of this project.
+		\begin{itemize}
+			\item User: a person who requests a service from the system. It can be a visitor or a passenger.
+			\item Visitor: a person who is not registered in the application.
+			\item Passenger: a person who is registered in the application.
+			\item Taxi driver: a taxi driver who access the application with a specific ID.
+			\item Request: the request of a taxi in a certain zone and place of the city made by a user.
+			\item Reservation: the reservation of a taxi in a certain zone, place and time that can be made only by passengers.
+	\end{itemize}
+	\subsection{Software and tool used}
+		\begin{itemize}
+			\item TeXstudio (http://www.texstudio.org/): to redact and to format this document.
+			\item draw.io (https://www.draw.io/):to create Use
+			Cases Diagrams, Sequence Diagrams, Class Diagrams and Statechart
+			Diagrams.
+			\item Balsamiq Mockups(http://balsamiq.com/products/mockups/): to create mockups.
+			\item Alloy Analyzer(http://alloy.mit.edu/alloy/): to create ALLOY models.
+		\end{itemize}
+	
+	\subsection{Hours of work}
+		Time spent redacting this document:
+		\begin{itemize}
+			\item Cattaneo Michela Gaia: {\raise.17ex\hbox{$\scriptstyle\sim$}}13 hours of work.
+			\item Barlocco Mattia: {\raise.17ex\hbox{$\scriptstyle\sim$}}13 hours of work.
+		\end{itemize}
+
+
+\end{document}
