@@ -180,15 +180,17 @@
 				The taxi driver can see the requests by a user as notifications. The system sends him a notification with the information on the user and his position, the taxi driver can accept the request or refuse it.
 			\item \textbf{Position in the queue.}
 				The taxi driver can see his position in the queue in his area, so that he is always able to know if there can be any incoming requests. The system constantly updates (every minute) the position of all drivers of all areas.
-			
-			
 		\end{enumerate}
 	\subsection{Non-functional requirements}
 		\subsubsection{Performance requirements}
-		\subsubsection{Design constraints}
+			The system is composed of a server side hosting the database, where all the data of the passenger and of the taxi driver are stored, and it handles all HTTP request. There is not a great amount of data to manage, there are only profile information of the passengers, of the taxi drivers and the log of the activities, then the size of the database is not a constraint for the system.\\ To supply a suitable service, the system has to be reactive and able to answer to a high number of simultaneous request.\\ There are no time constraints that depends on the system, the time to process a transaction is less then one second. The only time constraint would be the reply message of the taxi driver that depends on his reflexes.
 		\subsubsection{Software system attributes}
-		\subsubsection{Security}
-
+			\begin{enumerate}
+				\item Reliability: the server of the system is on 24 hours on 24, every day of the week to guarantee a suitable service. The system allows administrators to fix some problems without compromise the functionality of the system.
+				\item Availability: to guarantee the availability of the data, there is a backup system on a secondary database and one on an external storage. 
+				\item Security: the privacy of the exchanged data between server and client is guaranteed by SSL encryption. The passwords and the sensitive data which are stored on the database are protected by MD5 encryption.
+				\item Portability: the client side of the system is compatible with the major platform on the market (e.g. Android, iOS) and any device that support a browser and a GPS system.
+			\end{enumerate}
 \newpage
 \section{Scenarios Identifying}
 	\subsection{Scenario 1 [PASSWORD RECOVERY]}
