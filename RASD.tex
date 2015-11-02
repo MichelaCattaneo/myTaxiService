@@ -50,7 +50,7 @@
 	\end{itemize}
 	A passenger should be able to:
 	\begin{itemize}
-		\item Reserve a taxi by specifying the origin and the destination of the ride, at least two hour before the ride.
+		\item Reserve a taxi by specifying the origin and the destination of the ride, at least two hour in advance.
 	\end{itemize}
 	The taxi driver should be logged in with a specific ID and should be able to:
 	\begin{itemize}
@@ -148,36 +148,38 @@
 	\subsection{Functional requirements}
 		\begin{enumerate}
 			\item \textbf{Registration of the visitor.}
-				The visitor exploits the sign up functionality, he fills in the registration form, by inserting his personal information. Some fields are mandatory, such as: name, surname, password, e-mail address and telephone number.
+				The system displays the registration form to the user, who needs to fill in the mandatory fields of the form and press the "Submit" button. The user should provide his name, surname, password, e-mail address and telephone number. He can choose whether let the system know about his gender and date of birth or not.
+			
 			\item \textbf{E-mail confirmation.}
-				It is necessary to confirm the e-mail address, following the link provided in the e-mail received after the registration and before the first log in.
+				The system does not instantly confirm the creation of a new passenger profile, a confirmation e-mail is sent to the e-mail address provided by the user. The user can follow the link written in the e-mail and the system creates the new account.
+				
 			\item \textbf{Look up information about the system.}
-				The user can see the data of the system, in particular the description of the application, the contacts of the managers of the system and information about the investors.
-			\item \textbf{Log in of the passenger.}
-				The passenger inserts username and password in an input form.
-			\item \textbf{Log in of the taxi driver.}
-				The taxi driver inserts e-mail, ID and password in an input form.
-			\item \textbf{Log in with Facebook}
-				The system allows to sign up with the Facebook account without inserting e-mail, telephone number and the other information, if you have already inserted them on your Facebook profile. 
+				The system displays a screen where the user can read the data of the application, in particular the description of its functionalities, the contacts of the managers of the system and information about the investors.
+			\item \textbf{Log in as a passenger.}
+				The system provides an input form where the passenger can insert e-mail and password. The system checks if the account is already registered and if the password is correct, if not an error message is displayed. If this conditions hold, the passenger logs in successfully.
+			\item \textbf{Log in as a taxi driver.}
+				The system provides an input form in the mobile application where the taxi driver can insert e-mail, ID and password. The system checks if the account is correctly registered, if the ID matches the e-mail address and if the password is correct, if not an error message is displayed. If this conditions hold, the taxi driver logs in successfully.
+			\item \textbf{Log in with social networks}
+				The system allows the user to sign up with his Facebook or Google+ account without inserting e-mail, telephone number and the other information, if he has already inserted them on his profile.
 			\item \textbf{Retrieve password.}
-				The system allows the user or the taxi driver to recover his password by receiving a recover e-mail.
+				The system provide a link to recover the password of the account. The user clicks on the link and receives a recover e-mail with a link that redirects to a page where he can set his new password.
 			\item \textbf{Request a taxi.}
 				The user can make taxi requests enabling the GPS position so that the system can determine his position and can send the call to the first taxi driver of the queue of the designated area. 
 				The visitor can exploit this service in the home page of the application, inserting his name and telephone number.
 				The passenger can use this service without inserting any further information.
 			\item \textbf{Reserve a taxi.}
 				The passenger can reserve a taxi by indicating the origin and the destination and the time of the ride.
-			\item \textbf{Payment method.}
+			\item \textbf{Choose payment method.}
 				The user can choose whether to use cash or credit card as payment method. The visitor needs to provide his credit card data every time he chooses this second method, while the passenger only needs to add his credit card data only if this is the first time he chooses this payment method. The system deduct the money from the credit card only when the ride is over, sending also the receipt of the payment by e-mail.
 			\item \textbf{View or modify the profile.}
-				The passenger can see or modify his profile. He can edit or add his profile picture, other personal information and the credit card data. He can also update his personal information.
-			\item \textbf{Waiting time panel.}
-				The user can see the waiting time panel from the time he makes the request of a taxi until the taxi arrives. This consists in a display showing the time the user has to wait till the taxi arrival.
-			\item \textbf{Availability button.}
+				The passenger can see or edit his profile. He can modify or add his profile picture, other personal information and the credit card data. He can also update his personal information.
+			\item \textbf{See waiting time panel.}
+				The user can see the waiting time panel from the time he makes the request of a taxi until it arrives. This consists in a display showing the time the user has to wait till the taxi arrival.
+			\item \textbf{Change availability.}
 				The taxi driver can switch his state from available to unavailable and vice versa. He sets his state available when he has just finished a ride or in general when he is able to take a request from a user. He doesn't need to set his state unavailable when he takes a call, as it is already managed by the system, but this setting is necessary when he is not able to take requests or when he finishes work.
-			\item \textbf{Notification and position panel.(taxi)}
+			\item \textbf{Notification of the requests.}
 				The taxi driver can see the requests by a user as notifications. The system sends him a notification with the information on the user and his position, the taxi driver can accept the request or refuse it.
-			\item \textbf{Position in the queue.}
+			\item \textbf{See position in the queue.}
 				The taxi driver can see his position in the queue in his area, so that he is always able to know if there can be any incoming requests. The system constantly updates (every minute) the position of all drivers of all areas.
 		\end{enumerate}
 	\subsection{Non-functional requirements}
@@ -185,24 +187,33 @@
 			The system is composed of a server side hosting the database, where all the data of the passenger and of the taxi driver are stored, and it handles all HTTP request. There is not a great amount of data to manage, there are only profile information of the passengers, of the taxi drivers and the log of the activities, then the size of the database is not a constraint for the system.\\ To supply a suitable service, the system has to be reactive and able to answer to a high number of simultaneous request.\\ There are no time constraints that depends on the system, the time to process a transaction is less then one second. The only time constraint would be the reply message of the taxi driver that depends on his reflexes.
 		\subsubsection{Software system attributes}
 			\begin{enumerate}
-				\item Reliability: the server of the system is on 24 hours on 24, every day of the week to guarantee a suitable service. The system allows administrators to fix some problems without compromise the functionality of the system.
-				\item Availability: to guarantee the availability of the data, there is a backup system on a secondary database and one on an external storage. 
-				\item Security: the privacy of the exchanged data between server and client is guaranteed by SSL encryption. The passwords and the sensitive data which are stored on the database are protected by MD5 encryption.
-				\item Portability: the client side of the system is compatible with the major mobile platform on the market (e.g. Android, iOS) and any device (e.g. pc with windows, apple, etc.) that support a browser and a GPS system.
+				\item Reliability: the server must remain up twenty-four hours a day in order to guarantee a suitable service. The system allows the administrators to fix any problem without compromising the functionality of the system.
+				\item Availability: in order to guarantee the continuous availability of the data, it has been arranged one backup system on a secondary database and the other on an external storage. 
+				\item Security: privacy of the data exchanged between the server and the clients is guaranteed by a SSL encryption. The passwords and the sensitive data stored on the database are protected by MD5 encryption.
+				\item Portability: the client side of the system is compatible with the major mobile platforms on the market (e.g. Android, iOS) and any device (e.g. PC with Windows, Apple, etc.) that supports a browser and a GPS system.
 			\end{enumerate}
 \newpage
 \section{Scenarios Identifying}
-	\subsection{Scenario 1 [PASSWORD RECOVERY]}
+	\subsection{Scenario 1: Registration and log in}
+		USER1 is new to the city and is not used to use public transport, so he searches for the best taxi services in various forums. After a while, he decides to download the new application "myTaxiService", because it seems to offer the most interesting functionalities. USER1 registers in the application, without even filling the form, accessing with his Facebook account and adds his favorite photo with his girlfriend. Now he is able to log in, to make taxi reservations choosing the payment method he prefers and to request a taxi without having to insert his information every time he needs it.
+		
+	\subsection{Scenario 2: Password recovery}
 		USER1 has registered in the application when he visited the city a few months ago, now he is back and needs to make a taxi reservation for the afternoon. But USER1 is really absent-minded and is not able to remember his password. He is very happy to see the button "password recovery" and he press it: this leads to another page where the system tells him that an e-mail for the recovery has been sent to his e-mail address. He checks his inbox and follows the link to set his new password. Now he can easily log in and make his reservation.
 		
-	\subsection{Scenario 2 [ADD INFORMATION TO PROFILE]}
-		USER2 often uses myTaxiService for the taxi requests, as it is a fast and reliable service. He is a very lazy person and does not want to register, as the application allows visitors to easily request a taxi, but he is very tired of inserting his credit card data every time he is out of cash, so he finally make up his mind. He registers and he adds his credit card data to his profile along with a funny profile picture of a kitten. He is satisfied and he can request or reserve a taxi without even worry about the money spent.
+	\subsection{Scenario 3: Choose payment method}
+		USER2 often uses myTaxiService for the taxi requests, as it is a fast and reliable service. He is a very lazy person and does not want to register, as the application allows visitors to easily request a taxi, but he is very tired of paying by cash, so he finally make up his mind. He registers and adds his credit card data to his profile. USER2 is happy to save his time and he can request or reserve a taxi without even worry about the money spent.
 	
-	\subsection{Scenario 3 []}
-		USER3 
-	\subsection{Scenario 4}
-	\subsection{Scenario 5}
-
+	\subsection{Scenario 4: Reserve a taxi}
+		USER3 asks his friend USER3gf next door out for a date at the restaurant and then at the cinema. He really wants to make a good impression, but his car is stuck at the mechanic. So USER3 decides to go anyway by bus, even tho it is not the most elegant solution, but when he will come back there will not be any public transport. He decides to register in the myTaxiService application and to make a reservation for 00:30 pm, when the movie ends. The taxi is already there when they come out of the cinema and they are home in a few minutes, USER3 and USER3GF are very satisfied with the service and with the evening too.
+		 
+	\subsection{Scenario 5: See requests and reservations history}
+		USER4friend suggested USER4 the application myTaxiService. They are both usually going up and down the whole town in order to meet their clients, so they need a reliable and cheap transport. USER4 is very happy to use this application because he does not always remember the exact time of his reservation, but just accessing the passenger area is able to see it. At the end of the week, USER4friend needs to make his boss know how many rides he did for the clients, but he has lost the Excel file where he put all the log of his work activity. Instead of depressing, USER4friend remembers that he can access the application and see his requests and even the time he has made them. 
+		
+	\subsection{Scenario 6: Taxi driver availability}
+		DRIVER1 is used to take a coffee after his first ride of the day. Even if he is the first of the queue, he wants to maintain this habit, so he just switch his availability button to off. Now the system knows that he cannot be called for the requests and he can set his state available whenever he wants and see his position in the queue. Finally, when DRIVER1 takes a call, he knows that he does not have to bother about his availability because the system always sets his state unavailable in the exact time he takes the request of a passenger.
+		
+	\subsection{Scenario 7: Taxi drivers notification of the requests}
+		DRIVER2 is the first of the queue, so he knows that he is going to take a request soon but he is on the phone with his mother and does not see the notification within the first minute, so the system forwards it to the second taxi driver of the queue. Now he is in the last position of the area and needs to be very careful when the positions change. DRIVER2 shifts fast to the first position again and he is now able to click on the "Accept" button before the time is over. He sees the position of the request and goes there with no trouble. At the end of the day he scrolls his notifications panel and he is very satisfied with his work today, as he has missed just one request.
 \newpage
 \section{UML Models}
 	\subsection{Use Case}
@@ -237,14 +248,14 @@
 			\item TeXstudio (http://www.texstudio.org/): to redact and to format this document.
 			\item draw.io (https://www.draw.io/):to create Use Case Diagrams, Sequence Diagrams, Class Diagrams and Statechart Diagrams.
 			\item Balsamiq Mockups(http://balsamiq.com/products/mockups/): to create mockups.
-			\item Alloy Analyzer(http://alloy.mit.edu/alloy/): to create ALLOY models.
+			\item Alloy Analyzer(http://alloy.mit.edu/alloy/): to create Alloy models.
 		\end{itemize}
 	
 	\subsection{Hours of work}
 		Time spent redacting this document:
 		\begin{itemize}
-			\item Cattaneo Michela Gaia: {\raise.17ex\hbox{$\scriptstyle\sim$}}16 hours of work.
-			\item Barlocco Mattia: {\raise.17ex\hbox{$\scriptstyle\sim$}}16 hours of work.
+			\item Cattaneo Michela Gaia: {\raise.17ex\hbox{$\scriptstyle\sim$}}18 hours of work.
+			\item Barlocco Mattia: {\raise.17ex\hbox{$\scriptstyle\sim$}}18 hours of work.
 		\end{itemize}
 
 
