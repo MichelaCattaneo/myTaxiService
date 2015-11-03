@@ -1,0 +1,54 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{Purpose}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{Actual system}{section.1}% 3
+\BOOKMARK [2][-]{subsection.1.3}{Scope}{section.1}% 4
+\BOOKMARK [2][-]{subsection.1.4}{Actors}{section.1}% 5
+\BOOKMARK [2][-]{subsection.1.5}{Goals}{section.1}% 6
+\BOOKMARK [2][-]{subsection.1.6}{Domain properties}{section.1}% 7
+\BOOKMARK [1][-]{section.2}{Overall Description}{}% 8
+\BOOKMARK [2][-]{subsection.2.1}{Product perspective}{section.2}% 9
+\BOOKMARK [2][-]{subsection.2.2}{User characteristics}{section.2}% 10
+\BOOKMARK [2][-]{subsection.2.3}{Constraints}{section.2}% 11
+\BOOKMARK [3][-]{subsubsection.2.3.1}{Regulatory policies}{subsection.2.3}% 12
+\BOOKMARK [3][-]{subsubsection.2.3.2}{Hardware limitations}{subsection.2.3}% 13
+\BOOKMARK [3][-]{subsubsection.2.3.3}{Interfaces to other applications}{subsection.2.3}% 14
+\BOOKMARK [3][-]{subsubsection.2.3.4}{Parallel operations}{subsection.2.3}% 15
+\BOOKMARK [3][-]{subsubsection.2.3.5}{Documents related}{subsection.2.3}% 16
+\BOOKMARK [2][-]{subsection.2.4}{Assumptions}{section.2}% 17
+\BOOKMARK [2][-]{subsection.2.5}{Future possible implementations}{section.2}% 18
+\BOOKMARK [1][-]{section.3}{Specific Requirements}{}% 19
+\BOOKMARK [2][-]{subsection.3.1}{External interfaces requirements}{section.3}% 20
+\BOOKMARK [3][-]{subsubsection.3.1.1}{User interfaces}{subsection.3.1}% 21
+\BOOKMARK [3][-]{subsubsection.3.1.2}{API interfaces}{subsection.3.1}% 22
+\BOOKMARK [3][-]{subsubsection.3.1.3}{Hardware interfaces}{subsection.3.1}% 23
+\BOOKMARK [3][-]{subsubsection.3.1.4}{Software interfaces}{subsection.3.1}% 24
+\BOOKMARK [3][-]{subsubsection.3.1.5}{Communication interfaces}{subsection.3.1}% 25
+\BOOKMARK [2][-]{subsection.3.2}{Functional requirements}{section.3}% 26
+\BOOKMARK [2][-]{subsection.3.3}{Non-functional requirements}{section.3}% 27
+\BOOKMARK [3][-]{subsubsection.3.3.1}{Performance requirements}{subsection.3.3}% 28
+\BOOKMARK [3][-]{subsubsection.3.3.2}{Software system attributes}{subsection.3.3}% 29
+\BOOKMARK [1][-]{section.4}{Scenarios Identifying}{}% 30
+\BOOKMARK [2][-]{subsection.4.1}{Scenario 1: Registration and log in}{section.4}% 31
+\BOOKMARK [2][-]{subsection.4.2}{Scenario 2: Password recovery}{section.4}% 32
+\BOOKMARK [2][-]{subsection.4.3}{Scenario 3: Choose payment method}{section.4}% 33
+\BOOKMARK [2][-]{subsection.4.4}{Scenario 4: Reserve a taxi}{section.4}% 34
+\BOOKMARK [2][-]{subsection.4.5}{Scenario 5: See requests and reservations history}{section.4}% 35
+\BOOKMARK [2][-]{subsection.4.6}{Scenario 6: Taxi driver availability}{section.4}% 36
+\BOOKMARK [2][-]{subsection.4.7}{Scenario 7: Taxi drivers notification of the requests}{section.4}% 37
+\BOOKMARK [1][-]{section.5}{UML Models}{}% 38
+\BOOKMARK [2][-]{subsection.5.1}{Use Case}{section.5}% 39
+\BOOKMARK [2][-]{subsection.5.2}{Class diagram}{section.5}% 40
+\BOOKMARK [2][-]{subsection.5.3}{Sequence diagram}{section.5}% 41
+\BOOKMARK [2][-]{subsection.5.4}{Statechart diagram}{section.5}% 42
+\BOOKMARK [1][-]{section.6}{ALLOY Modeling}{}% 43
+\BOOKMARK [2][-]{subsection.6.1}{Data type}{section.6}% 44
+\BOOKMARK [2][-]{subsection.6.2}{Abstract entity implementation and signature}{section.6}% 45
+\BOOKMARK [2][-]{subsection.6.3}{Fact}{section.6}% 46
+\BOOKMARK [2][-]{subsection.6.4}{Assert}{section.6}% 47
+\BOOKMARK [2][-]{subsection.6.5}{Predicates}{section.6}% 48
+\BOOKMARK [2][-]{subsection.6.6}{Result}{section.6}% 49
+\BOOKMARK [2][-]{subsection.6.7}{Generated world}{section.6}% 50
+\BOOKMARK [1][-]{section.7}{Appendix}{}% 51
+\BOOKMARK [2][-]{subsection.7.1}{Glossary}{section.7}% 52
+\BOOKMARK [2][-]{subsection.7.2}{Software and tool used}{section.7}% 53
+\BOOKMARK [2][-]{subsection.7.3}{Hours of work}{section.7}% 54
