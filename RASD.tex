@@ -215,24 +215,21 @@
 \newpage
 \section{Scenarios Identifying}
 	\subsection{Scenario 1: Registration and log in}
-		USER1 is new to the city and is not used to use public transport, so he searches for the best taxi services in various forums. After a while, he decides to download the new application "myTaxiService", because it seems to offer the most interesting functionalities. USER1 registers in the application, without even filling the form, accessing with his Facebook account and adds his favorite photo with his girlfriend. Now he is able to log in, to make taxi reservations choosing the payment method he prefers and to request a taxi without having to insert his information every time he needs it.
+		USER1 is new to the city and is not used to use public transport, so he searches for the best taxi services via web. After a while, he decides to download the new application "myTaxiService", because it seems to offer the most interesting functionalities. USER1 registers in the application, without even filling the form, accessing with his Facebook account and adds his favorite photo with his girlfriend. Now he is able to log in, to make taxi reservations choosing the payment method he prefers and to request a taxi without having to insert his information every time he needs it.
 		
 	\subsection{Scenario 2: Password recovery}
-		USER1 has registered in the application when he visited the city a few months ago, now he is back and needs to make a taxi reservation for the afternoon. But USER1 is really absent-minded and is not able to remember his password. He is very happy to see the button "password recovery" and he press it: this leads to another page where the system tells him that an e-mail for the recovery has been sent to his e-mail address. He checks his inbox and follows the link to set his new password. Now he can easily log in and make his reservation.
+		USER1 has registered in the application when he visited the city a few months ago, now he is back and needs to make a taxi reservation for the afternoon. But USER1 is really absent-minded and is not able to remember his password. He is very happy to see the "Forgotten your password?" link and he press it: this leads to another page where the system tells him that an e-mail for the recovery has been sent to his e-mail address. He checks his inbox and follows the link to set his new password. Now he can easily log in and make his reservation.
 		
 	\subsection{Scenario 3: Choose payment method}
 		USER2 often uses myTaxiService for the taxi requests, as it is a fast and reliable service. He is a very lazy person and does not want to register, as the application allows visitors to easily request a taxi, but he is very tired of paying by cash, so he finally make up his mind. He registers and adds his credit card data to his profile. USER2 is happy to save his time and he can request or reserve a taxi without even worry about the money spent.
 	
 	\subsection{Scenario 4: Reserve a taxi}
-		USER3 asks his friend USER3gf next door out for a date at the restaurant and then at the cinema. He really wants to make a good impression, but his car is stuck at the mechanic. So USER3 decides to go anyway by bus, even tho it is not the most elegant solution, but when he will come back there will not be any public transport. He decides to register in the myTaxiService application and to make a reservation for 00:30 pm, when the movie ends. The taxi is already there when they come out of the cinema and they are home in a few minutes, USER3 and USER3GF are very satisfied with the service and with the evening too.
-		 
-	\subsection{Scenario 5: See requests and reservations history}
-		USER4friend suggested USER4 the application myTaxiService. They are both usually going up and down the whole town in order to meet their clients, so they need a reliable and cheap transport. USER4 is very happy to use this application because he does not always remember the exact time of his reservation, but just accessing the passenger area is able to see it. At the end of the week, USER4friend needs to make his boss know how many rides he did for the clients, but he has lost the Excel file where he put all the log of his work activity. Instead of depressing, USER4friend remembers that he can access the application and see his requests and even the time he has made them. 
+		USER3 asks his friend USER3gf next door out for a date at the restaurant and then at the cinema. He really wants to make a good impression, but his car is at the mechanic. So USER3 decides to go anyway by bus, even tho it is not the most elegant solution, but when he will come back there will not be any public transport. He decides to register in the myTaxiService application and make a reservation for 00:30 pm, when the movie ends. The taxi is already there when they come out of the cinema and they are home in a few minutes, USER3 and USER3GF are very satisfied with the service and with the evening too.
 		
-	\subsection{Scenario 6: Taxi driver availability}
+	\subsection{Scenario 5: Taxi driver availability}
 		DRIVER1 is used to take a coffee after his first ride of the day. Even if he is the first of the queue, he wants to maintain this habit, so he just switch his availability button to off. Now the system knows that he cannot be called for the requests and he can set his state available whenever he wants and see his position in the queue. Finally, when DRIVER1 takes a call, he knows that he does not have to bother about his availability because the system always sets his state unavailable in the exact time he takes the request of a passenger.
 		
-	\subsection{Scenario 7: Taxi drivers notification of the requests}
+	\subsection{Scenario 6: Taxi drivers notification of the requests}
 		DRIVER2 is the first of the queue, so he knows that he is going to take a request soon but he is on the phone with his mother and does not see the notification within the first minute, so the system forwards it to the second taxi driver of the queue. Now he is in the last position of the area and needs to be very careful when the positions change. DRIVER2 shifts fast to the first position again and he is now able to click on the "Accept" button before the time is over. He sees the position of the request and goes there with no trouble. At the end of the day he scrolls his notifications panel and he is very satisfied with his work today, as he has missed just one request.
 \newpage
 \section{UML Models}
@@ -243,10 +240,9 @@
 
 \newpage
 \section{ALLOY Modeling}
-	\subsection{Data type}
-	\subsection{Abstract entity implementation and signature}
-	\subsection{Fact}
-	\subsection{Assert}
+	\subsection{Signatures}
+	\subsection{Facts}
+	\subsection{Asserts}
 	\subsection{Predicates}
 	\subsection{Result}
 	\subsection{Generated world}
@@ -254,7 +250,7 @@
 \newpage
 \section{Appendix}
 	\subsection{Glossary}
-		In order to avoid ambiguity, some words, that will be often used in this document, will be given a precise definition of what will be the meaning in the contest of this project.
+		In order to avoid ambiguity, some words, which are often used in this document, are given a precise definition of what is the meaning in the contest of this project.
 		\begin{itemize}
 			\item User: a person who requests a service from the system. It can be a visitor or a passenger.
 			\item Visitor: a person who is not registered in the application.
