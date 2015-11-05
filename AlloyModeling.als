@@ -12,15 +12,13 @@ abstract sig Account{
 }
 
 sig Passenger extends Account{
-			card: one CreditCard,
-			request: some Request
+			card: one CreditCard
 }
 
 sig TaxiDriver extends Account{
 			iD: one String,
 			availability: one boolean,
-			workingArea: one Area,
-			requests: some Request
+			forwardedRequest: some Request
 }
 			
 sig Request{
@@ -28,11 +26,10 @@ sig Request{
 			passengerPosition: one String,
 			payByCreditCard: one boolean,
 			passenger: one Passenger,
-			taxiDrivers: some TaxiDriver,
 			area: one Area
 }	
 
-sig Reserve extends Request{
+sig Reservation extends Request{
 			departureTime: one int,
 			origin: one String,
 			destination: one String
@@ -41,8 +38,16 @@ sig Reserve extends Request{
 sig Area{
 			id: one int,
 			position: one String,
-			requests: some Request,
 			taxiDrivers: some TaxiDriver
+}
+
+sig CreditCard{
+			cardType: one String,
+			firstName: one String,
+			lastName: one String,
+			cardNumber: one int,
+			expirationDate: one Date,
+			ccv: one int
 }
 
 // FACTS
