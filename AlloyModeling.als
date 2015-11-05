@@ -6,16 +6,16 @@ sig Integer{}
 
 sig Visitor{
 			email: one Strings,
-			phoneNumber: one Strings
+		//	phoneNumber: one Strings
 }
 
-abstract sig Account extends Visitor{
+sig Account extends Visitor{
 			name: one Strings,
 			surname: one Strings,
-			dateOfBirth: one Date,
+		/*	dateOfBirth: one Date,
 			gender: one Strings,
 			password: one Strings,
-			profilePicture: one Strings
+			profilePicture: one Strings*/
 }
 
 sig Passenger extends Account{
@@ -28,9 +28,9 @@ sig TaxiDriver extends Account{
 			availability: one Bool
 }
 
-abstract sig Request{
-			id: one Integer,
-			userPosition: one Strings,
+sig Request{
+		/*	id: one Integer,
+			userPosition: one Strings,*/
 			currentTime: one Integer,
 			area: one Area,
 			taxiDriver: one TaxiDriver,
@@ -38,7 +38,7 @@ abstract sig Request{
 }
 
 sig RequestPassenger extends Request{
-			payByCreditCard: one Bool,
+		//	payByCreditCard: one Bool,
 			passenger: one Passenger,
 }	
 
@@ -48,41 +48,33 @@ sig RequestVisitor extends Request{
 
 sig Reservation extends RequestPassenger{
 			departureTime: one Integer,
-			origin: one Strings,
-			destination: one Strings
+			/*origin: one Strings,
+			destination: one Strings*/
 }
 
 sig Area{
 			id: one Integer,
-			position: one Strings,
+		//	position: one Strings,
 			taxiDrivers: some TaxiDriver
 }
 
 sig CreditCard{
-			cardType: one Strings,
+		/*	cardType: one Strings,
 			firstName: one Strings,
 			lastName: one Strings,
 			cardNumber: one Integer,
 			expirationDate: one Date,
-			ccv: one Integer
+			ccv: one Integer*/
 }
 
 // FACTS
 
-fact emailUnicity{
-			no disj a1, a2 : Account | a1.email = a2.email
-}
-
-fact noEmptyName{
-			all a : Account | (#a.name>1)
-}
-
-fact noEmptySurname{
-			all a : Account | (#a.surname>1)
+/*fact emailUnicity{
+			no disj v1, v2 :Visitor | v1.email = v2.email
 }
 
 fact oneCreditCardPerPassenger{
-			all p : Passenger | (one c : CreditCard | p.creditCard=c)
+			all p : Passenger | (lone c : CreditCard | p.creditCard=c)
 }
 
 fact idUnicity{
@@ -99,7 +91,7 @@ fact oneAreaPerRequest{
 
 fact oneVisitorPerVisitorRequest{
 			all rv : RequestVisitor | (one v : Visitor | rv.visitor=v)
-}
+}*/
 // ASSERTIONS
 assert validReservation{
 			all r : Reservation | #r.departureTime-#r.currentTime>=2
@@ -125,11 +117,11 @@ assert correctAreaTaxiRequest{
 
 check correctAreaTaxiRequest
 // PREDICATES
-pred show(){
+pred show{
 }
-run show for 5
+run show
 
-pred takeRequest[r,r' : Request, t : TaxiDriver]{
-			
+pred makeRequest(p : Passenger, r : RequestPassenger){
+			r.passenger=p
 }
-run takeRequest for 5
+run makeRequest
