@@ -44,30 +44,25 @@
 	A user should be able to:
 	\begin{itemize}
 		\item Request a taxi.
-		\item Payment method.
 		\item Check the waiting time.
 		\item Visualize the information about the system.
 		\item Sign up into the system.
 	\end{itemize}
 	A passenger should be able to:
 	\begin{itemize}
+		\item Log into the system.
 		\item Reserve a taxi by specifying the origin and the destination of the ride, at least two hour in advance.
+		\item Payment method.
 	\end{itemize}
 	The taxi driver should be logged in with a specific ID and should be able to:
 	\begin{itemize}
+		\item Log into the system.
 		\item Change his state from available to unavailable and vice versa.
 		\item Visualize the queue of his area.
 		\item Answer positively or negatively to the request that the system forwards to him.
 		\item Visualize the position of the user he needs to reach.
 	\end{itemize}
-	The system should be able to:
-	\begin{itemize}
-		\item Assign each taxi to the queue of the designated area, based on GPS position.
-		\item Forward the request to the first taxi in the queue.
-		\item If the first taxi of the queue doesn't take the request, the system will send the request to the second taxi of the queue and, at the same time the first taxi will be moved in the last position of the queue.
-		\item If the passenger wants to reserve a taxi, the system will forward the request to the first available taxi in the area ten minutes before the ride.
-	\end{itemize}
-	
+
 	\subsection{Domain properties}
 	We suppose that the following properties hold in the analyzed domain.
 	\begin{itemize}
@@ -78,7 +73,6 @@
 		\item A taxi driver always inform the system that he is available only when he actually is.
 		\item A taxi driver, who notifies that he is going to take a certain request, always carries it out.
 		\item When a taxi driver finishes a ride, he instantly changes his state from unavailable to available.
-		\item There is always an available taxi driver in an area.
 		\item If a user requests a service from the system, it will be within the borders of the city.
 		
 	\end{itemize}
@@ -118,13 +112,21 @@
 		
 		\subsection{Assumptions}
 			\begin{itemize}
-				\item User can only make one request or reservation at a time.
-				\item The system changes the state of a taxi driver from available to unavailable if he responds positively to a request, but not vice versa.
+				\item The user can only make one request at a time, which means that the system does not allow him to make requests until the ride is over.
+				\item The system changes the state of a taxi driver from available to unavailable if he accept a request, but not vice versa.
 				\item If the passenger makes a reservation less then two hours in advance the system will not accept it.
+				\item The user has to turn on his GPS in order to make any request.
 				\item The system is able to manage the taxi queues in a way that there is always a taxi driver available for the reservation within ten minutes before the ride.
-				\item The taxi driver has two minutes to respond to the request.
-				\item The profile of the passengers are private, no other users can visualize it.
-				\item The taxi driver receives the phone number and the position of the user if he take the request.
+				\item The system deducts the cost of the ride from the credit card of the passenger only when the ride is over, sending also the receipt of the payment to the e-mail address indicated in the passenger profile.
+				\item If the first taxi of the queue does not take the request, the system will send the request to the second taxi of the queue and, at the same time the first taxi will be moved in the last position of the queue.
+				\item The taxi driver has one minute to answer the request, if he does not make it in time, the system considers it as declined.
+				\item The profile of the passengers and of the taxi drivers are private, no other users or taxi drivers can visualize it.
+				\item  The system constantly updates the position of all drivers of all areas, assigning their position to the correct queue of the area.
+				\item When a user registers, the system does not instantly confirm the creation of a new passenger profile, but a confirmation e-mail is sent to the e-mail address provided by the user.
+				\item When a passenger makes a reservation, the system retains it, then it forwards it to the first taxi driver in the queue of the designated area, ten minutes earlier the specified time.
+				\item Gestione pagamento? C'è qualcosa installato sui taxi che tenga conto dell importo della corsa e lo invia al sistema.
+				\item The taxi driver can not register in the application, but he will be added in the database, providing him his ID.
+				\item There is always an available taxi driver in every area.
 			\end{itemize}
 			
 		\subsection{Future possible implementations}
@@ -153,7 +155,7 @@
 				The system displays the registration form to the user, who needs to fill in the mandatory fields of the form and press the "Submit" button. The user should provide his name, surname, password, e-mail address and telephone number. He can choose whether let the system know about his gender and date of birth or not.
 			
 			\item \textbf{E-mail confirmation.}
-				The system does not instantly confirm the creation of a new passenger profile, a confirmation e-mail is sent to the e-mail address provided by the user. The user can follow the link written in the e-mail and the system creates the new account.
+				The system sends a confirmation e-mail is sent to the e-mail address provided by the user. The user can follow the link written in the e-mail and the system creates the new account.
 				
 			\item \textbf{Look up information about the system.}
 				The system displays a screen where the user can read the data of the application, in particular the description of its functionalities, the contacts of the managers of the system and information about the investors.
@@ -177,10 +179,10 @@
 				
 			\item \textbf{Reserve a taxi.}
 				The system provides a "Make a reservation" button in the passenger area. The passenger presses this button and an input form is displayed, where he should indicate the origin, destination and time of the ride.
-				In the first time the system retains the reservation, then forwards it to the first taxi driver in the queue of the designated area, ten minutes earlier the specified time.
+				
 				
 			\item \textbf{Choose payment method.}
-				The system, after the passenger submits a request or a reservation, displays a panel to him, where he can choose whether to use cash or credit card as payment method. If the passenger decides to pay by cash, the taxi driver will take care of the payment. Instead the passenger needs to add his credit card data only if this is the first time he chooses this payment method, in fact the system adds the credit card data to his profile after the insertion and does not ask anymore. The system deducts the cost of the ride from the credit card only when the ride is over, sending also the receipt of the payment to the e-mail address indicated in the passenger profile.
+				The system, after the passenger submits a request or a reservation, displays a panel to him, where he can choose whether to use cash or credit card as payment method. If the passenger decides to pay by cash, the taxi driver will take care of the payment. Instead the passenger needs to add his credit card data only if this is the first time he chooses this payment method, in fact the system adds the credit card data to his profile after the insertion and does not ask anymore. 
 				
 			\item \textbf{View the profile.}
 				The passenger can see his profile by pressing the "See profile" button. The system displays a screen with his personal data already inserted and his profile picture.
@@ -193,13 +195,12 @@
 				
 			\item \textbf{Change availability.}
 				The taxi driver can switch his state from available to unavailable and vice versa. The system does not consider him in the queue as long as his state is unavailable and, if he is available, the system shows him his queue positioning and keeps him in consideration for the requests of the users.
-				Moreover the taxi driver doesn't need to set his state unavailable when he takes a call, as it is already managed by the system.
 				
 			\item \textbf{Notification of the requests.}
 				The taxi driver can see the requests by a user as notifications in the notification panel. The system sends him a notification with the position of the user, the taxi driver can decide to accept the request or refuse it.
 				
 			\item \textbf{See position in the queue.}
-				The system provides the taxi driver his position in the queue in his area, if his state is set to available, so that he is always able to know if there can be any incoming requests. The system constantly updates (every minute) the position of all drivers of all areas.
+				The system provides the taxi driver his position in the queue in his area, if his state is set to available, so that he is always able to know if there can be any incoming requests.
 				
 		\end{enumerate}
 	\subsection{Non-functional requirements}
@@ -265,17 +266,17 @@
 	\end{itemize}
 	\subsection{Software and tool used}
 		\begin{itemize}
-			\item TeXstudio (http://www.texstudio.org/): to redact and to format this document.
-			\item draw.io (https://www.draw.io/):to create Use Case Diagrams, Sequence Diagrams, Class Diagrams and Statechart Diagrams.
-			\item Balsamiq Mockups(http://balsamiq.com/products/mockups/): to create mockups.
-			\item Alloy Analyzer(http://alloy.mit.edu/alloy/): to create Alloy models.
+			\item TeXstudio (\url{http://www.texstudio.org/}): to redact and to format this document.
+			\item draw.io (\url{https://www.draw.io/}):to create Use Case Diagrams, Sequence Diagrams, Class Diagrams and Statechart Diagrams.
+			\item Balsamiq Mockups (\url{http://balsamiq.com/products/mockups/}): to create mockups.
+			\item Alloy Analyzer (\url{http://alloy.mit.edu/alloy/}): to create Alloy models.
 		\end{itemize}
 	
 	\subsection{Hours of work}
 		Time spent redacting this document:
 		\begin{itemize}
-			\item Cattaneo Michela Gaia: {\raise.17ex\hbox{$\scriptstyle\sim$}}18 hours of work.
-			\item Barlocco Mattia: {\raise.17ex\hbox{$\scriptstyle\sim$}}18 hours of work.
+			\item Cattaneo Michela Gaia: {\raise.17ex\hbox{$\scriptstyle\sim$}}30 hours of work.
+			\item Barlocco Mattia: {\raise.17ex\hbox{$\scriptstyle\sim$}}30 hours of work.
 		\end{itemize}
 
 
