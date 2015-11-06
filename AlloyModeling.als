@@ -136,6 +136,7 @@ check correctAreaTaxiRequest
 
 	--------------------------------	PREDICATES		--------------------------------
 pred show{
+#TaxiDriver=2
 }
 run show
 
