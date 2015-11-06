@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.22)  6 NOV 2015 14:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.22)  6 NOV 2015 17:35
 entering extended mode
 **RASD.tex
 (RASD.tex
@@ -233,7 +233,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.45 ...mberline {6.3}Asserts}{36}{subsection.6.3}
+l.45 ...rline {6.3}Assertions}{37}{subsection.6.3}
                                                    [1])
 \tf@toc=\write4
  [2]
@@ -249,32 +249,32 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 File: WebAppHomepage.png Graphic file (type png)
 
 <use WebAppHomepage.png>
-Package pdftex.def Info: WebAppHomepage.png used on input line 149.
+Package pdftex.def Info: WebAppHomepage.png used on input line 148.
 (pdftex.def)             Requested size: 203.56207pt x 162.60875pt.
  <MobileAppHomepage.png, id=317, 323.2075pt x 642.4pt>
 File: MobileAppHomepage.png Graphic file (type png)
 
 <use MobileAppHomepage.png>
-Package pdftex.def Info: MobileAppHomepage.png used on input line 151.
+Package pdftex.def Info: MobileAppHomepage.png used on input line 150.
 (pdftex.def)             Requested size: 96.963pt x 192.72148pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 147--155
+Underfull \hbox (badness 10000) in paragraph at lines 146--154
 
  []
 
 <WebAppLogin.png, id=318, 678.535pt x 542.025pt>
 File: WebAppLogin.png Graphic file (type png)
  <use WebAppLogin.png>
-Package pdftex.def Info: WebAppLogin.png used on input line 157.
+Package pdftex.def Info: WebAppLogin.png used on input line 156.
 (pdftex.def)             Requested size: 203.56207pt x 162.60875pt.
 
 <MobileAppLogin.png, id=319, 323.2075pt x 642.4pt>
 File: MobileAppLogin.png Graphic file (type png)
  <use MobileAppLogin.png>
-Package pdftex.def Info: MobileAppLogin.png used on input line 159.
+Package pdftex.def Info: MobileAppLogin.png used on input line 158.
 (pdftex.def)             Requested size: 96.963pt x 192.72148pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 155--163
+Underfull \hbox (badness 10000) in paragraph at lines 154--162
 
  []
 
@@ -283,22 +283,22 @@ leAppLogin.png>] <WebAppRegistration.png, id=328, 678.535pt x 542.025pt>
 File: WebAppRegistration.png Graphic file (type png)
 
 <use WebAppRegistration.png>
-Package pdftex.def Info: WebAppRegistration.png used on input line 165.
+Package pdftex.def Info: WebAppRegistration.png used on input line 164.
 (pdftex.def)             Requested size: 203.56207pt x 162.60875pt.
 
 <MobileAppRegistration.png, id=329, 323.2075pt x 642.4pt>
 File: MobileAppRegistration.png Graphic file (type png)
 
 <use MobileAppRegistration.png>
-Package pdftex.def Info: MobileAppRegistration.png used on input line 167.
+Package pdftex.def Info: MobileAppRegistration.png used on input line 166.
 (pdftex.def)             Requested size: 96.963pt x 192.72148pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 163--170
+Underfull \hbox (badness 10000) in paragraph at lines 162--169
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 163--170
+Underfull \hbox (badness 10000) in paragraph at lines 162--169
 
  []
 
@@ -306,27 +306,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 163--170
 File: WebAppMakeAReservation.png Graphic file (type png)
 
 <use WebAppMakeAReservation.png>
-Package pdftex.def Info: WebAppMakeAReservation.png used on input line 172.
+Package pdftex.def Info: WebAppMakeAReservation.png used on input line 171.
 (pdftex.def)             Requested size: 203.56207pt x 162.60875pt.
 
 <MobileAppMakeAReservation.png, id=331, 323.2075pt x 642.4pt>
 File: MobileAppMakeAReservation.png Graphic file (type png)
 
 <use MobileAppMakeAReservation.png>
-Package pdftex.def Info: MobileAppMakeAReservation.png used on input line 174.
+Package pdftex.def Info: MobileAppMakeAReservation.png used on input line 173.
 (pdftex.def)             Requested size: 96.963pt x 192.72148pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 170--177
+Underfull \hbox (badness 10000) in paragraph at lines 169--176
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 170--177
+Underfull \hbox (badness 10000) in paragraph at lines 169--176
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 170--177
+Underfull \hbox (badness 10000) in paragraph at lines 169--176
 
  []
 
@@ -336,22 +336,22 @@ vation.png> <./MobileAppMakeAReservation.png>]
 File: WebAppPaymentMethod.png Graphic file (type png)
 
 <use WebAppPaymentMethod.png>
-Package pdftex.def Info: WebAppPaymentMethod.png used on input line 179.
+Package pdftex.def Info: WebAppPaymentMethod.png used on input line 178.
 (pdftex.def)             Requested size: 203.56207pt x 162.60875pt.
 
 <MobileAppPaymentMethod.png, id=341, 323.2075pt x 642.4pt>
 File: MobileAppPaymentMethod.png Graphic file (type png)
 
 <use MobileAppPaymentMethod.png>
-Package pdftex.def Info: MobileAppPaymentMethod.png used on input line 181.
+Package pdftex.def Info: MobileAppPaymentMethod.png used on input line 180.
 (pdftex.def)             Requested size: 96.963pt x 192.72148pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 177--184
+Underfull \hbox (badness 10000) in paragraph at lines 176--183
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 177--184
+Underfull \hbox (badness 10000) in paragraph at lines 176--183
 
  []
 
@@ -359,27 +359,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 177--184
 File: WebAppPassengerProfile.png Graphic file (type png)
 
 <use WebAppPassengerProfile.png>
-Package pdftex.def Info: WebAppPassengerProfile.png used on input line 186.
+Package pdftex.def Info: WebAppPassengerProfile.png used on input line 185.
 (pdftex.def)             Requested size: 203.56207pt x 162.60875pt.
 
 <MobileAppPassengerProfile.png, id=343, 323.2075pt x 642.4pt>
 File: MobileAppPassengerProfile.png Graphic file (type png)
 
 <use MobileAppPassengerProfile.png>
-Package pdftex.def Info: MobileAppPassengerProfile.png used on input line 188.
+Package pdftex.def Info: MobileAppPassengerProfile.png used on input line 187.
 (pdftex.def)             Requested size: 96.963pt x 192.72148pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 184--191
+Underfull \hbox (badness 10000) in paragraph at lines 183--190
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 184--191
+Underfull \hbox (badness 10000) in paragraph at lines 183--190
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 184--191
+Underfull \hbox (badness 10000) in paragraph at lines 183--190
 
  []
 
@@ -389,17 +389,17 @@ erProfile.png> <./MobileAppPassengerProfile.png>]
 File: WebAppCreditCardData.png Graphic file (type png)
 
 <use WebAppCreditCardData.png>
-Package pdftex.def Info: WebAppCreditCardData.png used on input line 193.
+Package pdftex.def Info: WebAppCreditCardData.png used on input line 192.
 (pdftex.def)             Requested size: 203.56207pt x 162.60875pt.
 
 <MobileAppCreditCardData.png, id=353, 323.2075pt x 642.4pt>
 File: MobileAppCreditCardData.png Graphic file (type png)
 
 <use MobileAppCreditCardData.png>
-Package pdftex.def Info: MobileAppCreditCardData.png used on input line 195.
+Package pdftex.def Info: MobileAppCreditCardData.png used on input line 194.
 (pdftex.def)             Requested size: 96.963pt x 192.72148pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 191--198
+Underfull \hbox (badness 10000) in paragraph at lines 190--197
 
  []
 
@@ -407,22 +407,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 191--198
 File: WebAppWaitForTaxi.png Graphic file (type png)
 
 <use WebAppWaitForTaxi.png>
-Package pdftex.def Info: WebAppWaitForTaxi.png used on input line 200.
+Package pdftex.def Info: WebAppWaitForTaxi.png used on input line 199.
 (pdftex.def)             Requested size: 203.56207pt x 162.60875pt.
 
 <MobileAppWaitForTaxi.png, id=355, 323.2075pt x 642.4pt>
 File: MobileAppWaitForTaxi.png Graphic file (type png)
 
 <use MobileAppWaitForTaxi.png>
-Package pdftex.def Info: MobileAppWaitForTaxi.png used on input line 202.
+Package pdftex.def Info: MobileAppWaitForTaxi.png used on input line 201.
 (pdftex.def)             Requested size: 96.963pt x 192.72148pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 198--205
+Underfull \hbox (badness 10000) in paragraph at lines 197--204
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 198--205
+Underfull \hbox (badness 10000) in paragraph at lines 197--204
 
  []
 
@@ -430,27 +430,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 198--205
 File: WebAppTaxiIsArriving.png Graphic file (type png)
 
 <use WebAppTaxiIsArriving.png>
-Package pdftex.def Info: WebAppTaxiIsArriving.png used on input line 207.
+Package pdftex.def Info: WebAppTaxiIsArriving.png used on input line 206.
 (pdftex.def)             Requested size: 203.56207pt x 162.60875pt.
 
 <MobileAppTaxiIsArriving.png, id=357, 323.2075pt x 642.4pt>
 File: MobileAppTaxiIsArriving.png Graphic file (type png)
 
 <use MobileAppTaxiIsArriving.png>
-Package pdftex.def Info: MobileAppTaxiIsArriving.png used on input line 209.
+Package pdftex.def Info: MobileAppTaxiIsArriving.png used on input line 208.
 (pdftex.def)             Requested size: 96.963pt x 192.72148pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 205--212
+Underfull \hbox (badness 10000) in paragraph at lines 204--211
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 205--212
+Underfull \hbox (badness 10000) in paragraph at lines 204--211
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 205--212
+Underfull \hbox (badness 10000) in paragraph at lines 204--211
 
  []
 
@@ -460,20 +460,20 @@ orTaxi.png> <./MobileAppWaitForTaxi.png>]
 File: MobileAppTaxiDriverArea.png Graphic file (type png)
 
 <use MobileAppTaxiDriverArea.png>
-Package pdftex.def Info: MobileAppTaxiDriverArea.png used on input line 215.
+Package pdftex.def Info: MobileAppTaxiDriverArea.png used on input line 214.
 (pdftex.def)             Requested size: 96.963pt x 192.72148pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 212--219
+Underfull \hbox (badness 10000) in paragraph at lines 211--218
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 212--219
+Underfull \hbox (badness 10000) in paragraph at lines 211--218
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 212--219
+Underfull \hbox (badness 10000) in paragraph at lines 211--218
 
  []
 
@@ -482,382 +482,469 @@ File: MobileAppTaxiDriverNotifications.png Graphic file (type png)
 
 <use MobileAppTaxiDriverNotifications.png>
 Package pdftex.def Info: MobileAppTaxiDriverNotifications.png used on input lin
-e 222.
+e 221.
 (pdftex.def)             Requested size: 96.963pt x 192.72148pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 219--225
+Underfull \hbox (badness 10000) in paragraph at lines 218--224
 
  []
 
 [12 <./WebAppTaxiIsArriving.png> <./MobileAppTaxiIsArriving.png> <./MobileAppTa
-xiDriverArea.png>]
+xiDriverArea.png>] [13 <./MobileAppTaxiDriverNotifications.png>]
 Overfull \hbox (3.97293pt too wide) in paragraph at lines 241--242
 []\OT1/cmr/m/n/10 Source: http://www.oracle.com/technetwork/java/javaee/tech/in
 dex.html 
  []
 
-[13 <./MobileAppTaxiDriverNotifications.png>] [14] [15] [16] [17] [18]
-<UseCase2.jpg, id=406, 758.835pt x 1118.1775pt>
+[14] [15] [16] [17] [18] [19] <UseCase2.jpg, id=410, 758.835pt x 1118.1775pt>
 File: UseCase2.jpg Graphic file (type jpg)
- <use UseCase2.jpg>
-Package pdftex.def Info: UseCase2.jpg used on input line 352.
-(pdftex.def)             Requested size: 303.52863pt x 447.26308pt.
- [19 <./UseCase2.jpg>] <classDiagram.png, id=411, 775.89874pt x 736.7525pt>
-File: classDiagram.png Graphic file (type png)
 
-<use classDiagram.png>
-Package pdftex.def Info: classDiagram.png used on input line 360.
+<use UseCase2.jpg>
+Package pdftex.def Info: UseCase2.jpg used on input line 353.
+(pdftex.def)             Requested size: 303.52863pt x 447.26308pt.
+ [20 <./UseCase2.jpg>]
+<classDiagram.png, id=415, 775.89874pt x 736.7525pt>
+File: classDiagram.png Graphic file (type png)
+ <use classDiagram.png>
+Package pdftex.def Info: classDiagram.png used on input line 361.
 (pdftex.def)             Requested size: 426.74562pt x 405.21513pt.
 
-Overfull \hbox (81.74562pt too wide) in paragraph at lines 360--361
+Overfull \hbox (81.74562pt too wide) in paragraph at lines 361--362
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 357--362
+Underfull \hbox (badness 10000) in paragraph at lines 358--363
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 357--362
+Underfull \hbox (badness 10000) in paragraph at lines 358--363
 
  []
 
-[20 <./classDiagram.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 365--367
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 365--367
+[21 <./classDiagram.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 366--368
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 365--367
-
- []
-
-[21] <SequenceSignup.jpg, id=421, 543.53062pt x 364.36125pt>
-File: SequenceSignup.jpg Graphic file (type jpg)
-
-<use SequenceSignup.jpg>
-Package pdftex.def Info: SequenceSignup.jpg used on input line 385.
-(pdftex.def)             Requested size: 385.90944pt x 258.69829pt.
-
-Overfull \hbox (40.90944pt too wide) in paragraph at lines 385--386
- [][] 
- []
-
-[22 <./SequenceSignup.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 388--390
+Underfull \hbox (badness 10000) in paragraph at lines 366--368
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 388--390
+Underfull \hbox (badness 10000) in paragraph at lines 366--368
 
  []
 
+<UseCaseSignup.jpg, id=421, 588.1975pt x 92.345pt>
+File: UseCaseSignup.jpg Graphic file (type jpg)
+ <use UseCaseSignup.jpg>
+Package pdftex.def Info: UseCaseSignup.jpg used on input line 384.
+(pdftex.def)             Requested size: 417.62314pt x 65.56538pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 388--390
-
+Overfull \hbox (72.62314pt too wide) in paragraph at lines 384--385
+[][] 
  []
 
 
-Overfull \hbox (22.03825pt too wide) in paragraph at lines 392--403
+Overfull \hbox (22.03825pt too wide) in paragraph at lines 371--386
  [] 
  []
 
-<UseCaseLogin.jpg, id=426, 588.1975pt x 174.6525pt>
-File: UseCaseLogin.jpg Graphic file (type jpg)
- <use UseCaseLogin.jpg>
-Package pdftex.def Info: UseCaseLogin.jpg used on input line 406.
-(pdftex.def)             Requested size: 352.92122pt x 104.7923pt.
+[22 <./UseCaseSignup.jpg>]
+<SequenceSignup.jpg, id=426, 543.53062pt x 364.36125pt>
+File: SequenceSignup.jpg Graphic file (type jpg)
 
-Overfull \hbox (7.92122pt too wide) in paragraph at lines 406--407
+<use SequenceSignup.jpg>
+Package pdftex.def Info: SequenceSignup.jpg used on input line 392.
+(pdftex.def)             Requested size: 385.90944pt x 258.69829pt.
+
+Overfull \hbox (40.90944pt too wide) in paragraph at lines 392--393
  [][] 
  []
 
-[23 <./UseCaseLogin.jpg>] <SequenceLogin.jpg, id=431, 535.2497pt x 356.0803pt>
+[23 <./SequenceSignup.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 395--397
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 395--397
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 395--397
+
+ []
+
+<UseCaseLogin.jpg, id=431, 588.1975pt x 174.6525pt>
+File: UseCaseLogin.jpg Graphic file (type jpg)
+ <use UseCaseLogin.jpg>
+Package pdftex.def Info: UseCaseLogin.jpg used on input line 413.
+(pdftex.def)             Requested size: 352.92122pt x 104.7923pt.
+
+Overfull \hbox (7.92122pt too wide) in paragraph at lines 413--414
+ [][] 
+ []
+
+
+Overfull \hbox (22.03825pt too wide) in paragraph at lines 399--415
+ [] 
+ []
+
+[24 <./UseCaseLogin.jpg>] <SequenceLogin.jpg, id=437, 535.2497pt x 356.0803pt>
 File: SequenceLogin.jpg Graphic file (type jpg)
 
 <use SequenceLogin.jpg>
-Package pdftex.def Info: SequenceLogin.jpg used on input line 414.
+Package pdftex.def Info: SequenceLogin.jpg used on input line 421.
 (pdftex.def)             Requested size: 401.43628pt x 267.05957pt.
 
-Overfull \hbox (56.43628pt too wide) in paragraph at lines 414--415
+Overfull \hbox (56.43628pt too wide) in paragraph at lines 421--422
  [][] 
  []
 
-[24 <./SequenceLogin.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 417--419
+[25 <./SequenceLogin.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 424--426
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 417--419
+Underfull \hbox (badness 10000) in paragraph at lines 424--426
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 417--419
+Underfull \hbox (badness 10000) in paragraph at lines 424--426
 
  []
 
-[25] <SequenceProfile.jpg, id=441, 395.97937pt x 458.46281pt>
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ú in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ù in font cmr10!
+<UseCaseProfile.jpg, id=442, 334.24875pt x 91.34125pt>
+File: UseCaseProfile.jpg Graphic file (type jpg)
+
+<use UseCaseProfile.jpg>
+Package pdftex.def Info: UseCaseProfile.jpg used on input line 441.
+(pdftex.def)             Requested size: 267.39935pt x 73.07309pt.
+
+Overfull \hbox (22.03825pt too wide) in paragraph at lines 428--443
+ [] 
+ []
+
+[26 <./UseCaseProfile.jpg>]
+<SequenceProfile.jpg, id=447, 395.97937pt x 458.46281pt>
 File: SequenceProfile.jpg Graphic file (type jpg)
 
 <use SequenceProfile.jpg>
-Package pdftex.def Info: SequenceProfile.jpg used on input line 436.
+Package pdftex.def Info: SequenceProfile.jpg used on input line 449.
 (pdftex.def)             Requested size: 384.09953pt x 444.70839pt.
 
-Overfull \hbox (39.09953pt too wide) in paragraph at lines 436--437
+Overfull \hbox (39.09953pt too wide) in paragraph at lines 449--450
  [][] 
  []
 
-[26 <./SequenceProfile.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 439--441
+[27 <./SequenceProfile.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 452--454
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 439--441
+Underfull \hbox (badness 10000) in paragraph at lines 452--454
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 439--441
+Underfull \hbox (badness 10000) in paragraph at lines 452--454
 
  []
 
-[27] <SequenceRequest.jpg, id=450, 457.71pt x 374.14781pt>
+<UseCaseRequest.jpg, id=452, 697.60625pt x 376.40625pt>
+File: UseCaseRequest.jpg Graphic file (type jpg)
+
+<use UseCaseRequest.jpg>
+Package pdftex.def Info: UseCaseRequest.jpg used on input line 471.
+(pdftex.def)             Requested size: 418.56697pt x 225.84547pt.
+
+Overfull \hbox (73.56697pt too wide) in paragraph at lines 471--472
+ [][] 
+ []
+
+
+Overfull \hbox (22.03825pt too wide) in paragraph at lines 456--473
+ [] 
+ []
+
+[28 <./UseCaseRequest.jpg>]
+<SequenceRequest.jpg, id=457, 457.71pt x 374.14781pt>
 File: SequenceRequest.jpg Graphic file (type jpg)
 
 <use SequenceRequest.jpg>
-Package pdftex.def Info: SequenceRequest.jpg used on input line 458.
+Package pdftex.def Info: SequenceRequest.jpg used on input line 479.
 (pdftex.def)             Requested size: 411.9352pt x 336.7299pt.
 
-Overfull \hbox (66.9352pt too wide) in paragraph at lines 458--459
+Overfull \hbox (66.9352pt too wide) in paragraph at lines 479--480
  [][] 
  []
 
-[28 <./SequenceRequest.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 461--463
+[29 <./SequenceRequest.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 482--484
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 461--463
+Underfull \hbox (badness 10000) in paragraph at lines 482--484
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 461--463
+Underfull \hbox (badness 10000) in paragraph at lines 482--484
 
  []
 
-[29] <SequenceReserve.jpg, id=459, 497.60907pt x 510.40688pt>
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ú in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ù in font cmr10!
+<UseCaseReserve.jpg, id=462, 567.11874pt x 406.51875pt>
+File: UseCaseReserve.jpg Graphic file (type jpg)
+
+<use UseCaseReserve.jpg>
+Package pdftex.def Info: UseCaseReserve.jpg used on input line 502.
+(pdftex.def)             Requested size: 340.27386pt x 243.91312pt.
+
+Overfull \hbox (22.03825pt too wide) in paragraph at lines 486--504
+ [] 
+ []
+
+[30 <./UseCaseReserve.jpg>]
+<SequenceReserve.jpg, id=468, 497.60907pt x 510.40688pt>
 File: SequenceReserve.jpg Graphic file (type jpg)
 
 <use SequenceReserve.jpg>
-Package pdftex.def Info: SequenceReserve.jpg used on input line 480.
+Package pdftex.def Info: SequenceReserve.jpg used on input line 510.
 (pdftex.def)             Requested size: 398.08778pt x 408.32605pt.
 
-Overfull \hbox (53.08778pt too wide) in paragraph at lines 480--481
+Overfull \hbox (53.08778pt too wide) in paragraph at lines 510--511
  [][] 
  []
 
-[30 <./SequenceReserve.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 483--485
+[31 <./SequenceReserve.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 513--515
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 483--485
+Underfull \hbox (badness 10000) in paragraph at lines 513--515
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 483--485
+Underfull \hbox (badness 10000) in paragraph at lines 513--515
 
  []
 
-[31] <SequenceTaxiArea.jpg, id=469, 310.91156pt x 236.38312pt>
+<UseCaseTaxiArea.jpg, id=473, 567.11874pt x 183.68625pt>
+File: UseCaseTaxiArea.jpg Graphic file (type jpg)
+
+<use UseCaseTaxiArea.jpg>
+Package pdftex.def Info: UseCaseTaxiArea.jpg used on input line 529.
+(pdftex.def)             Requested size: 396.98041pt x 128.57947pt.
+
+Overfull \hbox (51.98041pt too wide) in paragraph at lines 529--530
+ [][] 
+ []
+
+
+Overfull \hbox (22.03825pt too wide) in paragraph at lines 517--531
+ [] 
+ []
+
+[32 <./UseCaseTaxiArea.jpg>]
+<SequenceTaxiArea.jpg, id=478, 310.91156pt x 236.38312pt>
 File: SequenceTaxiArea.jpg Graphic file (type jpg)
 
 <use SequenceTaxiArea.jpg>
-Package pdftex.def Info: SequenceTaxiArea.jpg used on input line 502.
+Package pdftex.def Info: SequenceTaxiArea.jpg used on input line 537.
 (pdftex.def)             Requested size: 310.91078pt x 236.38254pt.
- [32 <./SequenceTaxiArea.jpg>]
-<stateChartDiagram.jpg, id=474, 806.01125pt x 677.53125pt>
+ [33 <./SequenceTaxiArea.jpg>]
+<stateChartDiagram.jpg, id=483, 806.01125pt x 677.53125pt>
 File: stateChartDiagram.jpg Graphic file (type jpg)
 
 <use stateChartDiagram.jpg>
-Package pdftex.def Info: stateChartDiagram.jpg used on input line 511.
+Package pdftex.def Info: stateChartDiagram.jpg used on input line 546.
 (pdftex.def)             Requested size: 403.00464pt x 338.76479pt.
 
-Overfull \hbox (58.00464pt too wide) in paragraph at lines 511--512
+Overfull \hbox (58.00464pt too wide) in paragraph at lines 546--547
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 507--513
+Underfull \hbox (badness 10000) in paragraph at lines 542--548
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 507--513
+Underfull \hbox (badness 10000) in paragraph at lines 542--548
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 507--513
+Underfull \hbox (badness 10000) in paragraph at lines 542--548
 
  []
 
-[33 <./stateChartDiagram.jpg>]
-<signatures.jpg, id=479, 387.69844pt x 543.53062pt>
+[34 <./stateChartDiagram.jpg>]
+<signatures.jpg, id=488, 387.69844pt x 543.53062pt>
 File: signatures.jpg Graphic file (type jpg)
  <use signatures.jpg>
-Package pdftex.def Info: signatures.jpg used on input line 520.
+Package pdftex.def Info: signatures.jpg used on input line 555.
 (pdftex.def)             Requested size: 310.15916pt x 434.82507pt.
 
-[34 <./signatures.jpg>] <facts1.jpg, id=484, 472.01344pt x 511.9125pt>
+[35 <./signatures.jpg>] <facts1.jpg, id=493, 472.01344pt x 511.9125pt>
 File: facts1.jpg Graphic file (type jpg)
 
 <use facts1.jpg>
-Package pdftex.def Info: facts1.jpg used on input line 525.
+Package pdftex.def Info: facts1.jpg used on input line 560.
 (pdftex.def)             Requested size: 264.32571pt x 286.66905pt.
- <facts2.jpg, id=485, 478.03593pt x 305.64188pt>
+ <facts2.jpg, id=494, 478.03593pt x 305.64188pt>
 File: facts2.jpg Graphic file (type jpg)
 
 <use facts2.jpg>
-Package pdftex.def Info: facts2.jpg used on input line 527.
+Package pdftex.def Info: facts2.jpg used on input line 562.
 (pdftex.def)             Requested size: 267.69829pt x 171.15826pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 525--528
+Underfull \hbox (badness 10000) in paragraph at lines 560--563
 [][]
  []
 
-[35 <./facts1.jpg> <./facts2.jpg>]
-<assertions.jpg, id=490, 461.47406pt x 276.28218pt>
+[36 <./facts1.jpg> <./facts2.jpg>]
+<assertions.jpg, id=500, 461.47406pt x 276.28218pt>
 File: assertions.jpg Graphic file (type jpg)
  <use assertions.jpg>
-Package pdftex.def Info: assertions.jpg used on input line 532.
+Package pdftex.def Info: assertions.jpg used on input line 567.
 (pdftex.def)             Requested size: 369.17973pt x 221.02603pt.
 
-Overfull \hbox (24.17973pt too wide) in paragraph at lines 532--533
+Overfull \hbox (24.17973pt too wide) in paragraph at lines 567--568
 [][] 
  []
 
-<predicates.jpg, id=491, 421.575pt x 130.23656pt>
+<predicates.jpg, id=501, 405.76593pt x 145.29282pt>
 File: predicates.jpg Graphic file (type jpg)
  <use predicates.jpg>
-Package pdftex.def Info: predicates.jpg used on input line 536.
-(pdftex.def)             Requested size: 337.26045pt x 104.18938pt.
+Package pdftex.def Info: predicates.jpg used on input line 572.
+(pdftex.def)             Requested size: 324.61317pt x 116.23439pt.
 
-<results.jpg, id=492, 388.45125pt x 83.5622pt>
+[37 <./assertions.jpg> <./predicates.jpg>]
+<results.jpg, id=506, 388.45125pt x 83.5622pt>
 File: results.jpg Graphic file (type jpg)
  <use results.jpg>
-Package pdftex.def Info: results.jpg used on input line 540.
+Package pdftex.def Info: results.jpg used on input line 577.
 (pdftex.def)             Requested size: 388.45029pt x 83.56198pt.
 
-Overfull \hbox (43.45029pt too wide) in paragraph at lines 540--541
+Overfull \hbox (43.45029pt too wide) in paragraph at lines 577--578
 [][] 
  []
 
-[36 <./assertions.jpg> <./predicates.jpg> <./results.jpg>]
-<show.jpg, id=498, 571.38469pt x 358.33875pt>
+[38 <./results.jpg>] <show.jpg, id=511, 571.38469pt x 358.33875pt>
 File: show.jpg Graphic file (type jpg)
- <use show.jpg>
-Package pdftex.def Info: show.jpg used on input line 549.
+
+<use show.jpg>
+Package pdftex.def Info: show.jpg used on input line 586.
 (pdftex.def)             Requested size: 399.96655pt x 250.83542pt.
 
-Overfull \hbox (54.96655pt too wide) in paragraph at lines 549--550
+Overfull \hbox (54.96655pt too wide) in paragraph at lines 586--587
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 545--551
+Underfull \hbox (badness 10000) in paragraph at lines 582--588
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 545--551
+Underfull \hbox (badness 10000) in paragraph at lines 582--588
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 545--551
+Underfull \hbox (badness 10000) in paragraph at lines 582--588
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 545--551
+Underfull \hbox (badness 10000) in paragraph at lines 582--588
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 545--551
+Underfull \hbox (badness 10000) in paragraph at lines 582--588
 
  []
 
-[37 <./show.jpg>] <makeRequest.jpg, id=503, 702.37407pt x 386.94562pt>
+[39 <./show.jpg>] <makeRequest.jpg, id=516, 702.37407pt x 386.94562pt>
 File: makeRequest.jpg Graphic file (type jpg)
 
 <use makeRequest.jpg>
-Package pdftex.def Info: makeRequest.jpg used on input line 557.
+Package pdftex.def Info: makeRequest.jpg used on input line 594.
 (pdftex.def)             Requested size: 421.42769pt x 232.16916pt.
 
-Overfull \hbox (76.42769pt too wide) in paragraph at lines 557--558
+Overfull \hbox (76.42769pt too wide) in paragraph at lines 594--595
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 553--559
+Underfull \hbox (badness 10000) in paragraph at lines 590--596
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 553--559
+Underfull \hbox (badness 10000) in paragraph at lines 590--596
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 553--559
+Underfull \hbox (badness 10000) in paragraph at lines 590--596
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 553--559
+Underfull \hbox (badness 10000) in paragraph at lines 590--596
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 553--559
+Underfull \hbox (badness 10000) in paragraph at lines 590--596
 
  []
 
-[38 <./makeRequest.jpg>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 587.
- [39]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 587.
+[40 <./makeRequest.jpg>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 624.
+ [41]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 624.
  (RASD.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 587.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 587.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 624.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 624.
 Package rerunfilecheck Info: File `RASD.out' has not changed.
-(rerunfilecheck)             Checksum: 070FB858E2F3A53EED1A5118D47E096F;3775.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 587.
+(rerunfilecheck)             Checksum: 0C57BCE71258AEAD4BCFB8208110A5FB;3778.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 624.
  ) 
 Here is how much of TeX's memory you used:
- 5311 strings out of 493673
- 79769 string characters out of 3143143
+ 5338 strings out of 493673
+ 80328 string characters out of 3143143
  158983 words of memory out of 3000000
- 8516 multiletter control sequences out of 15000+200000
+ 8536 multiletter control sequences out of 15000+200000
  8370 words of font info for 30 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 29i,8n,28p,741b,389s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 29i,8n,28p,753b,389s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeK/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/
 Program Files (x86)/MiKTeK/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Progra
 m Files (x86)/MiKTeK/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files
@@ -866,9 +953,9 @@ MiKTeK/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files (x86)/MiKTeK/
 fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeK/fonts/
 type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files (x86)/MiKTeK/fonts/type1/p
 ublic/amsfonts/cm/cmtt10.pfb>
-Output written on RASD.pdf (40 pages, 2736562 bytes).
+Output written on RASD.pdf (42 pages, 2732473 bytes).
 PDF statistics:
- 569 PDF objects out of 1000 (max. 8388607)
- 99 named destinations out of 1000 (max. 500000)
- 628 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 582 PDF objects out of 1000 (max. 8388607)
+ 101 named destinations out of 1000 (max. 500000)
+ 653 words of extra memory for PDF output out of 10000 (max. 10000000)
 

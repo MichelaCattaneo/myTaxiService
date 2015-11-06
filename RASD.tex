@@ -8,7 +8,7 @@
 	\centering
 	\includegraphics[scale=0.35]{logo-polimi.png}
 \end{figure}
-\title{\textbf{myTaxiService}\\\textbf{R}equirement \textbf{A}nalysis and \textbf{S}pecification \textbf{D}ocument\\
+\title{\textbf{myTaxiService}\\\textbf{R}equirement \textbf{A}nalysis and \textbf{S}pecification \textbf{D}ocument\\ A.Y. 2015/2016\\
 	Politecnico di Milano}	
 \author{Cattaneo Michela Gaia, matr. 791685\\Barlocco Mattia, matr. 792735 }
 \date{November 6, 2015}
@@ -21,23 +21,23 @@
 \section{Introduction}
 	
 	\subsection{Purpose}
-		This document represent the Requirement Analysis and Specification Document (RASD). This document aims at describing the system in terms of functional and non-functional requirements, modeling the system according to the real needs of the customer and showing the constraints and the limit of the software. This document serves as a contractual basis between the customer and the developer.
+		This document represents the Requirement Analysis and Specification Document (RASD). The aim of this document is to describe the system in terms of functional and non-functional requirements, modeling the system according to the real needs of the customer and showing the constraints and the limit of the software. This document serves as a contractual basis between the customer and the developer.
 	
 	\subsection{Actual system}
 		The government of a large city has commissioned a system that is able to manage and optimize the taxi service.
 	
 	\subsection{Scope}
-		The system aims at simplifying the passengers access and guaranteeing a fair management of taxi queues.
+		The system aims at simplifying the access of the passengers and guaranteeing a fair management of taxi queues.
 		In order to manage the queue optimization, the city is divided in zones, each one associated to a taxi queue, and the system computes the taxi distribution basing on their GPSs information.	\\	
-		The system allows the user of the application to request a taxi in an area of the city, even without logging in. As soon as a taxi driver takes the request, the application notifies the user of the ID of the incoming taxi and the waiting time. In addition, the user can register, by filling in a form, and make reservations: he only needs to indicate the origin and destination of the ride and the exact time (at least 2 hours in advance) and the system reports that a taxi will be there to pick him up.\\
-		On the other hand, the taxi driver always has to notify his availability and let the system know if he is going to take a certain request by a passenger. If the driver is not able to confirm, the system will forward the request to the second in queue and move this taxi driver in the last position of the queue.
+		The system allows the user of the application to request a taxi in an area of the city, even without logging in, guaranteeing a fast way to access the service. As soon as a taxi driver takes the request, the application notifies the user of the ID of the incoming taxi and the waiting time. The user can also register, by filling in a form, and exploit additional functionalities such as choose the payment method he prefers or make reservations: he only needs to indicate the origin and destination of the ride and the exact time. \\
+		On the other hand, the taxi driver always has to notify his availability and let the system know if he is going to take a certain request by a passenger. If the driver is not able to confirm, the system will forward the request to the second in the queue and will move this taxi driver in the last position of the queue.
 	
 	\subsection{Actors}
 		The actors participating in the system are:
 	\begin{itemize}
-		\item Visitor: a person who can see the home page of the application, he can register, look up for information about the system and request a taxi, after giving name and phone number. 
-		\item Passenger: a regular registered user who wants to use the application in order to request a taxi in a specific zone or make a reservation for a given time.
-		\item Taxi Driver: a registered user who logged in with a specific ID. This area is reserved to taxi drivers who needs to use the application in order to inform the system of their availability or about what request they are going to take care of.
+		\item Visitor: a person who can see the home page of the application, he can register, look up for information about the system and request a taxi, after providing e-mail address and phone number. 
+		\item Passenger: a regular registered user who wants to use the application in order to request a taxi in a specific area or make a reservation for a given time.
+		\item Taxi Driver: a registered user who logged in with a specific ID, provided by the system. This area is reserved to taxi drivers who needs to use the application in order to inform the system of their availability or about what request they are going to take care of.
 	\end{itemize}
 	
 	\subsection{Goals}
@@ -51,15 +51,15 @@
 	A passenger should be able to:
 	\begin{itemize}
 		\item Log into the system.
-		\item Reserve a taxi by specifying the origin and the destination of the ride, at least two hour in advance.
-		\item Payment method.
+		\item Reserve a taxi.
+		\item Choose the payment method.
 	\end{itemize}
 	The taxi driver should be logged in with a specific ID and should be able to:
 	\begin{itemize}
 		\item Log into the system.
 		\item Change his state from available to unavailable and vice versa.
 		\item Visualize the queue of his area.
-		\item Answer positively or negatively to the request that the system forwards to him.
+		\item Accept or decline the request that the system forwards to him.
 		\item Visualize the position of the user he needs to reach.
 	\end{itemize}
 
@@ -81,26 +81,27 @@
 \newpage
 \section{Overall Description}
 	\subsection{Product perspective}
-	The product consists in a web application and a mobile app both based on the web. There is a server part which manages all the requests of the users along with the answers and the availability of the taxi drivers, computing their zone distribution. There are several clients (visitors, passengers or taxi drivers) interacting with the server by using a graphical user interface, but there is no implementation of interfaces for administration, in fact the application is only user-based.
+	The product consists in a web application and a mobile app both based on the web. The web application is used only by the users, the mobile app instead is used also by taxi drivers.\\
+	There is a server which manages all the requests of the users along with the answers and the availability of the taxi drivers, computing their area distribution. There are several clients (visitors, passengers or taxi drivers) interacting with the server by using a graphical user interface, but there is no implementation of interfaces for administration. In fact, the application is only user-based.
 	
 	\subsection{User characteristics}
-	The user can be a person who wants to request a taxi or access the application in order to use additional functionalities, such as make a reservation or easily request a taxi without having to give his information every time he exploits the service.
-	The application is used also by the taxi drivers who needs to receive the requests of the customers and to interact with the system, responding to the calls and updating their availability and their GPS position .
-	The user must have access to the Internet.
+	The user can be a person who wants to request a taxi or access the system in order to use additional functionalities, such as make a reservation or easily request a taxi without having to give his information every time he exploits the service.
+	The mobile app is used also by the taxi drivers who needs to receive the requests of the customers and to interact with the system, answering to the calls and updating their availability and their GPS position .
 	
 	\subsection{Constraints}
 		\subsubsection{Regulatory policies}
-		The system must ensure the privacy of the users, without publishing their personal information. 
+		The system must ensure the privacy of the users, without publishing their personal information.
 		\subsubsection{Hardware limitations}
-		The system doesn't work if the smartphone is not powerful enough or it has not the GPS detector.
+		The system requires the users to use a device provided with a GPS detector and an Internet connection.
 		\subsubsection{Interfaces to other applications}
-		The system interfaces with two applications:
+		The system interfaces with three applications:
 		\begin{itemize}
-			\item Google maps to determine the area of a taxi or the position of a user.
+			\item Google Maps in order to determine the position of the taxi drivers and the users.
 			\item Facebook if a user wants to sign in with his Facebook account.
+			\item Google+ if a user wants to sign in with his Google+ account.
 		\end{itemize}
 		\subsubsection{Parallel operations}
-			The system supports parallel operations of different clients accessing the application and making requests or reservations of taxis.
+			The system supports parallel operations of different clients, who access the application and make requests or reservations of taxis.
 		
 		\subsubsection{Documents related}
 			\begin{itemize}
@@ -129,14 +130,12 @@
 			\end{itemize}
 			
 		\subsection{Future possible implementations}
-			The application must be open to future implementations. 
-			Future possible implementations are:
+			The application is open to future implementations, which could be:
 			\begin{itemize}
 				\item Taxi sharing: this is an additional functionality that allows different passengers to share the taxi with other passengers. The system must be notified that the passenger wants to use the taxi sharing option and it will ask him to indicate the destination of this rides. When it is all settled, the system is able to check if there are other persons in the same area that wants to reach the same destination, informing the taxi driver and the passengers. This can be a convenient solution, as the cost of the ride would be equally shared among the passengers.
 				\item Price transparency: this is an additional functionality that allows the passenger to calculate the price of the ride in advance, inserting its origin and destination.
-				\item Meet the driver: this is an additional functionality that lets the passenger know which taxi driver has answered his request. The system will send the passenger the profile of the designated driver with his name and data, so that the he would be able to recognize him or even call or text him if necessary.
+				\item Meet the driver: this is an additional functionality that lets the passenger know which taxi driver has answered his request. The system will send the profile of the designated driver to the passenger, along with his name and data, so that the customer would be able to recognize him or even call or text him if necessary.
 				\item Give us feedback: this is an additional functionality that allows the passenger to rate the driver after the ride and leave comments about it.
-				\item Easy to pay: this is an additional functionality that allows the passenger to automatically pay with the credit card associated with his account. The system will send him an e-mail with the receipt of payment.
 			\end{itemize}
 
 \newpage
@@ -144,7 +143,7 @@
 	\subsection{External interfaces requirements}
 		\subsubsection{User interfaces}
 			\begin{itemize}
-				\item \textbf{Home page} This mockup represents the home page of the mobile application and of the web app, where a user can request a taxi or have access to the log in or registration page, or look up information about the service.
+				\item \textbf{Home page} This mockup represents the home page of the mobile app and of the web application, where a user can request a taxi or have access to the log in or registration page, or look up information about the service.
 				\begin{figure}[h]
 					\includegraphics[scale=0.3]{WebAppHomepage.png}%
 					\qquad\qquad
@@ -152,7 +151,7 @@
 				
 				\end{figure}
 				\\
-				\item \textbf{Log in} This mockup represents the log in page of the mobile application and of the web app, where a user can log into the application filling in the form or accessing with the Facebook or Google+ account. The taxi drivers can use only the mobile application.
+				\item \textbf{Log in} This mockup represents the log in page of the mobile app and of the web application, where a user can log into the application filling in the form or accessing with the Facebook or Google+ account. The taxi drivers can use only the mobile application.
 				\begin{figure}[h]
 					\includegraphics[scale=0.3]{WebAppLogin.png}%
 					\qquad\qquad
@@ -160,49 +159,49 @@
 					
 				\end{figure}
 				\\
-				\item \textbf{Registration} This mockup represents the sign up page of the mobile application and of the web app, where a user can register into the application filling in the form with his personal data.\\
+				\item \textbf{Registration} This mockup represents the sign up page of the mobile app and of the web application, where a user can register, filling in the form with his personal data.\\
 				\begin{figure}[h]
 					\includegraphics[scale=0.3]{WebAppRegistration.png}%
 					\qquad\qquad
 					\includegraphics[scale=0.3]{MobileAppRegistration.png}
 				\end{figure}
 				\\ 	\\
-				\item \textbf{Passenger Area} This mockup represents the passenger area of the mobile application and of the web app, where a passenger can request or reserve a taxi or access to his profile.\\
+				\item \textbf{Passenger Area} This mockup represents the passenger area of the mobile app and of the web application, where a passenger can request or reserve a taxi or access to his profile.\\
 				\begin{figure}[h]
 					\includegraphics[scale=0.3]{WebAppMakeAReservation.png}%
 					\qquad\qquad
 					\includegraphics[scale=0.3]{MobileAppMakeAReservation.png}
 				\end{figure}
 				\\ \\ \\
-				\item \textbf{Payment Method} This mockup represents the passenger area of the mobile application and of the web app, where a passenger can choose the payment method of his request or reservation.\\
+				\item \textbf{Payment Method} This mockup represents the passenger area of the mobile app and of the web application, where a passenger can choose the payment method of his request or reservation.\\
 				\begin{figure}[h]
 					\includegraphics[scale=0.3]{WebAppPaymentMethod.png}%
 					\qquad\qquad
 					\includegraphics[scale=0.3]{MobileAppPaymentMethod.png}
 				\end{figure}
 				\\ \\
-				\item \textbf{Passenger Profile} This mockup represents the passenger profile page of the mobile application and of the web app, where a passenger can see or modify his profile.\\
+				\item \textbf{Passenger Profile} This mockup represents the passenger profile mobile app and of the web application, where a passenger can see or modify his profile.\\
 				\begin{figure}[h]
 					\includegraphics[scale=0.3]{WebAppPassengerProfile.png}%
 					\qquad\qquad
 					\includegraphics[scale=0.3]{MobileAppPassengerProfile.png}
 				\end{figure}
 				\\ \\ \\ 
-				\item \textbf{Credit Card Data} This mockup represents the passenger area of the mobile application and of the web app, where a passenger can insert his credit card data.\\
+				\item \textbf{Credit Card Data} This mockup represents the passenger area of mobile app and of the web application, where a passenger can insert his credit card data.\\
 				\begin{figure}[h]
 					\includegraphics[scale=0.3]{WebAppCreditCardData.png}%
 					\qquad\qquad
 					\includegraphics[scale=0.3]{MobileAppCreditCardData.png}
 				\end{figure}
 				\\
-				\item \textbf{Loading Screen} This mockup represents the passenger area of the mobile application and of the web app, where a passenger waits for his request to be taken in consideration and can cancel it.\\
+				\item \textbf{Loading Screen} This mockup represents the passenger area of the mobile app and of the web application, where a passenger waits for his request to be taken in consideration and can cancel it.\\
 				\begin{figure}[h]
 					\includegraphics[scale=0.3]{WebAppWaitForTaxi.png}%
 					\qquad\qquad
 					\includegraphics[scale=0.3]{MobileAppWaitForTaxi.png}
 				\end{figure}
 				\\ \\ 
-				\item \textbf{Waiting Time} This mockup represents the passenger area of the mobile application and of the web app, where a passenger see how much time he has to wait until the taxi arrival.\\
+				\item \textbf{Waiting Time} This mockup represents the passenger area of the mobile app and of the web application, where a passenger see how much time he has to wait until the taxi arrival.\\
 				\begin{figure}[h]
 					\includegraphics[scale=0.3]{WebAppTaxiIsArriving.png}%
 					\qquad\qquad
@@ -223,9 +222,10 @@
 				\end{figure}
 				\\
 			\end{itemize}
+\newpage
 		\subsubsection{API interfaces}
 			The system exploits the Google Map APIs in order to track the movements of the taxi drivers and to get the position of the users that request a service. It is necessary to be always aware of the taxi position in the areas and to make sure that the system is able to calculate the exact time the user has to wait until the taxi arrival. 
-			Facebook and Google+ APIs are used to allow the users to log in in the application without filling in any registration form or providing any further personal information.
+			Facebook and Google+ APIs are used to allow the users to log into the application without filling in any registration form or providing any further personal information.
 			
 		\subsubsection{Hardware interfaces}
 			This project does not support any hardware interfaces.
@@ -290,12 +290,12 @@
 			\item \textbf{Reserve a taxi.}
 				The system provides a "Make a reservation" button in the passenger area. The passenger presses this button and an input form is displayed, where he should indicate the origin, destination and time of the ride.
 				
-				
+				\newpage
 			\item \textbf{Choose payment method.}
 				The system, after the passenger submits a request or a reservation, displays a panel to him, where he can choose whether to use cash or credit card as payment method. If the passenger decides to pay by cash, the taxi driver will take care of the payment. Instead the passenger needs to add his credit card data only if this is the first time he chooses this payment method, in fact the system adds the credit card data to his profile after the insertion and does not ask anymore. 
 				
 			\item \textbf{View the profile.}
-				The passenger can see his profile by pressing the "See profile" button. The system displays a screen with his personal data already inserted and his profile picture.
+				The passenger or the taxi driver can see his profile by pressing the "See profile" button. The system displays a screen with his personal data already inserted and his profile picture.
 				
 			\item \textbf{Edit the profile.}
 				 The passenger can edit his profile by pressing the "Edit profile" button and the system displays a screen where he can change his name, surname, e-mail address, password, phone number and profile picture. He can edit or add his gender, date of birth and credit card data. In case the passenger modifies his e-mail address, the system will send an e-mail confirmation.
@@ -313,9 +313,10 @@
 				The system provides the taxi driver his position in the queue in his area, if his state is set to available, so that he is always able to know if there can be any incoming requests.
 				
 		\end{itemize}
+\newpage
 	\subsection{Non-functional requirements}
 		\subsubsection{Performance requirements}
-			The system is composed of a server side hosting the database, where all the data of the passenger and of the taxi driver are stored, and it handles all HTTP request. There is not a great amount of data to manage, there are only profile information of the passengers, of the taxi drivers and the log of the activities, then the size of the database is not a constraint for the system.\\ To supply a suitable service, the system has to be reactive and able to answer to a high number of simultaneous request.\\ There are no time constraints that depends on the system, the time to process a transaction is less then one second. The only time constraint would be the reply message of the taxi driver that depends on his reflexes.
+			The system is composed of a server side hosting the database, where all the data of the passenger and of the taxi driver are stored, and it handles all the HTTP request. There is not a great amount of data to manage: there are the profile information of the passengers, of the taxi drivers and the log of the activities; so the size of the database is not a constraint for the system.\\ In order to provide a suitable service, the system has to be reactive and able to answer to a high number of simultaneous requests.\\ There are no time constraints that depends on the system, the time to process a transaction is less then one second. The only time constraint would be the reply message of the taxi driver that depends on his reflexes.
 		\subsubsection{Software system attributes} 
 			\begin{enumerate}
 				\item Reliability: the server must remain up twenty-four hours a day in order to guarantee a suitable service. The system allows the administrators to fix any problem without compromising the functionality of the system.
@@ -336,7 +337,7 @@
 	
 	\subsection{Scenario 4: Reserve a taxi}
 		Pierre asks his friend next door, Marie, out for a date at the restaurant and then at the cinema. He really wants to make a good impression, but his car is at the mechanic. So Cesare decides to go anyway by bus, even tho it is not the most elegant solution, but when he will come back there will not be any public transport. He decides to register in the myTaxiService application and make a reservation for 00:30 pm, when the movie ends. The taxi is already there when they come out of the cinema and they are home in a few minutes, Pierre and Marie are very satisfied with the service and with the evening too.
-		
+		\newpage
 	\subsection{Scenario 5: Taxi driver availability}
 		Jonathan is used to take a coffee after his first ride of the day. Even if he is the first of the queue, he wants to maintain this habit, so he just switch his availability button to off. Now the system knows that he cannot be called for the requests and he can set his state available whenever he wants and see his position in the queue. Finally, when Jonathan takes a call, he knows that he does not have to bother about his availability because the system always sets his state unavailable in the exact time he takes the request of a passenger.
 		
@@ -367,7 +368,7 @@
 		\begin{center}
 			\centering
 			
-			\begin{tabular}{| c| c|}
+			\begin{tabular}{| c| p{8cm}|}
 				\hline \textbf{Actor} &  Visitor and passenger.\\
 				\hline \textbf{Goal} & Sign up into the system.\\
 				\hline \textbf{Input Condition} & The visitor is not already registered into the system. \\
@@ -378,6 +379,10 @@
 				\hline \textbf{Exception} & If any information is incorrect, the system notifies the visitor and asks him to redo it.\\
 				\hline
 			\end{tabular}
+			\vspace{4cm}
+			\begin{figure}[h]
+				\includegraphics[scale=0.71]{UseCaseSignup.jpg}
+			\end{figure}
 		\end{center}
 		
 		\newpage
@@ -394,7 +399,7 @@
 			\begin{tabular}{|c|p{8cm}|}
 				\hline \textbf{Actor} &  Visitor, taxi driver and passenger.\\
 				\hline \textbf{Goal} &  Log into the system.\\
-				\hline \textbf{Input Condition} & The visitor is already registered into the system as a Taxi driver or a Passenger.\\
+				\hline \textbf{Input Condition} & The visitor is already registered into the system as a taxi driver or a passenger.\\
 				\hline \textbf{Event Flow} & 1. The system shows the login page.\\
 				& 2. The visitor completes the login form.\\
 				\hline \textbf{Output Condition} & 1. The system checks the credentials and shows the passenger or taxi driver area.\\
@@ -402,7 +407,7 @@
 				\hline \textbf{Exception} & If the credentials are incorrect the system notifies the visitor.\\
 				\hline
 			\end{tabular}
-			
+			\vspace{4cm}
 			\begin{figure}[h]
 				\centering
 				\includegraphics[scale=0.6]{UseCaseLogin.jpg}
@@ -420,15 +425,21 @@
 			\\ \\ \\
 			\begin{center}
 				\centering
-				\begin{tabular}{|c|c|}
-					\hline \textbf{Actor} &  \\
-					\hline \textbf{Goal} & \\
-					\hline \textbf{Input Condition} & \\
-					\hline \textbf{Event Flow} & \\
-					\hline \textbf{Output Condition} & \\
-					\hline \textbf{Exception} & \\
+				\begin{tabular}{|c|p{8cm}|}
+					\hline \textbf{Actor} &  Passenger.\\
+					\hline \textbf{Goal} & Edit his profile information.\\
+					\hline \textbf{Input Condition} & The passenger is already logged in.\\
+					\hline \textbf{Event Flow} & 1.	The system shows the “Edit profile” page.\\
+					& 2. The passenger modifies some information and submits the changes.\\
+					\hline \textbf{Output Condition} & The system checks the changes and shows the passenger area.\\
+					\hline \textbf{Exception} & If any information is incorrect, the system notifies the passenger and cancels the changes.\\
 					\hline
 				\end{tabular}
+				\vspace{4cm}
+				\begin{figure}[h]
+					\centering
+					\includegraphics[scale=0.8]{UseCaseProfile.jpg}
+				\end{figure}
 			\end{center}
 			
 			\newpage
@@ -442,15 +453,23 @@
 			\\ \\ \\
 			\begin{center}
 				\centering
-				\begin{tabular}{|c|c|}
-					\hline \textbf{Actor} &  \\
-					\hline \textbf{Goal} & \\
-					\hline \textbf{Input Condition} & \\
-					\hline \textbf{Event Flow} & \\
-					\hline \textbf{Output Condition} & \\
-					\hline \textbf{Exception} & \\
+				\begin{tabular}{|c|p{8cm}|}
+					\hline \textbf{Actor} & Taxi driver and passenger.\\
+					\hline \textbf{Goal} & Request a taxi and answer to the request.\\
+					\hline \textbf{Input Condition} & The passenger is already logged in and he has not made any request or reservation recently.\\
+					\hline \textbf{Event Flow} & 1.	The passenger presses the request button.\\
+					& 2. The passenger waits for the system to look for an available taxi driver.\\
+					& 3. The taxi driver answers to the request.\\
+					& 4. The system sends a confirmation to the passenger if a taxi driver has accepted the request. \\
+					\hline \textbf{Output Condition} & When the system finds a taxi driver, it notifies the passenger.\\
+					\hline \textbf{Exception} & If a taxi driver declines the request, the system continues the research.\\
 					\hline
 				\end{tabular}
+				\vspace{1cm}
+				\begin{figure}[h]
+					\centering
+					\includegraphics[scale=0.6]{UseCaseRequest.jpg}
+				\end{figure}
 			\end{center}
 			
 			\newpage
@@ -464,15 +483,24 @@
 				\\ \\ \\
 				\begin{center}
 					\centering
-					\begin{tabular}{|c|c|}
-						\hline \textbf{Actor} &  \\
-						\hline \textbf{Goal} & \\
-						\hline \textbf{Input Condition} & \\
-						\hline \textbf{Event Flow} & \\
-						\hline \textbf{Output Condition} & \\
-						\hline \textbf{Exception} & \\
+					\begin{tabular}{|c|p{8cm}|}
+						\hline \textbf{Actor} &  Taxi driver and passenger.\\
+						\hline \textbf{Goal} & Reserve a taxi and answer to the request.\\
+						\hline \textbf{Input Condition} & The passenger is already logged in and he has not made any request or reservation recently.\\
+						\hline \textbf{Event Flow} & 1.	The passenger presses the “Make a reservation” button.\\
+						& 2. The system displays to the passenger the reservation form.\\
+						& 3. The passenger fills in the form and submits it.\\
+						& 4. The system checks the current and the departure time.\\
+						& 5. Ten minutes before the ride, the system looks for an available taxi driver. \\
+						\hline \textbf{Output Condition} & When the system finds a taxi driver, it notifies it to the passenger.\\
+						\hline \textbf{Exception} & If the departure time is wrong, the system does not allow the passenger to make the reservation.\\
 						\hline
 					\end{tabular}
+					\vspace{1cm}
+					\begin{figure}[h]
+						\centering
+						\includegraphics[scale=0.6]{UseCaseReserve.jpg}
+					\end{figure}
 				\end{center}
 				
 				\newpage
@@ -486,15 +514,20 @@
 				\\ \\ \\
 				\begin{center}
 					\centering
-					\begin{tabular}{|c|c|}
-						\hline \textbf{Actor} &  \\
-						\hline \textbf{Goal} & \\
-						\hline \textbf{Input Condition} & \\
-						\hline \textbf{Event Flow} & \\
-						\hline \textbf{Output Condition} & \\
-						\hline \textbf{Exception} & \\
+					\begin{tabular}{|c|p{8cm}|}
+						\hline \textbf{Actor} & Taxi driver.\\
+						\hline \textbf{Goal} & See the taxi driver area.\\
+						\hline \textbf{Input Condition} & The taxi driver is already logged in.\\
+						\hline \textbf{Event Flow} & The taxi driver requests his area page.\\
+						\hline \textbf{Output Condition} & The system shows the area page to the taxi driver.\\
+						\hline \textbf{Exception} & If the information in the area is incorrect, the system refreshes the page.\\
 						\hline
 					\end{tabular}
+					\vspace{4cm}
+					\begin{figure}[h]
+						\centering
+						\includegraphics[scale=0.7]{UseCaseTaxiArea.jpg}
+					\end{figure}
 				\end{center}
 			
 				\newpage
@@ -529,14 +562,16 @@
 		\includegraphics[scale=0.56]{facts2.jpg}
 	\end{figure}
 \newpage
-	\subsection{Asserts}
+	\subsection{Assertions}
 	\begin{figure}[h]
 		\includegraphics[scale=0.8]{assertions.jpg}
 	\end{figure}
+	
 	\subsection{Predicates}
 		\begin{figure}[h]
 			\includegraphics[scale=0.8]{predicates.jpg}
 		\end{figure}
+\newpage
 	\subsection{Results}
 		\begin{figure}[h]
 			\includegraphics[scale=1]{results.jpg}
@@ -567,8 +602,8 @@
 			\item Visitor: a person who is not registered in the application.
 			\item Passenger: a person who is registered in the application.
 			\item Taxi driver: a taxi driver who access the application with a specific ID.
-			\item Request: the request of a taxi in a certain zone and place of the city made by a user.
-			\item Reservation: the reservation of a taxi in a certain zone, place and time that can be made only by passengers.
+			\item Request: the request of a taxi in a certain area and position in the city made by a user.
+			\item Reservation: the reservation of a taxi in a certain area, place and time that can be made only by passengers.
 	\end{itemize}
 	\subsection{Software and tool used}
 		\begin{itemize}
