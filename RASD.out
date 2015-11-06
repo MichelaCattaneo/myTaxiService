@@ -39,14 +39,16 @@
 \BOOKMARK [2][-]{subsection.5.2}{Class diagram}{section.5}% 39
 \BOOKMARK [2][-]{subsection.5.3}{Sequence diagram}{section.5}% 40
 \BOOKMARK [2][-]{subsection.5.4}{State Chart diagram}{section.5}% 41
-\BOOKMARK [1][-]{section.6}{ALLOY Modeling}{}% 42
+\BOOKMARK [1][-]{section.6}{Alloy Modeling}{}% 42
 \BOOKMARK [2][-]{subsection.6.1}{Signatures}{section.6}% 43
 \BOOKMARK [2][-]{subsection.6.2}{Facts}{section.6}% 44
 \BOOKMARK [2][-]{subsection.6.3}{Asserts}{section.6}% 45
 \BOOKMARK [2][-]{subsection.6.4}{Predicates}{section.6}% 46
-\BOOKMARK [2][-]{subsection.6.5}{Result}{section.6}% 47
+\BOOKMARK [2][-]{subsection.6.5}{Results}{section.6}% 47
 \BOOKMARK [2][-]{subsection.6.6}{Generated world}{section.6}% 48
-\BOOKMARK [1][-]{section.7}{Appendix}{}% 49
-\BOOKMARK [2][-]{subsection.7.1}{Glossary}{section.7}% 50
-\BOOKMARK [2][-]{subsection.7.2}{Software and tool used}{section.7}% 51
-\BOOKMARK [2][-]{subsection.7.3}{Hours of work}{section.7}% 52
+\BOOKMARK [3][-]{subsubsection.6.6.1}{General World}{subsection.6.6}% 49
+\BOOKMARK [3][-]{subsubsection.6.6.2}{Request By A Passenger}{subsection.6.6}% 50
+\BOOKMARK [1][-]{section.7}{Appendix}{}% 51
+\BOOKMARK [2][-]{subsection.7.1}{Glossary}{section.7}% 52
+\BOOKMARK [2][-]{subsection.7.2}{Software and tool used}{section.7}% 53
+\BOOKMARK [2][-]{subsection.7.3}{Hours of work}{section.7}% 54

@@ -224,12 +224,43 @@
 				\\
 			\end{itemize}
 		\subsubsection{API interfaces}
+			The system exploits the Google Map APIs in order to track the movements of the taxi drivers and to get the position of the users that request a service. It is necessary to be always aware of the taxi position in the areas and to make sure that the system is able to calculate the exact time the user has to wait until the taxi arrival. 
+			Facebook and Google+ APIs are used to allow the users to log in in the application without filling in any registration form or providing any further personal information.
+			
 		\subsubsection{Hardware interfaces}
-		This project does not support any hardware interfaces.
+			This project does not support any hardware interfaces.
 		\subsubsection{Software interfaces}
+			\begin{itemize}
+				\item Database Management System (DBMS):
+				\item[-] Name: MySQL.
+				\item[-] Version: 5.6.21
+				\item[-] Source: http://www.mysql.it/
+				\item Java Virtual Machine (JVM).
+				\item[-] Name: JEE
+				\item[-] Version: 7
+				\item[-] Source: http://www.oracle.com/technetwork/java/javaee/tech/index.html
+				\item Application server:
+				\item[-] Name: Glassfish.
+				\item[-] Version: 4.1.
+				\item[-] Source: https://glassfish.java.net/
+				\item Operating System (OS).
+				\item[-] Application must be able to run on any SO which supports JVM and
+				DBMS specified before.
+			\end{itemize}
 		\subsubsection{Communication interfaces}
+			\begin{center}
+				\centering
+			
+				\begin{tabular}{|c| c| c|}
+					\hline Protocol & Application & Port \\
+					\hline		TCP & HTTPS & 443 \\
+					\hline		TCP & HTTP & 80 \\
+					\hline		TCP & DBMS & 3306(default)\\
+					\hline
+				\end{tabular}
+			\end{center}
 	\subsection{Functional requirements}
-		\begin{enumerate}
+		\begin{itemize}
 			\item \textbf{Registration of the visitor.}
 				The system displays the registration form to the user, who needs to fill in the mandatory fields of the form and press the "Submit" button. The user should provide his name, surname, password, e-mail address and telephone number. He can choose whether let the system know about his gender and date of birth or not.
 			
@@ -281,7 +312,7 @@
 			\item \textbf{See position in the queue.}
 				The system provides the taxi driver his position in the queue in his area, if his state is set to available, so that he is always able to know if there can be any incoming requests.
 				
-		\end{enumerate}
+		\end{itemize}
 	\subsection{Non-functional requirements}
 		\subsubsection{Performance requirements}
 			The system is composed of a server side hosting the database, where all the data of the passenger and of the taxi driver are stored, and it handles all HTTP request. There is not a great amount of data to manage, there are only profile information of the passengers, of the taxi drivers and the log of the activities, then the size of the database is not a constraint for the system.\\ To supply a suitable service, the system has to be reactive and able to answer to a high number of simultaneous request.\\ There are no time constraints that depends on the system, the time to process a transaction is less then one second. The only time constraint would be the reply message of the taxi driver that depends on his reflexes.
@@ -295,22 +326,22 @@
 \newpage
 \section{Scenarios Identifying}
 	\subsection{Scenario 1: Registration and log in}
-		USER1 is new to the city and is not used to use public transport, so he searches for the best taxi services via web. After a while, he decides to download the new application "myTaxiService", because it seems to offer the most interesting functionalities. USER1 registers in the application, without even filling the form, accessing with his Facebook account and adds his favorite photo with his girlfriend. Now he is able to log in, to make taxi reservations choosing the payment method he prefers and to request a taxi without having to insert his information every time he needs it.
+		Virginia is new to the city and is not used to use public transport, so she searches for the best taxi services via web. After a while, she decides to download the new application "myTaxiService", because it seems to offer the most interesting functionalities. Virginia registers in the application, without even filling the form, accessing with her Facebook account and adds her favorite photo with her boyfriend. Now she is able to log in, to make taxi reservations choosing the payment method she prefers and to request a taxi without having to insert her information every time she needs it.
 		
 	\subsection{Scenario 2: Password recovery}
-		USER1 has registered in the application when he visited the city a few months ago, now he is back and needs to make a taxi reservation for the afternoon. But USER1 is really absent-minded and is not able to remember his password. He is very happy to see the "Forgotten your password?" link and he press it: this leads to another page where the system tells him that an e-mail for the recovery has been sent to his e-mail address. He checks his inbox and follows the link to set his new password. Now he can easily log in and make his reservation.
+		Charlie has registered in the application when he visited the city a few months ago, now he is back and needs to make a taxi reservation for the afternoon. But Charlie is really absent-minded and is not able to remember his password. He is very happy to see the "Forgotten your password?" link and he press it: this leads to another page where the system tells him that an e-mail for the recovery has been sent to his e-mail address. He checks his inbox and follows the link to set his new password. Now he can easily log in and make his reservation.
 		
 	\subsection{Scenario 3: Choose payment method}
-		USER2 often uses myTaxiService for the taxi requests, as it is a fast and reliable service. He is a very lazy person and does not want to register, as the application allows visitors to easily request a taxi, but he is very tired of paying by cash, so he finally make up his mind. He registers and adds his credit card data to his profile. USER2 is happy to save his time and he can request or reserve a taxi without even worry about the money spent.
+		William often uses myTaxiService for the taxi requests, as it is a fast and reliable service. He is a very lazy person and does not want to register, as the application allows visitors to easily request a taxi, but he is very tired of paying by cash, so he finally make up his mind. He registers and adds his credit card data to his profile. William is happy to save his time and he can request or reserve a taxi without even worry about the money spent.
 	
 	\subsection{Scenario 4: Reserve a taxi}
-		USER3 asks his friend USER3gf next door out for a date at the restaurant and then at the cinema. He really wants to make a good impression, but his car is at the mechanic. So USER3 decides to go anyway by bus, even tho it is not the most elegant solution, but when he will come back there will not be any public transport. He decides to register in the myTaxiService application and make a reservation for 00:30 pm, when the movie ends. The taxi is already there when they come out of the cinema and they are home in a few minutes, USER3 and USER3GF are very satisfied with the service and with the evening too.
+		Pierre asks his friend next door, Marie, out for a date at the restaurant and then at the cinema. He really wants to make a good impression, but his car is at the mechanic. So Cesare decides to go anyway by bus, even tho it is not the most elegant solution, but when he will come back there will not be any public transport. He decides to register in the myTaxiService application and make a reservation for 00:30 pm, when the movie ends. The taxi is already there when they come out of the cinema and they are home in a few minutes, Pierre and Marie are very satisfied with the service and with the evening too.
 		
 	\subsection{Scenario 5: Taxi driver availability}
-		DRIVER1 is used to take a coffee after his first ride of the day. Even if he is the first of the queue, he wants to maintain this habit, so he just switch his availability button to off. Now the system knows that he cannot be called for the requests and he can set his state available whenever he wants and see his position in the queue. Finally, when DRIVER1 takes a call, he knows that he does not have to bother about his availability because the system always sets his state unavailable in the exact time he takes the request of a passenger.
+		Jonathan is used to take a coffee after his first ride of the day. Even if he is the first of the queue, he wants to maintain this habit, so he just switch his availability button to off. Now the system knows that he cannot be called for the requests and he can set his state available whenever he wants and see his position in the queue. Finally, when Jonathan takes a call, he knows that he does not have to bother about his availability because the system always sets his state unavailable in the exact time he takes the request of a passenger.
 		
 	\subsection{Scenario 6: Taxi drivers notification of the requests}
-		DRIVER2 is the first of the queue, so he knows that he is going to take a request soon but he is on the phone with his mother and does not see the notification within the first minute, so the system forwards it to the second taxi driver of the queue. Now he is in the last position of the area and needs to be very careful when the positions change. DRIVER2 shifts fast to the first position again and he is now able to click on the "Accept" button before the time is over. He sees the position of the request and goes there with no trouble. At the end of the day he scrolls his notifications panel and he is very satisfied with his work today, as he has missed just one request.
+		Walter is the first of the queue, so he knows that he is going to take a request soon but he is on the phone with his mother and does not see the notification within the first minute, so the system forwards it to the second taxi driver of the queue. Now he is in the last position of the area and needs to be very careful when the positions change. Walter shifts fast to the first position again and he is now able to click on the "Accept" button before the time is over. He sees the position of the request and goes there with no trouble. At the end of the day he scrolls his notifications panel and he is very satisfied with his work today, as he has missed just one request.
 \newpage
 \section{UML Models}
 	\subsection{Use Case diagram}
@@ -331,8 +362,147 @@
 \newpage
 	\subsection{Sequence diagram}
 	\begin{itemize}
-		\item
-		\item 
+		\item User Registration
+		\\ \\ \\
+		\begin{center}
+			\centering
+			
+			\begin{tabular}{| c| c|}
+				\hline \textbf{Actor} &  Visitor and passenger.\\
+				\hline \textbf{Goal} & Sign up into the system.\\
+				\hline \textbf{Input Condition} & The visitor is not already registered into the system. \\
+				\hline \textbf{Event Flow} & 1.	The system shows the sign up page.\\
+				& 2. The visitor completes the sign up form and submits.	\\
+				\hline \textbf{Output Condition} & 1. The system checks the information  of th e visitor and allows him to log in\\
+				& 2. The visitor becomes a passenger.\\
+				\hline \textbf{Exception} & If any information is incorrect, the system notifies the visitor and asks him to redo it.\\
+				\hline
+			\end{tabular}
+		\end{center}
+		
+		\newpage
+		
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.71]{SequenceSignup.jpg}
+		\end{figure}
+		\newpage
+		\item User Log In
+		\\ \\ \\
+		\begin{center}
+			\centering
+			\begin{tabular}{|c|p{8cm}|}
+				\hline \textbf{Actor} &  Visitor, taxi driver and passenger.\\
+				\hline \textbf{Goal} &  Log into the system.\\
+				\hline \textbf{Input Condition} & The visitor is already registered into the system as a Taxi driver or a Passenger.\\
+				\hline \textbf{Event Flow} & 1. The system shows the login page.\\
+				& 2. The visitor completes the login form.\\
+				\hline \textbf{Output Condition} & 1. The system checks the credentials and shows the passenger or taxi driver area.\\
+				& 2. The visitor becomes a passenger or a taxi driver if the credentials are correct.\\
+				\hline \textbf{Exception} & If the credentials are incorrect the system notifies the visitor.\\
+				\hline
+			\end{tabular}
+			
+			\begin{figure}[h]
+				\centering
+				\includegraphics[scale=0.6]{UseCaseLogin.jpg}
+			\end{figure}
+		\end{center}
+		
+		\newpage
+		 
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.75]{SequenceLogin.jpg}
+		\end{figure}
+			\newpage
+			\item Passenger Profile
+			\\ \\ \\
+			\begin{center}
+				\centering
+				\begin{tabular}{|c|c|}
+					\hline \textbf{Actor} &  \\
+					\hline \textbf{Goal} & \\
+					\hline \textbf{Input Condition} & \\
+					\hline \textbf{Event Flow} & \\
+					\hline \textbf{Output Condition} & \\
+					\hline \textbf{Exception} & \\
+					\hline
+				\end{tabular}
+			\end{center}
+			
+			\newpage
+			
+			\begin{figure}[h]
+				\centering
+				\includegraphics[scale=0.97]{SequenceProfile.jpg}
+			\end{figure}
+			\newpage
+			\item Request By A User
+			\\ \\ \\
+			\begin{center}
+				\centering
+				\begin{tabular}{|c|c|}
+					\hline \textbf{Actor} &  \\
+					\hline \textbf{Goal} & \\
+					\hline \textbf{Input Condition} & \\
+					\hline \textbf{Event Flow} & \\
+					\hline \textbf{Output Condition} & \\
+					\hline \textbf{Exception} & \\
+					\hline
+				\end{tabular}
+			\end{center}
+			
+			\newpage
+			
+			\begin{figure}[h]
+				\centering
+				\includegraphics[scale=0.9]{SequenceRequest.jpg}
+			\end{figure}
+				\newpage
+				\item Reservation By A Passenger
+				\\ \\ \\
+				\begin{center}
+					\centering
+					\begin{tabular}{|c|c|}
+						\hline \textbf{Actor} &  \\
+						\hline \textbf{Goal} & \\
+						\hline \textbf{Input Condition} & \\
+						\hline \textbf{Event Flow} & \\
+						\hline \textbf{Output Condition} & \\
+						\hline \textbf{Exception} & \\
+						\hline
+					\end{tabular}
+				\end{center}
+				
+				\newpage
+				
+				\begin{figure}[h]
+					\centering
+					\includegraphics[scale=0.8]{SequenceReserve.jpg}
+				\end{figure}
+				\newpage
+				\item Taxi Area
+				\\ \\ \\
+				\begin{center}
+					\centering
+					\begin{tabular}{|c|c|}
+						\hline \textbf{Actor} &  \\
+						\hline \textbf{Goal} & \\
+						\hline \textbf{Input Condition} & \\
+						\hline \textbf{Event Flow} & \\
+						\hline \textbf{Output Condition} & \\
+						\hline \textbf{Exception} & \\
+						\hline
+					\end{tabular}
+				\end{center}
+			
+				\newpage
+				
+				\begin{figure}[h]
+					\centering
+					\includegraphics[scale=1]{SequenceTaxiArea.jpg}
+				\end{figure}
 	\end{itemize}
 \newpage
 	\subsection{State Chart diagram}
@@ -344,14 +514,50 @@
 		\end{figure}
 
 \newpage
-\section{ALLOY Modeling}
+\section{Alloy Modeling}
+	The alloy modeling has been used to test the consistency of the proposed Class diagram with the Alloy Analyzer 4.2. This report consists in the signatures of the classes, facts and assertions on the model and two examples of the world generated by our predicates.
 	\subsection{Signatures}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.8]{signatures.jpg}
+	\end{figure}
+\newpage
 	\subsection{Facts}
+	\begin{figure}[h]
+		\includegraphics[scale=0.56]{facts1.jpg}%
+		\qquad\qquad
+		\includegraphics[scale=0.56]{facts2.jpg}
+	\end{figure}
+\newpage
 	\subsection{Asserts}
+	\begin{figure}[h]
+		\includegraphics[scale=0.8]{assertions.jpg}
+	\end{figure}
 	\subsection{Predicates}
-	\subsection{Result}
+		\begin{figure}[h]
+			\includegraphics[scale=0.8]{predicates.jpg}
+		\end{figure}
+	\subsection{Results}
+		\begin{figure}[h]
+			\includegraphics[scale=1]{results.jpg}
+		\end{figure}
+\newpage
 	\subsection{Generated world}
-
+		\subsubsection{General World}
+		In this image is shown the world generated by Alloy Analyzer via the
+		execution of the predicate "show".
+		\\ \\ \\ \\ \\ \\
+			\begin{figure}[h]
+				\includegraphics[scale=0.7]{show.jpg}
+			\end{figure}
+\newpage
+		\subsubsection{Request By A Passenger}
+		In this image is shown the world generated by Alloy Analyzer via the
+		execution of the predicate "makeRequest".
+		\\ \\ \\ \\ \\ \\
+		\begin{figure}[h]
+			\includegraphics[scale=0.6]{makeRequest.jpg}
+		\end{figure}
 \newpage
 \section{Appendix}
 	\subsection{Glossary}
