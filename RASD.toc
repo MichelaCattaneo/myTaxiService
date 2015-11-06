@@ -19,36 +19,34 @@
 \contentsline {section}{\numberline {3}Specific Requirements}{8}{section.3}
 \contentsline {subsection}{\numberline {3.1}External interfaces requirements}{8}{subsection.3.1}
 \contentsline {subsubsection}{\numberline {3.1.1}User interfaces}{8}{subsubsection.3.1.1}
-\contentsline {subsubsection}{\numberline {3.1.2}API interfaces}{8}{subsubsection.3.1.2}
-\contentsline {subsubsection}{\numberline {3.1.3}Hardware interfaces}{8}{subsubsection.3.1.3}
-\contentsline {subsubsection}{\numberline {3.1.4}Software interfaces}{8}{subsubsection.3.1.4}
-\contentsline {subsubsection}{\numberline {3.1.5}Communication interfaces}{8}{subsubsection.3.1.5}
-\contentsline {subsection}{\numberline {3.2}Functional requirements}{8}{subsection.3.2}
-\contentsline {subsection}{\numberline {3.3}Non-functional requirements}{10}{subsection.3.3}
-\contentsline {subsubsection}{\numberline {3.3.1}Performance requirements}{10}{subsubsection.3.3.1}
-\contentsline {subsubsection}{\numberline {3.3.2}Software system attributes}{10}{subsubsection.3.3.2}
-\contentsline {section}{\numberline {4}Scenarios Identifying}{11}{section.4}
-\contentsline {subsection}{\numberline {4.1}Scenario 1: Registration and log in}{11}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}Scenario 2: Password recovery}{11}{subsection.4.2}
-\contentsline {subsection}{\numberline {4.3}Scenario 3: Choose payment method}{11}{subsection.4.3}
-\contentsline {subsection}{\numberline {4.4}Scenario 4: Reserve a taxi}{11}{subsection.4.4}
-\contentsline {subsection}{\numberline {4.5}Scenario 5: See requests and reservations history}{11}{subsection.4.5}
-\contentsline {subsection}{\numberline {4.6}Scenario 6: Taxi driver availability}{12}{subsection.4.6}
-\contentsline {subsection}{\numberline {4.7}Scenario 7: Taxi drivers notification of the requests}{12}{subsection.4.7}
-\contentsline {section}{\numberline {5}UML Models}{13}{section.5}
-\contentsline {subsection}{\numberline {5.1}Use Case}{13}{subsection.5.1}
-\contentsline {subsection}{\numberline {5.2}Class diagram}{13}{subsection.5.2}
-\contentsline {subsection}{\numberline {5.3}Sequence diagram}{13}{subsection.5.3}
-\contentsline {subsection}{\numberline {5.4}Statechart diagram}{13}{subsection.5.4}
-\contentsline {section}{\numberline {6}ALLOY Modeling}{14}{section.6}
-\contentsline {subsection}{\numberline {6.1}Data type}{14}{subsection.6.1}
-\contentsline {subsection}{\numberline {6.2}Abstract entity implementation and signature}{14}{subsection.6.2}
-\contentsline {subsection}{\numberline {6.3}Fact}{14}{subsection.6.3}
-\contentsline {subsection}{\numberline {6.4}Assert}{14}{subsection.6.4}
-\contentsline {subsection}{\numberline {6.5}Predicates}{14}{subsection.6.5}
-\contentsline {subsection}{\numberline {6.6}Result}{14}{subsection.6.6}
-\contentsline {subsection}{\numberline {6.7}Generated world}{14}{subsection.6.7}
-\contentsline {section}{\numberline {7}Appendix}{15}{section.7}
-\contentsline {subsection}{\numberline {7.1}Glossary}{15}{subsection.7.1}
-\contentsline {subsection}{\numberline {7.2}Software and tool used}{15}{subsection.7.2}
-\contentsline {subsection}{\numberline {7.3}Hours of work}{15}{subsection.7.3}
+\contentsline {subsubsection}{\numberline {3.1.2}API interfaces}{13}{subsubsection.3.1.2}
+\contentsline {subsubsection}{\numberline {3.1.3}Hardware interfaces}{13}{subsubsection.3.1.3}
+\contentsline {subsubsection}{\numberline {3.1.4}Software interfaces}{13}{subsubsection.3.1.4}
+\contentsline {subsubsection}{\numberline {3.1.5}Communication interfaces}{13}{subsubsection.3.1.5}
+\contentsline {subsection}{\numberline {3.2}Functional requirements}{13}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Non-functional requirements}{15}{subsection.3.3}
+\contentsline {subsubsection}{\numberline {3.3.1}Performance requirements}{15}{subsubsection.3.3.1}
+\contentsline {subsubsection}{\numberline {3.3.2}Software system attributes}{15}{subsubsection.3.3.2}
+\contentsline {section}{\numberline {4}Scenarios Identifying}{16}{section.4}
+\contentsline {subsection}{\numberline {4.1}Scenario 1: Registration and log in}{16}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Scenario 2: Password recovery}{16}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Scenario 3: Choose payment method}{16}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}Scenario 4: Reserve a taxi}{16}{subsection.4.4}
+\contentsline {subsection}{\numberline {4.5}Scenario 5: Taxi driver availability}{16}{subsection.4.5}
+\contentsline {subsection}{\numberline {4.6}Scenario 6: Taxi drivers notification of the requests}{17}{subsection.4.6}
+\contentsline {section}{\numberline {5}UML Models}{18}{section.5}
+\contentsline {subsection}{\numberline {5.1}Use Case diagram}{18}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Class diagram}{19}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}Sequence diagram}{20}{subsection.5.3}
+\contentsline {subsection}{\numberline {5.4}State Chart diagram}{21}{subsection.5.4}
+\contentsline {section}{\numberline {6}ALLOY Modeling}{22}{section.6}
+\contentsline {subsection}{\numberline {6.1}Signatures}{22}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Facts}{22}{subsection.6.2}
+\contentsline {subsection}{\numberline {6.3}Asserts}{22}{subsection.6.3}
+\contentsline {subsection}{\numberline {6.4}Predicates}{22}{subsection.6.4}
+\contentsline {subsection}{\numberline {6.5}Result}{22}{subsection.6.5}
+\contentsline {subsection}{\numberline {6.6}Generated world}{22}{subsection.6.6}
+\contentsline {section}{\numberline {7}Appendix}{23}{section.7}
+\contentsline {subsection}{\numberline {7.1}Glossary}{23}{subsection.7.1}
+\contentsline {subsection}{\numberline {7.2}Software and tool used}{23}{subsection.7.2}
+\contentsline {subsection}{\numberline {7.3}Hours of work}{23}{subsection.7.3}

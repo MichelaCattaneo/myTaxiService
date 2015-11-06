@@ -143,6 +143,86 @@
 \section{Specific Requirements}
 	\subsection{External interfaces requirements}
 		\subsubsection{User interfaces}
+			\begin{itemize}
+				\item \textbf{Home page} This mockup represents the home page of the mobile application and of the web app, where a user can request a taxi or have access to the log in or registration page, or look up information about the service.
+				\begin{figure}[h]
+					\includegraphics[scale=0.3]{WebAppHomepage.png}%
+					\qquad\qquad
+					\includegraphics[scale=0.3]{MobileAppHomepage.png}
+				
+				\end{figure}
+				\\
+				\item \textbf{Log in} This mockup represents the log in page of the mobile application and of the web app, where a user can log into the application filling in the form or accessing with the Facebook or Google+ account. The taxi drivers can use only the mobile application.
+				\begin{figure}[h]
+					\includegraphics[scale=0.3]{WebAppLogin.png}%
+					\qquad\qquad
+					\includegraphics[scale=0.3]{MobileAppLogin.png}
+					
+				\end{figure}
+				\\
+				\item \textbf{Registration} This mockup represents the sign up page of the mobile application and of the web app, where a user can register into the application filling in the form with his personal data.\\
+				\begin{figure}[h]
+					\includegraphics[scale=0.3]{WebAppRegistration.png}%
+					\qquad\qquad
+					\includegraphics[scale=0.3]{MobileAppRegistration.png}
+				\end{figure}
+				\\ 	\\
+				\item \textbf{Passenger Area} This mockup represents the passenger area of the mobile application and of the web app, where a passenger can request or reserve a taxi or access to his profile.\\
+				\begin{figure}[h]
+					\includegraphics[scale=0.3]{WebAppMakeAReservation.png}%
+					\qquad\qquad
+					\includegraphics[scale=0.3]{MobileAppMakeAReservation.png}
+				\end{figure}
+				\\ \\ \\
+				\item \textbf{Payment Method} This mockup represents the passenger area of the mobile application and of the web app, where a passenger can choose the payment method of his request or reservation.\\
+				\begin{figure}[h]
+					\includegraphics[scale=0.3]{WebAppPaymentMethod.png}%
+					\qquad\qquad
+					\includegraphics[scale=0.3]{MobileAppPaymentMethod.png}
+				\end{figure}
+				\\ \\
+				\item \textbf{Passenger Profile} This mockup represents the passenger profile page of the mobile application and of the web app, where a passenger can see or modify his profile.\\
+				\begin{figure}[h]
+					\includegraphics[scale=0.3]{WebAppPassengerProfile.png}%
+					\qquad\qquad
+					\includegraphics[scale=0.3]{MobileAppPassengerProfile.png}
+				\end{figure}
+				\\ \\ \\ 
+				\item \textbf{Credit Card Data} This mockup represents the passenger area of the mobile application and of the web app, where a passenger can insert his credit card data.\\
+				\begin{figure}[h]
+					\includegraphics[scale=0.3]{WebAppCreditCardData.png}%
+					\qquad\qquad
+					\includegraphics[scale=0.3]{MobileAppCreditCardData.png}
+				\end{figure}
+				\\
+				\item \textbf{Loading Screen} This mockup represents the passenger area of the mobile application and of the web app, where a passenger waits for his request to be taken in consideration and can cancel it.\\
+				\begin{figure}[h]
+					\includegraphics[scale=0.3]{WebAppWaitForTaxi.png}%
+					\qquad\qquad
+					\includegraphics[scale=0.3]{MobileAppWaitForTaxi.png}
+				\end{figure}
+				\\ \\ 
+				\item \textbf{Waiting Time} This mockup represents the passenger area of the mobile application and of the web app, where a passenger see how much time he has to wait until the taxi arrival.\\
+				\begin{figure}[h]
+					\includegraphics[scale=0.3]{WebAppTaxiIsArriving.png}%
+					\qquad\qquad
+					\includegraphics[scale=0.3]{MobileAppTaxiIsArriving.png}
+				\end{figure}
+				\\ \\ \\
+				\item \textbf{Taxi Driver Area} This mockup represents the taxi driver area of the mobile application, where a taxi driver can set his availability, see his position in the queue and access to his profile.\\
+				\begin{figure}[h]
+					\centering
+					\includegraphics[scale=0.3]{MobileAppTaxiDriverArea.png}
+				\end{figure}
+				\\
+				\\ \\ 
+				\item \textbf{Taxi Driver Notifications} This mockup represents the taxi driver area of the mobile application, where a taxi driver can see the notifications of the forwarded requests and accept or decline them.\\
+				\begin{figure}[h]
+					\centering
+					\includegraphics[scale=0.3]{MobileAppTaxiDriverNotifications.png}
+				\end{figure}
+				\\
+			\end{itemize}
 		\subsubsection{API interfaces}
 		\subsubsection{Hardware interfaces}
 		This project does not support any hardware interfaces.
@@ -233,10 +313,35 @@
 		DRIVER2 is the first of the queue, so he knows that he is going to take a request soon but he is on the phone with his mother and does not see the notification within the first minute, so the system forwards it to the second taxi driver of the queue. Now he is in the last position of the area and needs to be very careful when the positions change. DRIVER2 shifts fast to the first position again and he is now able to click on the "Accept" button before the time is over. He sees the position of the request and goes there with no trouble. At the end of the day he scrolls his notifications panel and he is very satisfied with his work today, as he has missed just one request.
 \newpage
 \section{UML Models}
-	\subsection{Use Case}
+	\subsection{Use Case diagram}
+	This Use Case diagram gives an overview on the main actors of the system and their functionalities.
+	\\
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.4]{UseCase2.jpg}
+		
+	\end{figure}
+\newpage
 	\subsection{Class diagram}
+	This Class diagram describes a basic structure of the entities of the system and their relations.
+	\\ \\ \\ 
+	\begin{figure}[h]
+		\includegraphics[scale=0.55]{classDiagram.png}
+	\end{figure}
+\newpage
 	\subsection{Sequence diagram}
-	\subsection{Statechart diagram}
+	\begin{itemize}
+		\item
+		\item 
+	\end{itemize}
+\newpage
+	\subsection{State Chart diagram}
+		This State Chart diagram describes the behaviour of the system.
+		\\ \\ \\ \\ 
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.5]{stateChartDiagram.jpg}
+		\end{figure}
 
 \newpage
 \section{ALLOY Modeling}
@@ -270,8 +375,8 @@
 	\subsection{Hours of work}
 		Time spent redacting this document:
 		\begin{itemize}
-			\item Cattaneo Michela Gaia: {\raise.17ex\hbox{$\scriptstyle\sim$}}30 hours of work.
-			\item Barlocco Mattia: {\raise.17ex\hbox{$\scriptstyle\sim$}}30 hours of work.
+			\item Cattaneo Michela Gaia: {\raise.17ex\hbox{$\scriptstyle\sim$}}35 hours of work.
+			\item Barlocco Mattia: {\raise.17ex\hbox{$\scriptstyle\sim$}}35 hours of work.
 		\end{itemize}
 
 

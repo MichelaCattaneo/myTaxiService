@@ -32,23 +32,21 @@
 \BOOKMARK [2][-]{subsection.4.2}{Scenario 2: Password recovery}{section.4}% 32
 \BOOKMARK [2][-]{subsection.4.3}{Scenario 3: Choose payment method}{section.4}% 33
 \BOOKMARK [2][-]{subsection.4.4}{Scenario 4: Reserve a taxi}{section.4}% 34
-\BOOKMARK [2][-]{subsection.4.5}{Scenario 5: See requests and reservations history}{section.4}% 35
-\BOOKMARK [2][-]{subsection.4.6}{Scenario 6: Taxi driver availability}{section.4}% 36
-\BOOKMARK [2][-]{subsection.4.7}{Scenario 7: Taxi drivers notification of the requests}{section.4}% 37
-\BOOKMARK [1][-]{section.5}{UML Models}{}% 38
-\BOOKMARK [2][-]{subsection.5.1}{Use Case}{section.5}% 39
-\BOOKMARK [2][-]{subsection.5.2}{Class diagram}{section.5}% 40
-\BOOKMARK [2][-]{subsection.5.3}{Sequence diagram}{section.5}% 41
-\BOOKMARK [2][-]{subsection.5.4}{Statechart diagram}{section.5}% 42
-\BOOKMARK [1][-]{section.6}{ALLOY Modeling}{}% 43
-\BOOKMARK [2][-]{subsection.6.1}{Data type}{section.6}% 44
-\BOOKMARK [2][-]{subsection.6.2}{Abstract entity implementation and signature}{section.6}% 45
-\BOOKMARK [2][-]{subsection.6.3}{Fact}{section.6}% 46
-\BOOKMARK [2][-]{subsection.6.4}{Assert}{section.6}% 47
-\BOOKMARK [2][-]{subsection.6.5}{Predicates}{section.6}% 48
-\BOOKMARK [2][-]{subsection.6.6}{Result}{section.6}% 49
-\BOOKMARK [2][-]{subsection.6.7}{Generated world}{section.6}% 50
-\BOOKMARK [1][-]{section.7}{Appendix}{}% 51
-\BOOKMARK [2][-]{subsection.7.1}{Glossary}{section.7}% 52
-\BOOKMARK [2][-]{subsection.7.2}{Software and tool used}{section.7}% 53
-\BOOKMARK [2][-]{subsection.7.3}{Hours of work}{section.7}% 54
+\BOOKMARK [2][-]{subsection.4.5}{Scenario 5: Taxi driver availability}{section.4}% 35
+\BOOKMARK [2][-]{subsection.4.6}{Scenario 6: Taxi drivers notification of the requests}{section.4}% 36
+\BOOKMARK [1][-]{section.5}{UML Models}{}% 37
+\BOOKMARK [2][-]{subsection.5.1}{Use Case diagram}{section.5}% 38
+\BOOKMARK [2][-]{subsection.5.2}{Class diagram}{section.5}% 39
+\BOOKMARK [2][-]{subsection.5.3}{Sequence diagram}{section.5}% 40
+\BOOKMARK [2][-]{subsection.5.4}{State Chart diagram}{section.5}% 41
+\BOOKMARK [1][-]{section.6}{ALLOY Modeling}{}% 42
+\BOOKMARK [2][-]{subsection.6.1}{Signatures}{section.6}% 43
+\BOOKMARK [2][-]{subsection.6.2}{Facts}{section.6}% 44
+\BOOKMARK [2][-]{subsection.6.3}{Asserts}{section.6}% 45
+\BOOKMARK [2][-]{subsection.6.4}{Predicates}{section.6}% 46
+\BOOKMARK [2][-]{subsection.6.5}{Result}{section.6}% 47
+\BOOKMARK [2][-]{subsection.6.6}{Generated world}{section.6}% 48
+\BOOKMARK [1][-]{section.7}{Appendix}{}% 49
+\BOOKMARK [2][-]{subsection.7.1}{Glossary}{section.7}% 50
+\BOOKMARK [2][-]{subsection.7.2}{Software and tool used}{section.7}% 51
+\BOOKMARK [2][-]{subsection.7.3}{Hours of work}{section.7}% 52

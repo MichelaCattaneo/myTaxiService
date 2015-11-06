@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.22)  5 NOV 2015 14:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.22)  6 NOV 2015 11:34
 entering extended mode
 **RASD.tex
 (RASD.tex
@@ -210,7 +210,7 @@ LaTeX Info: Redefining \nameref on input line 6.
 \MPnumerator=\count103
 \makeMPintoPDFobject=\count104
 \everyMPtoPDFconversion=\toks16
-) <logo-polimi.png, id=219, 722.7pt x 722.7pt>
+) <logo-polimi.png, id=211, 722.7pt x 722.7pt>
 File: logo-polimi.png Graphic file (type png)
  <use logo-polimi.png>
 Package pdftex.def Info: logo-polimi.png used on input line 9.
@@ -233,7 +233,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.45 ...ntation and signature}{14}{subsection.6.2}
+l.45 ...mberline {6.3}Asserts}{22}{subsection.6.3}
                                                    [1])
 \tf@toc=\write4
  [2]
@@ -245,25 +245,325 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 38.
  [3] [4] [5] [6]
-[7] [8] [9] [10] [11] [12] [13] [14]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 282.
- [15]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 282.
+[7] <WebAppHomepage.png, id=306, 678.535pt x 542.025pt>
+File: WebAppHomepage.png Graphic file (type png)
+
+<use WebAppHomepage.png>
+Package pdftex.def Info: WebAppHomepage.png used on input line 149.
+(pdftex.def)             Requested size: 203.56207pt x 162.60875pt.
+ <MobileAppHomepage.png, id=307, 323.2075pt x 642.4pt>
+File: MobileAppHomepage.png Graphic file (type png)
+
+<use MobileAppHomepage.png>
+Package pdftex.def Info: MobileAppHomepage.png used on input line 151.
+(pdftex.def)             Requested size: 96.963pt x 192.72148pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 147--155
+
+ []
+
+<WebAppLogin.png, id=308, 678.535pt x 542.025pt>
+File: WebAppLogin.png Graphic file (type png)
+ <use WebAppLogin.png>
+Package pdftex.def Info: WebAppLogin.png used on input line 157.
+(pdftex.def)             Requested size: 203.56207pt x 162.60875pt.
+
+<MobileAppLogin.png, id=309, 323.2075pt x 642.4pt>
+File: MobileAppLogin.png Graphic file (type png)
+ <use MobileAppLogin.png>
+Package pdftex.def Info: MobileAppLogin.png used on input line 159.
+(pdftex.def)             Requested size: 96.963pt x 192.72148pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 155--163
+
+ []
+
+[8 <./WebAppHomepage.png> <./MobileAppHomepage.png> <./WebAppLogin.png> <./Mobi
+leAppLogin.png>] <WebAppRegistration.png, id=318, 678.535pt x 542.025pt>
+File: WebAppRegistration.png Graphic file (type png)
+
+<use WebAppRegistration.png>
+Package pdftex.def Info: WebAppRegistration.png used on input line 165.
+(pdftex.def)             Requested size: 203.56207pt x 162.60875pt.
+
+<MobileAppRegistration.png, id=319, 323.2075pt x 642.4pt>
+File: MobileAppRegistration.png Graphic file (type png)
+
+<use MobileAppRegistration.png>
+Package pdftex.def Info: MobileAppRegistration.png used on input line 167.
+(pdftex.def)             Requested size: 96.963pt x 192.72148pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 163--170
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 163--170
+
+ []
+
+<WebAppMakeAReservation.png, id=320, 678.535pt x 542.025pt>
+File: WebAppMakeAReservation.png Graphic file (type png)
+
+<use WebAppMakeAReservation.png>
+Package pdftex.def Info: WebAppMakeAReservation.png used on input line 172.
+(pdftex.def)             Requested size: 203.56207pt x 162.60875pt.
+
+<MobileAppMakeAReservation.png, id=321, 323.2075pt x 642.4pt>
+File: MobileAppMakeAReservation.png Graphic file (type png)
+
+<use MobileAppMakeAReservation.png>
+Package pdftex.def Info: MobileAppMakeAReservation.png used on input line 174.
+(pdftex.def)             Requested size: 96.963pt x 192.72148pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 170--177
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 170--177
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 170--177
+
+ []
+
+[9 <./WebAppRegistration.png> <./MobileAppRegistration.png> <./WebAppMakeAReser
+vation.png> <./MobileAppMakeAReservation.png>]
+<WebAppPaymentMethod.png, id=330, 678.535pt x 542.025pt>
+File: WebAppPaymentMethod.png Graphic file (type png)
+
+<use WebAppPaymentMethod.png>
+Package pdftex.def Info: WebAppPaymentMethod.png used on input line 179.
+(pdftex.def)             Requested size: 203.56207pt x 162.60875pt.
+
+<MobileAppPaymentMethod.png, id=331, 323.2075pt x 642.4pt>
+File: MobileAppPaymentMethod.png Graphic file (type png)
+
+<use MobileAppPaymentMethod.png>
+Package pdftex.def Info: MobileAppPaymentMethod.png used on input line 181.
+(pdftex.def)             Requested size: 96.963pt x 192.72148pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 177--184
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 177--184
+
+ []
+
+<WebAppPassengerProfile.png, id=332, 678.535pt x 542.025pt>
+File: WebAppPassengerProfile.png Graphic file (type png)
+
+<use WebAppPassengerProfile.png>
+Package pdftex.def Info: WebAppPassengerProfile.png used on input line 186.
+(pdftex.def)             Requested size: 203.56207pt x 162.60875pt.
+
+<MobileAppPassengerProfile.png, id=333, 323.2075pt x 642.4pt>
+File: MobileAppPassengerProfile.png Graphic file (type png)
+
+<use MobileAppPassengerProfile.png>
+Package pdftex.def Info: MobileAppPassengerProfile.png used on input line 188.
+(pdftex.def)             Requested size: 96.963pt x 192.72148pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 184--191
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 184--191
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 184--191
+
+ []
+
+[10 <./WebAppPaymentMethod.png> <./MobileAppPaymentMethod.png> <./WebAppPasseng
+erProfile.png> <./MobileAppPassengerProfile.png>]
+<WebAppCreditCardData.png, id=342, 678.535pt x 542.025pt>
+File: WebAppCreditCardData.png Graphic file (type png)
+
+<use WebAppCreditCardData.png>
+Package pdftex.def Info: WebAppCreditCardData.png used on input line 193.
+(pdftex.def)             Requested size: 203.56207pt x 162.60875pt.
+
+<MobileAppCreditCardData.png, id=343, 323.2075pt x 642.4pt>
+File: MobileAppCreditCardData.png Graphic file (type png)
+
+<use MobileAppCreditCardData.png>
+Package pdftex.def Info: MobileAppCreditCardData.png used on input line 195.
+(pdftex.def)             Requested size: 96.963pt x 192.72148pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 191--198
+
+ []
+
+<WebAppWaitForTaxi.png, id=344, 678.535pt x 542.025pt>
+File: WebAppWaitForTaxi.png Graphic file (type png)
+
+<use WebAppWaitForTaxi.png>
+Package pdftex.def Info: WebAppWaitForTaxi.png used on input line 200.
+(pdftex.def)             Requested size: 203.56207pt x 162.60875pt.
+
+<MobileAppWaitForTaxi.png, id=345, 323.2075pt x 642.4pt>
+File: MobileAppWaitForTaxi.png Graphic file (type png)
+
+<use MobileAppWaitForTaxi.png>
+Package pdftex.def Info: MobileAppWaitForTaxi.png used on input line 202.
+(pdftex.def)             Requested size: 96.963pt x 192.72148pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 198--205
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 198--205
+
+ []
+
+<WebAppTaxiIsArriving.png, id=346, 678.535pt x 542.025pt>
+File: WebAppTaxiIsArriving.png Graphic file (type png)
+
+<use WebAppTaxiIsArriving.png>
+Package pdftex.def Info: WebAppTaxiIsArriving.png used on input line 207.
+(pdftex.def)             Requested size: 203.56207pt x 162.60875pt.
+
+<MobileAppTaxiIsArriving.png, id=347, 323.2075pt x 642.4pt>
+File: MobileAppTaxiIsArriving.png Graphic file (type png)
+
+<use MobileAppTaxiIsArriving.png>
+Package pdftex.def Info: MobileAppTaxiIsArriving.png used on input line 209.
+(pdftex.def)             Requested size: 96.963pt x 192.72148pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 205--212
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 205--212
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 205--212
+
+ []
+
+[11 <./WebAppCreditCardData.png> <./MobileAppCreditCardData.png> <./WebAppWaitF
+orTaxi.png> <./MobileAppWaitForTaxi.png>]
+<MobileAppTaxiDriverArea.png, id=356, 323.2075pt x 642.4pt>
+File: MobileAppTaxiDriverArea.png Graphic file (type png)
+
+<use MobileAppTaxiDriverArea.png>
+Package pdftex.def Info: MobileAppTaxiDriverArea.png used on input line 215.
+(pdftex.def)             Requested size: 96.963pt x 192.72148pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 212--219
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 212--219
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 212--219
+
+ []
+
+<MobileAppTaxiDriverNotifications.png, id=357, 323.2075pt x 642.4pt>
+File: MobileAppTaxiDriverNotifications.png Graphic file (type png)
+
+<use MobileAppTaxiDriverNotifications.png>
+Package pdftex.def Info: MobileAppTaxiDriverNotifications.png used on input lin
+e 222.
+(pdftex.def)             Requested size: 96.963pt x 192.72148pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 219--225
+
+ []
+
+[12 <./WebAppTaxiIsArriving.png> <./MobileAppTaxiIsArriving.png> <./MobileAppTa
+xiDriverArea.png>] [13 <./MobileAppTaxiDriverNotifications.png>] [14] [15]
+[16] [17] <UseCase2.jpg, id=407, 758.835pt x 1118.1775pt>
+File: UseCase2.jpg Graphic file (type jpg)
+ <use UseCase2.jpg>
+Package pdftex.def Info: UseCase2.jpg used on input line 321.
+(pdftex.def)             Requested size: 303.52863pt x 447.26308pt.
+
+[18 <./UseCase2.jpg>] <classDiagram.png, id=413, 775.89874pt x 736.7525pt>
+File: classDiagram.png Graphic file (type png)
+
+<use classDiagram.png>
+Package pdftex.def Info: classDiagram.png used on input line 329.
+(pdftex.def)             Requested size: 426.74562pt x 405.21513pt.
+
+Overfull \hbox (81.74562pt too wide) in paragraph at lines 329--330
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 326--331
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 326--331
+
+ []
+
+[19 <./classDiagram.png>] [20]
+<stateChartDiagram.jpg, id=423, 806.01125pt x 677.53125pt>
+File: stateChartDiagram.jpg Graphic file (type jpg)
+
+<use stateChartDiagram.jpg>
+Package pdftex.def Info: stateChartDiagram.jpg used on input line 339.
+(pdftex.def)             Requested size: 403.00464pt x 338.76479pt.
+
+Overfull \hbox (58.00464pt too wide) in paragraph at lines 339--340
+ [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 335--341
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 335--341
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 335--341
+
+ []
+
+[21 <./stateChartDiagram.jpg>] [22]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 379.
+ [23]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 379.
  (RASD.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 282.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 282.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 379.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 379.
 Package rerunfilecheck Info: File `RASD.out' has not changed.
-(rerunfilecheck)             Checksum: 579353377659F8C9A1CE3299C0ADAC60;3800.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 282.
+(rerunfilecheck)             Checksum: 9519495C9FCC2B5606546B5CDC2A2EEB;3617.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 379.
  ) 
 Here is how much of TeX's memory you used:
- 5113 strings out of 493673
- 75161 string characters out of 3143143
+ 5233 strings out of 493673
+ 78283 string characters out of 3143143
  158980 words of memory out of 3000000
- 8364 multiletter control sequences out of 15000+200000
+ 8454 multiletter control sequences out of 15000+200000
  8370 words of font info for 30 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 29i,6n,28p,741b,406s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 29i,7n,28p,741b,406s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeK/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/
 Program Files (x86)/MiKTeK/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Progra
 m Files (x86)/MiKTeK/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files
@@ -272,9 +572,9 @@ MiKTeK/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files (x86)/MiKTeK/
 fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeK/fonts/
 type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files (x86)/MiKTeK/fonts/type1/p
 ublic/amsfonts/cm/cmtt10.pfb>
-Output written on RASD.pdf (16 pages, 271335 bytes).
+Output written on RASD.pdf (24 pages, 1758566 bytes).
 PDF statistics:
- 423 PDF objects out of 1000 (max. 8388607)
- 91 named destinations out of 1000 (max. 500000)
- 438 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 491 PDF objects out of 1000 (max. 8388607)
+ 97 named destinations out of 1000 (max. 500000)
+ 537 words of extra memory for PDF output out of 10000 (max. 10000000)
 
