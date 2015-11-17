@@ -1,0 +1,43 @@
+\documentclass[18pt,oneside,a4paper, titlepage]{article}
+
+\usepackage[hidelinks]{hyperref}
+\usepackage[pdftex]{graphicx}
+
+\begin{document}
+\begin{figure}[t]
+	\centering
+	\includegraphics[scale=0.35]{logo-polimi.png}
+\end{figure}
+\title{\textbf{myTaxiService}\\\textbf{D}esign \textbf{D}ocument\\ A.Y. 2015/2016\\
+	Politecnico di Milano \\ Version 1.0}	
+\author{Cattaneo Michela Gaia, matr. 791685\\Barlocco Mattia, matr. 792735 }
+\date{December 4, 2015}
+\maketitle
+
+\newpage
+	\tableofcontents
+
+\newpage
+	\section{Architectural Design}
+		\subsection{Overview}
+		\subsection{High level components and their interaction}
+			The architectural style adopted is the multi-tier architecture model based on JEE Architecture. It is composed by four tier:
+			\begin{itemize}
+				\item \textbf{Client tier}: this part runs on the client devices via a Web browser or the mobile application. It allows the users to insert and submit the data in the input forms, that are sent to the web tier. On the other hand, the taxi drivers can send information about their availability to the server and the application client monitors their GPS position in order to move the taxi drivers to another queue if they change their area. 
+				\item \textbf{Web tier}: this part runs on the JEE server. It always listens to all the clients requests and forwards them to the business tier, if they need to be processed. It is the responsible for the creation of the faces and pages of the client interfaces with the data fetched from the business application.
+				\item \textbf{Business tier}: this part runs on the JEE server, too. It contains the logical part of the application, collecting and managing the information of the other tiers. It analyses the data coming from the web tier and, according to the request, it modifies or asks for the required information stored in the database, then it is able to send the result to the web tier.  
+				\item \textbf{EIS tier}: this part contains the database where all the application data are stored. It is not only accessed by the business tier, but also by the administrators, who can directly add a taxi driver account to the database. 
+			\end{itemize}
+		\subsection{Component view}
+			
+		\subsection{Deployment view}
+		\subsection{Runtime view}
+		%	You can use sequence diagrams to describe the way components interact to accomplish specific tasks typically related to your use cases
+		
+		\subsection{Component interfaces}
+		\subsection{Selected architectural styles and patterns}
+		%	Please explain which style/patterns you used, why and how
+			
+		\subsection{Other design decisions}
+		
+\end{document}
