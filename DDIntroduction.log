@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.22)  13 NOV 2015 17:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.22)  16 NOV 2015 13:32
 entering extended mode
 **DDIntroduction.tex
 (DDIntroduction.tex
@@ -44,15 +44,14 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 16.
+[1
 
+{C:/Users/Michela/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 Overfull \hbox (1.55618pt too wide) in paragraph at lines 39--40
 []\OT1/cmr/m/n/10 myTaxiService Re-quire-ment Anal-y-sis and Spec-i-fi-ca-tion 
 Doc-u-ment (RASD) 
  []
 
-[1
-
-{C:/Users/Michela/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 [2] (DDIntroduction.aux) ) 
 Here is how much of TeX's memory you used:
  228 strings out of 493673
@@ -61,13 +60,13 @@ Here is how much of TeX's memory you used:
  3656 multiletter control sequences out of 15000+200000
  5158 words of font info for 19 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 23i,4n,19p,506b,173s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 23i,4n,19p,506b,175s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeK/fonts/type1/public/ams
 fonts/cm/cmbx10.pfb><C:/Program Files (x86)/MiKTeK/fonts/type1/public/amsfonts/
 cm/cmbx12.pfb><C:/Program Files (x86)/MiKTeK/fonts/type1/public/amsfonts/cm/cmr
 10.pfb><C:/Program Files (x86)/MiKTeK/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 >
-Output written on DDIntroduction.pdf (2 pages, 62530 bytes).
+Output written on DDIntroduction.pdf (2 pages, 62652 bytes).
 PDF statistics:
  25 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
