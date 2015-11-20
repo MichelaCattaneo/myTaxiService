@@ -2,6 +2,10 @@
 
 \usepackage[hidelinks]{hyperref}
 \usepackage[pdftex]{graphicx}
+\usepackage{amsmath}
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
 
 \begin{document}
 \begin{figure}[t]
@@ -16,9 +20,9 @@
 
 \newpage
 	\tableofcontents
-
+% ADD DOMAIN PROPERTY: ALMENO UN TAXI ACCETTA LA RICHIESTA. ????????????????????????????
 \newpage
-	\section{Introduction}
+	\include{DDIntroduction}
 		
 	\section{Architectural Design}
 		\subsection{Overview}
@@ -40,16 +44,15 @@
 		\subsection{Other design decisions}
 		% Section 4.G and 4.H are meant to include any explanation of the choices you have made and of their rationale. 
 		
-	\section{Algorithm Design}
-	%	Focus on the definition of the most relevant algorithmic part of your project
-		
+	\include{DDAlgorithmDesign}
+\newpage	
 	\section{User Interface Design}
 		The user interface design has been already specified in the section 3.1.1 of the RASD, where all the user interfaces are described with the support of mockups.
 	%	Provide an overview on how the user interfaces of your system will look like. If you have already included this part in the RASD you can simply refer to what you have already done, possibly providing here some extensions if applicable.
 		
 	\section{Requirements Traceability}
 	%	Explain how the requirements you have defined in the RASD map into the design elements that you have defined in this document.
-
+\newpage
 	\section{Appendix}
 		\subsection{Software and tools used}
 				\begin{itemize}

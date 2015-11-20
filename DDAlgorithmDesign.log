@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.22)  20 NOV 2015 12:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.22)  20 NOV 2015 17:44
 entering extended mode
 **DDAlgorithmDesign.tex
 (DDAlgorithmDesign.tex
@@ -140,48 +140,70 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 15.
 
-Underfull \hbox (badness 10000) in paragraph at lines 15--17
+Underfull \hbox (badness 10000) in paragraph at lines 15--18
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 15--17
+Underfull \hbox (badness 10000) in paragraph at lines 15--18
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 15--18
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 15--18
 
  []
 
 [1
 
 {C:/Users/Michela/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 43--45
+Underfull \hbox (badness 10000) in paragraph at lines 43--64
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 43--45
+Underfull \hbox (badness 10000) in paragraph at lines 43--64
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--64
 
  []
 
 [2]
-Missing character: There is no Ã in font cmr10!
-Missing character: There is no ¨ in font cmr10!
- [3] [4] (DDAlgorithmDesign.aux) ) 
+Underfull \hbox (badness 10000) in paragraph at lines 66--71
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--71
+
+ []
+
+[3] [4] (DDAlgorithmDesign.aux) ) 
 Here is how much of TeX's memory you used:
- 1487 strings out of 493673
- 18745 string characters out of 3143143
- 79492 words of memory out of 3000000
- 4875 multiletter control sequences out of 15000+200000
+ 1488 strings out of 493673
+ 18763 string characters out of 3143143
+ 80492 words of memory out of 3000000
+ 4876 multiletter control sequences out of 15000+200000
  6651 words of font info for 24 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 27i,5n,20p,1030b,370s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files (x86)/MiKTeK/fonts/type1/pu
-blic/amsfonts/cm/cmbx10.pfb><C:/Program Files (x86)/MiKTeK/fonts/type1/public/a
-msfonts/cm/cmbx12.pfb><C:/Program Files (x86)/MiKTeK/fonts/type1/public/amsfont
-s/cm/cmcsc10.pfb><C:/Program Files (x86)/MiKTeK/fonts/type1/public/amsfonts/cm/
-cmmi10.pfb><C:/Program Files (x86)/MiKTeK/fonts/type1/public/amsfonts/cm/cmr10.
-pfb><C:/Program Files (x86)/MiKTeK/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/
-Program Files (x86)/MiKTeK/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Progra
-m Files (x86)/MiKTeK/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on DDAlgorithmDesign.pdf (4 pages, 112892 bytes).
+ 27i,6n,20p,979b,370s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files (x86)/MiKTeK/fonts/type1/pub
+lic/amsfonts/cm/cmbx10.pfb><C:/Program Files (x86)/MiKTeK/fonts/type1/public/am
+sfonts/cm/cmbx12.pfb><C:/Program Files (x86)/MiKTeK/fonts/type1/public/amsfonts
+/cm/cmcsc10.pfb><C:/Program Files (x86)/MiKTeK/fonts/type1/public/amsfonts/cm/c
+mmi10.pfb><C:/Program Files (x86)/MiKTeK/fonts/type1/public/amsfonts/cm/cmr10.p
+fb><C:/Program Files (x86)/MiKTeK/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/P
+rogram Files (x86)/MiKTeK/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program
+ Files (x86)/MiKTeK/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on DDAlgorithmDesign.pdf (4 pages, 109572 bytes).
 PDF statistics:
  47 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
