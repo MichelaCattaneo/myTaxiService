@@ -1,18 +1,121 @@
 \documentclass[18pt,oneside,a4paper, titlepage]{article}
+
+\usepackage{amsmath}
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
 \begin{document}
-	
 	\newpage
 	
 	\section{Algorithm Design}
 	%	Focus on the definition of the most relevant algorithmic part of your project
 		The most relevant algorithm of the myTaxiService application is the one implementing the queue management. It is important to optimize its implementation as long as it is the most complex and the one that distinguishes the system.\\
+		Another significant algorithm is the one that manages the forwarding of the requests of the users to the taxi drivers.
 		\begin{itemize}
-			\item INIT: There is a class that initializes the queues of the taxi drivers, starting assigning one taxi to all the areas and then, basing on the statistics data, the queues are filled with a number of taxi drivers that is greater or equal than the number of the requests expected in that area.\\
-			COMPLEXITY: O(T) with T=number of taxis (randomly assigned)
-			\item REQUEST: The taxi drivers are now able to take requests in the designated area. When a taxi driver takes a request the system sets his availability to false and it stops monitoring his position. In fact, the server constantly monitors the position of all the taxi drivers that are declared available, connecting to the GPS on their devices, and uses this values in order to manage the taxi distribution in the different areas. If a taxi driver does not accept the request of a user, whether because he is busy or because he has not seen the call in the first minute, the system moves him to the last position of the queue, forwarding the request to the second one.\\
-			COMPLEXITY: O(A+Q) with A=number of areas and Q=number of taxi in queue in that area(find the area where the passenger is in and take the first of the queue of that area)
-			\item QUEUES: The areas of the city are represented by a graph with an array of adjacencies and the queue of the taxi drivers, whose position is within its boundaries, is assigned to each area. It is a useful representation in order to decide how to distribute the taxis, in fact it is possible that an area is occupied by a number of taxi that is equal to the threshold of the maximum taxis that can be present in that area. In this case the system does not put a recently arrived taxi in the queue of that area, but advise the taxi driver that he will be moved to an adjacent area that has the minimum number of taxi, searching recursively in the adjacencies of the areas. As it is necessary to guarantee that there should always be at least one taxi driver in each area, when it occurs that the last taxi driver leaves an area, the system instantly notifies the last taxi driver of the queue that he has to move from the most populated adjacent area to the needy area.
-			COMPLEXITY: O(A)
+			\item \textbf{Initialization.} The class which manages the areas distribution and the queues of the taxi driver also deals with the initialization of the queues of the taxis. It starts assigning to every area as many taxi as the average number of the requests expected in that area, based on the statistics. Once all the areas have been filled with their optimal number of taxis, the remaining taxi drivers are sent to the areas that are most needy.\\The "needyArea" function, in fact, returns the index of the most needy area at the moment, calculating the area that has the maximum difference between the maximum number of requests recorded and the average of requests.\\
+			 \\
+			
+			
+			\begin{algorithm}
+				\caption{Initialization}
+				\begin{algorithmic}[1]
+					\Procedure{initQueues}{TaxiDriver[] taxiDrivers, Area[] areas}
+					\State $i \gets \textit{0}$
+					\State $j \gets \textit{0}$
+					\For {$i < \textit{areas.size()}$}
+						\State $k \gets \textit{0}$
+						\For {$k < \textit{areas[i].getAverage()}$}
+								\State $areas[i].\text{addToQueue}(taxiDrivers[j])$
+								\State $j \gets j+1$.
+								\EndFor
+						\EndFor
+					\If{$j < \textit{taxiDrivers.size()}$ }
+						\For {$j < \textit{taxiDrivers.size()}$}
+							\State $areas[\text{needyArea} (areas)].\text{addInQueue}(taxiDrivers[j])$
+						\EndFor
+					\EndIf
+					\EndProcedure
+				\end{algorithmic}
+			\end{algorithm}
+			
+			COMPLEXITY: O(T) with T = number of taxis.
+			\newpage
+			\item \textbf{Manage requests.} After the initialization, the taxi drivers are able to take requests. If they accept the request, the function sets their availability to false and stops monitoring their position. It is also possible that a taxi driver declines the request or is not able to give an answer to the server. In this case, the first taxi driver is moved to the last position of the queue and forwards the request to the second of the queue, who is now moved to the first position. This action is iterated in the queue of that area until a taxi accept the request. After accepting the call, the taxi driver is set unavailable and he is deleted from the queue, as it is likely that he will end up in another area.\\
+			 \\
+			
+				\begin{algorithm}
+					\caption{Manage requests}
+					\begin{algorithmic}[1]
+						\Procedure{manageRequest}{Position pos, Area area}
+						\State $answer \gets \text{"no"}$
+						\State $timer \gets \text{new Timer(60)}$
+						\While {$answer = \text{"no"} \text{  }||\text{  } answer = \text{"timeOut"}$}
+							\State $\text{sendRequest}(area.\text{getFirstOfQueue()}, pos)$
+							\State $answer \gets \text{waitAnswer}(timer)$
+							\If{$answer = \text{"no"} \text{ }||\text{  } answer = \text{"timeOut"}$}
+								\State $area.\text{moveToEndOfQueue()}$
+							\EndIf
+						\EndWhile
+						\State $area.\text{getFirstOfQueue()}.setUnavailable()$
+						\State $area.\text{deleteFirstFromQueue()}$
+						\EndProcedure
+					\end{algorithmic}
+				\end{algorithm}
+			COMPLEXITY: O(A+Q) with A = number of areas and Q = number of taxi enqueued in that area.
+			\newpage
+			\item \textbf{Manage queues.} The areas of the city are represented by a graph with an array of adjacencies and the queue of the taxi drivers, whose position is within its boundaries, is assigned to each area.\\ It is a useful representation in order to decide how to distribute the taxis, in fact it is possible that an area is occupied by a number of taxi that is equal to the threshold of the maximum taxis that can be present in that area. In this case the system does not put a recently arrived taxi in the queue of that area, but advise the taxi driver that he will be moved to an adjacent area that is needy. If there are not needy adjacent areas, he will be assigned to a random area and if it \\
+			
+			
+			 As it is necessary to guarantee that there should always be at least one taxi driver in each area, when it occurs that the last taxi driver leaves an area, the system instantly notifies the last taxi driver of the queue that he has to move from the most populated adjacent area to the needy area.
+			termina sicuramente dentro il while perchè i taxi non sono tutti massimi.
+			
+			
+			\begin{algorithm}
+				\caption{Manage queues}
+				\begin{algorithmic}[1]
+					\Procedure{manageQueue}{Area[] area, TaxiDriver taxiDriver}
+					\State $List<Area> \text{ } queue$
+					\State $Area \text{ } tmp$
+					\For {$ i < area.size() $}
+						\If {$ taxiDriver.position \text{ is in } area[i]$}
+							\State $ startingArea \gets i $
+						\EndIf
+					\EndFor
+					\If {$ area[startingArea].getNumberOfTaxi() < MAX $}
+						\State $ area[startingArea].addToQueue(taxiDriver)$
+					
+					\Else
+						\For {$ i < area.sie() $}
+							\State $area[i].distance \gets INFINITY $
+						\EndFor
+						\State $area[startingArea].distance \gets 0$
+						\State $ queue.enqueue(area[startingArea])$
+						\While {$ \text{!}queue.isEmpty()$}
+							\State $ tmp \gets queue.dequeue() $
+							\For {$i < tmp.adjacencies.size()$}
+								\If{$ tmp.adjacencies[i].getNumberOfTaxi() < avg[i]$}
+									\State $tmp.adjacencies[i].addToQueue(taxiDriver)$
+									\State \textbf{return} 
+								\EndIf
+							\EndFor
+							\For{$ i < tmp.adjacencies.size()$}
+								\If{$ tmp.adjacencies[i].getNumberOfTaxi() < MAX$}
+									\State $tmp.asjacencies[i].addToQueue(taxiDriver)$
+									\State \textbf{return} 
+								\EndIf
+								\If{$tmp.adjacencies[i].distance = INFINITY$}
+									\State $tmp.adjacencies[i].distance \gets tmp.distance + 1$
+									\State $ queue.enqueue(tmp.adjacencies[i])$
+								\EndIf
+							\EndFor
+						\EndWhile
+					
+					
+					\EndIf
+					\EndProcedure
+				\end{algorithmic}
+			\end{algorithm}
+			COMPLEXITY: O(A) with A = number of areas.
 		\end{itemize}
 		
 		%the complexity of the algorithms

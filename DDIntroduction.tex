@@ -10,7 +10,10 @@
 		\\This document is addressed to the project development teams, technical architects, database designers and testers, as long as it has useful guidelines and a specific description of the design implementation of the system.
 		
 	\subsection{Scope}
-		
+		The system aims at simplifying the access of the passengers and guaranteeing a fair management of taxi queues.\\
+		The server listens for the requests of the clients, which can be taxi drivers or users and access to their GPS position.\\
+		The user clients are able to request a taxi and, if logged into the system, they can also make reservations and choose the payment method they prefer. On the other hand, taxi driver clients can change their status from available to unavailable, accept or decline the requests of the users and see their position in the queue of the area they are in.\\The server manages the notifications to forward to the clients, for example the arrival of a taxi for a user or the requests of the users for the taxi drivers. 
+	
 	\subsection{Definitions, Acronyms, Abbreviations}
 		\begin{itemize}
 			\item \textbf{Definitions}
