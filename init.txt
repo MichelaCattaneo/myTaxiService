@@ -11,17 +11,18 @@ manageQueue(Area[] area,TaxiDriver taxiDriver){
 			area[i].distance=INFINITY;
 		area[startingArea].distance=0;
 		queue.enqueue(area[startingArea]);
+		rejectedTaxiDriver=taxiDriver;
 		while(!queue.isEmpty()){
 			tmp=queue.dequeue();
 			for(int i=0; i<tmp.adjacencies.size(); i++)
 				if(tmp.adjacencies[i].getNumberOfTaxi()<AVG){
-					tmp.adjacencies[i].addToQueue(taxiDriver);
+					tmp.adjacencies[i].addToQueue(rejectedTaxiDriver);
 					return;
 					}
 			
 			for(int i=0; i<tmp.adjacencies.size(); i++){
 				if(tmp.adjacencies[i].getNumberOfTaxi()<MAX){
-					tmp.adjacencies[i].addToQueue(taxiDriver);
+					tmp.adjacencies[i].addToQueue(rejectedTaxiDriver);
 					return;
 					}
 				
@@ -30,6 +31,6 @@ manageQueue(Area[] area,TaxiDriver taxiDriver){
 					queue.enqueue(tmp.adjacencies[i]);
 				}				
 			}
-		}
+			rejectedTaxiDriver=queue.getFirstOfQueue().addToFullQueue(rejectedTaxiDriver);
 	}
 }

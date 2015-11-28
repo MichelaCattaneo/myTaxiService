@@ -23,41 +23,60 @@
 % ADD DOMAIN PROPERTY: ALMENO UN TAXI ACCETTA LA RICHIESTA. ????????????????????????????
 \newpage
 	\include{DDIntroduction}
-		
-	\section{Architectural Design}
-		\subsection{Overview}
-		\subsection{High level components and their interaction}
-		% here you can introduce the high level components of your architecture (in our basic example in the slides about design you find these in slide 7) and describe the main interaction between them (no details here. You can say why some components talk to each other, why, if the communication is synchronous or asynchronous, any other info you think is useful at this point). 
-		\subsection{Component view}
-		% here you have a refinement of what you have in Section 4.B and identify sub-components. For instance, the diagram in slide 6 could be a diagram showing a  component view
-		
-		\subsection{Deployment view}
-		% this is what you have in slide 8, that is, the identification of the artifact that need to be deployed to have the system working
-		\subsection{Runtime view}
-		%	You can use sequence diagrams to describe the way components interact to accomplish specific tasks typically related to your use cases
-		% this is what you have in slide 9 plus sequence diagrams describing the way components behave in order to accomplish a certain activity
-		\subsection{Component interfaces}
-		% here you define the interfaces of your components, that is, which operations they offer to the external world, their meaning, any input and output parameter (name, possible set of values/type)
-		\subsection{Selected architectural styles and patterns}
-		%	Please explain which style/patterns you used, why and how
-			
-		\subsection{Other design decisions}
-		% Section 4.G and 4.H are meant to include any explanation of the choices you have made and of their rationale. 
-		
+	\include{DDArchitecturalDesign}	
 	\include{DDAlgorithmDesign}
 \newpage	
 	\section{User Interface Design}
 		The user interface design has been already specified in the section 3.1.1 of the RASD, where all the user interfaces are described with the support of mockups.
 	%	Provide an overview on how the user interfaces of your system will look like. If you have already included this part in the RASD you can simply refer to what you have already done, possibly providing here some extensions if applicable.
-		
+\newpage
 	\section{Requirements Traceability}
 	%	Explain how the requirements you have defined in the RASD map into the design elements that you have defined in this document.
+		\begin{itemize}
+			\item \textbf{Registration of the visitor.} This requirement is specified in the section 2.3 in the Access interface and in the AccessManager component.
+			
+			\item \textbf{E-mail confirmation.}
+			
+			\item \textbf{Look up information about the system.}
+			
+			\item \textbf{Log in as a passenger.} This requirement is specified in the section 2.3 in the Access interface and in the AccessManager component.
+		
+			\item \textbf{Log in as a taxi driver.} This requirement is specified in the section 2.3 in the AccessManager component.
+		
+			\item \textbf{Log in with social networks.} This requirement is specified in the section 2.3 in the Access interface and in the AccessManager component.
+			
+			\item \textbf{Retrieve password.} This requirement is specified in the section 2.3 in the AccessManager component.
+			
+			\item \textbf{Request a taxi.} This requirement is specified in the section 2.3 in the RequestTaxi interface and in the RequestManager component.
+			
+			\item \textbf{Reserve a taxi.} This requirement is specified in the section 2.3 in the MakeReservation interface and in the RequestManager component.
+			
+			\item \textbf{Choose payment method.} This requirement is specified in the section 2.3 in the ChoosePaymentMethod interface and in the PaymentManager component.
+			
+			\item \textbf{View profile.} This requirement is specified in the section 2.3 in the PassengerArea and TaxiDriverArea interfaces.
+			
+			\item \textbf{Edit profile.} This requirement is specified in the section 2.3 in the PassengerArea and TaxiDriverArea interfaces and in the PassengerAreaManager and TaxiDriverAreaManager components.
+			
+			\item \textbf{See waiting time.}
+			
+			\item \textbf{Change availability.} This requirement is specified in the section 2.3 in the TaxiDriverArea interface and in the TaxiDriverAreaManager component.
+			
+			\item \textbf{Notification of the requests.} This requirement is specified in the section 2.3 in the TaxiDriverArea interface and in the TaxiDriverAreaManager component.
+			
+			\item \textbf{See position in the queue.} This requirement is specified in the section 2.3 in the TaxiDriverArea interface and in the TaxiDriverAreaManager component.
+		\end{itemize}
+\newpage
+	\section{References}
+		\begin{itemize}
+			\item  ISO/IEC/IEEE 42010:2011, Systems and software engineering - Architecture description
+			\item \url{http://www.uml-diagrams.org/component-diagrams.html}
+		\end{itemize}
 \newpage
 	\section{Appendix}
 		\subsection{Software and tools used}
 				\begin{itemize}
 					\item TeXstudio (\url{http://www.texstudio.org/}): to redact and to format this document.
-					\item draw.io (\url{https://www.draw.io/}):to create all the diagrams.
+					\item draw.io (\url{https://www.draw.io/}): to create all the diagrams.
 				\end{itemize}
 		\subsection{Hours of work}
 			Time spent redacting this document:
