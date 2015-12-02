@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.22)  28 NOV 2015 18:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.22)  2 DEC 2015 15:54
 entering extended mode
 **DD.tex
 (DD.tex
@@ -305,7 +305,7 @@ LaTeX Info: Redefining \nameref on input line 10.
 \MPnumerator=\count124
 \makeMPintoPDFobject=\count125
 \everyMPtoPDFconversion=\toks24
-) <logo-polimi.png, id=91, 722.7pt x 722.7pt>
+) <logo-polimi.png, id=87, 722.7pt x 722.7pt>
 File: logo-polimi.png Graphic file (type png)
  <use logo-polimi.png>
 Package pdftex.def Info: logo-polimi.png used on input line 13.
@@ -340,7 +340,7 @@ Doc-u-ment (RASD)
 
 
 ]
-<HighLevelComp.png, id=147, 816.04875pt x 359.3425pt>
+<HighLevelComp.png, id=142, 816.04875pt x 359.3425pt>
 File: HighLevelComp.png Graphic file (type png)
  <use HighLevelComp.png>
 Package pdftex.def Info: HighLevelComp.png used on input line 18.
@@ -411,17 +411,17 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 90.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 90.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 90.
 Package rerunfilecheck Info: File `DD.out' has not changed.
-(rerunfilecheck)             Checksum: 65D6285739D0C076B9FF59B9981BA859;1424.
+(rerunfilecheck)             Checksum: 0974A32DBBCEC2E2144EB0B2D9A9093C;1351.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 90.
  ) 
 Here is how much of TeX's memory you used:
- 6303 strings out of 493673
- 90583 string characters out of 3143143
- 181569 words of memory out of 3000000
- 9538 multiletter control sequences out of 15000+200000
+ 6301 strings out of 493673
+ 90553 string characters out of 3143143
+ 180569 words of memory out of 3000000
+ 9537 multiletter control sequences out of 15000+200000
  10843 words of font info for 39 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 29i,6n,30p,993b,390s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 29i,6n,30p,993b,394s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeK/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/
 Program Files (x86)/MiKTeK/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Progra
 m Files (x86)/MiKTeK/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Program Fil
@@ -434,9 +434,9 @@ amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeK/fonts/type1/public/amsfon
 ts/cm/cmsy7.pfb><C:/Program Files (x86)/MiKTeK/fonts/type1/public/amsfonts/cm/c
 mti10.pfb><C:/Program Files (x86)/MiKTeK/fonts/type1/public/amsfonts/cm/cmtt10.
 pfb>
-Output written on DD.pdf (20 pages, 311463 bytes).
+Output written on DD.pdf (20 pages, 313073 bytes).
 PDF statistics:
- 271 PDF objects out of 1000 (max. 8388607)
- 46 named destinations out of 1000 (max. 500000)
- 187 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 266 PDF objects out of 1000 (max. 8388607)
+ 45 named destinations out of 1000 (max. 500000)
+ 179 words of extra memory for PDF output out of 10000 (max. 10000000)
 
