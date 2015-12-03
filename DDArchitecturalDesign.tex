@@ -67,18 +67,74 @@
 			\end{figure}
 		%other sequence
 	\newpage
-		\subsection{Component interfaces}
-		% here you define the interfaces of your components, that is, which operations they offer to the external world, their meaning, any input and output parameter (name, possible set of values/type)
-		Here is presented a list of the interfaces defined in the component diagram and their functionalities.
-		\begin{itemize}
-			\item \textbf{Access.}
-			\item \textbf{TaxiDriverArea.}
-			\item \textbf{PassengerArea.}
-			\item \textbf{RequestTaxiVisitor.}
-			\item \textbf{RequestTaxiPassenger.}
-			\item \textbf{MakeReservation.}
-			\item \textbf{PaymentMethod.}
+	\subsection{Component interfaces}
+	% here you define the interfaces of your components, that is, which operations they offer to the external world, their meaning, any input and output parameter (name, possible set of values/type)
+	Here is presented a list of the interfaces defined in the component diagram and their functionalities.
+	\begin{itemize}
+		\item \textbf{Access.}
+		This interface allows a generic user to log into the system as a passenger or as a taxi driver and allows the visitor to sign up. It requires the visitor to insert his personal information, email and password if he wants to register, otherwise only email and password if he wants to log in. If the data entered are correct the system redirects the client to his personal area.\\ The inputs of the login as a passenger are:
+		\begin{itemize} 
+			\item[-] Email (String)
+			\item[-] Password (String)
 		\end{itemize}
+		The inputs of the login as a taxi driver are:
+		\begin{itemize} 
+			\item[-] Email (String)
+			\item[-] Password (String)
+			\item[-] Code (String)
+		\end{itemize} 
+		The inputs of the registration are:
+		\begin{itemize} 
+			\item[-] Email (String)
+			\item[-] Name (String)
+			\item[-] Surname (String)
+			\item[-] Password (String)
+			\item[-] Phone number (String)
+		\end{itemize}
+		\item \textbf{TaxiDriverArea.}
+		This interface allows the taxi driver to see and modify his profile information, to change his availability and to see his position in the queue. It requires the taxi driver to insert new personal information if he wants to modify his profile, otherwise he can press the button of the availability to change his state. The output of this interface is the profile of the taxi driver with the position of the queue, the availability button and the notifications.\\ The inputs of the edit profile form are:
+		\begin{itemize} 
+			\item[-] Email (String)
+			\item[-] Name (String)
+			\item[-] Surname (String)
+			\item[-] Password (String)
+			\item[-] Phone number (String)
+		\end{itemize}
+		The input of the availability button is true or false whether he wants to declare available or not.
+		\item \textbf{PassengerArea.}
+		This interface allows the passenger to see and modify his profile information, to make a request and to make a reservation. It requires the passenger to insert new personal information if he wants to edit his profile, otherwise he can press the designated button in order to make the request or the reservation. The outputs are the profile of the passenger or the redirection to the screen of the request or of the reservation.\\ The inputs of the edit profile form are:
+		\begin{itemize} 
+			\item[-] Email (String)
+			\item[-] Name (String)
+			\item[-] Surname (String)
+			\item[-] Password (String)
+			\item[-] Phone number (String)
+		\end{itemize}
+		\item \textbf{Notifications.}
+		This interface is a panel that allows the taxi driver to see and to accept or decline the request of the user. The input is \textit{accept} if he wants to take the request, \textit{decline} otherwise. If he does not answer in one minute the input is automatically set to \textit{timeOut}. The output is the history of the requests previously forwarded.
+		\item \textbf{RequestTaxiVisitor.}
+		This interface allows the visitor to make a request. The input is his position in that moment sent automatically from the user device when he presses the button. The output is a waiting screen.
+		\item \textbf{RequestTaxiPassenger.}
+		This interface allows the passenger to make a request. The input is his position in that moment sent automatically from the user device when he presses the button. The output is the redirection to the payment method panel. 
+		\item \textbf{MakeReservation.}
+		This interface allows the passenger to make a reservation by filling in a form.\\ Its inputs are:
+		\begin{itemize} 
+			\item[-] DepartureTime (Time)
+			\item[-] Origin (String)
+			\item[-] Destination (String)
+		\end{itemize}
+		The output is the redirection to the payment method panel.
+		\item \textbf{PaymentMethod.}
+		This interface allows the passenger to choose the payment method he prefers. The input is \textit{cash} if he wants to pay when the ride is over, \textit{card} otherwise. If he chooses to pay with the credit card he needs to provide his credit card data if he has not done it yet. The output is the redirect to the waiting screen.\\ The inputs of the credit card data form are: 
+		\begin{itemize} 
+			\item[-] CardType (String)
+			\item[-] FirstName (String)
+			\item[-] LastName (String)
+			\item[-] ExpirationDate (Date)
+			\item[-] CVV (int)
+			\item[-] CardNumber (int)
+		\end{itemize}
+	\end{itemize}
 	\newpage
 		\subsection{Selected architectural styles and patterns}
 		%	Please explain which style/patterns you used, why and how

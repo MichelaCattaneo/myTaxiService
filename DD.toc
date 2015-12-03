@@ -8,14 +8,14 @@
 \contentsline {subsection}{\numberline {2.1}Overview}{5}{subsection.2.1}
 \contentsline {subsection}{\numberline {2.2}High level components and their interaction}{6}{subsection.2.2}
 \contentsline {subsection}{\numberline {2.3}Component view}{7}{subsection.2.3}
-\contentsline {subsection}{\numberline {2.4}Deployment view}{8}{subsection.2.4}
-\contentsline {subsection}{\numberline {2.5}Runtime view}{9}{subsection.2.5}
-\contentsline {subsection}{\numberline {2.6}Component interfaces}{10}{subsection.2.6}
-\contentsline {subsection}{\numberline {2.7}Selected architectural styles and patterns}{11}{subsection.2.7}
-\contentsline {section}{\numberline {3}Algorithm Design}{12}{section.3}
-\contentsline {section}{\numberline {4}User Interface Design}{16}{section.4}
-\contentsline {section}{\numberline {5}Requirements Traceability}{17}{section.5}
-\contentsline {section}{\numberline {6}References}{18}{section.6}
-\contentsline {section}{\numberline {7}Appendix}{19}{section.7}
-\contentsline {subsection}{\numberline {7.1}Software and tools used}{19}{subsection.7.1}
-\contentsline {subsection}{\numberline {7.2}Hours of work}{19}{subsection.7.2}
+\contentsline {subsection}{\numberline {2.4}Deployment view}{9}{subsection.2.4}
+\contentsline {subsection}{\numberline {2.5}Runtime view}{10}{subsection.2.5}
+\contentsline {subsection}{\numberline {2.6}Component interfaces}{11}{subsection.2.6}
+\contentsline {subsection}{\numberline {2.7}Selected architectural styles and patterns}{14}{subsection.2.7}
+\contentsline {section}{\numberline {3}Algorithm Design}{15}{section.3}
+\contentsline {section}{\numberline {4}User Interface Design}{19}{section.4}
+\contentsline {section}{\numberline {5}Requirements Traceability}{20}{section.5}
+\contentsline {section}{\numberline {6}References}{21}{section.6}
+\contentsline {section}{\numberline {7}Appendix}{22}{section.7}
+\contentsline {subsection}{\numberline {7.1}Software and tools used}{22}{subsection.7.1}
+\contentsline {subsection}{\numberline {7.2}Hours of work}{22}{subsection.7.2}
