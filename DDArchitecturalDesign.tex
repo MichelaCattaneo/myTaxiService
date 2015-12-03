@@ -2,20 +2,26 @@
 
 %\usepackage[hidelinks]{hyperref}
 %\usepackage[pdftex]{graphicx}
+%\usepackage{lscape}
+%\usepackage{pdflscape}
 
 %\begin{document}
 
 \newpage
 	\section{Architectural Design}
 		\subsection{Overview}
-				
+			This section deals with the specific description of the architectural choices made for the myTaxiService system. These decisions are supported by different diagrams, whose aim is to highlight and simplify the view of the components of the system, and explanations about the architectural styles adopted.
+			\\In the first subsections there is a representation of the components of the system with diagrams. Here are presented the high level components and their interaction, with a brief definition of the functionalities of the three components individuated, then these are unfolded and there is a more specific description of the components, the interfaces and their relationships and features.\\
+			The last subsection explains and justifies the architectural styles selected for the myTaxiService system, which consists in a client/server, event-based system, with a service-oriented, three tier architecture (client, server and database). 
+			
+	
 \newpage
 		\subsection{High level components and their interaction}
 		% here you can introduce the high level components of your architecture (in our basic example in the slides about design you find these in slide 7) and describe the main interaction between them (no details here. You can say why some components talk to each other, why, if the communication is synchronous or asynchronous, any other info you think is useful at this point). 
 			\vspace{1cm}
 			\begin{figure}[h]
 				\centering
-				\includegraphics[scale=0.45]{HighLevelComp.png}
+				\includegraphics[scale=0.45]{Diagrams/HighLevelComp2.png}
 			\end{figure}
 			\vspace{1cm}
 			\begin{itemize}
@@ -27,14 +33,39 @@
 	\newpage
 		\subsection{Component view}
 		% here you have a refinement of what you have in Section 4.B and identify sub-components. For instance, the diagram in slide 6 could be a diagram showing a  component view
-		These are the components that define the myTaxiService system architecture. The system is composed by many subsystems 
+		These are the components that define the myTaxiService system architecture. This diagram is composed by many subsystems and an external component which belongs to the database.\\ Starting from the left, in the first subsystem, the \textbf{Controller}, there are two components that manage the requests of the users and the payments.\\ The \textit{RequestManager} component manages all the logic of the requests, getting the information from the users and forwarding them to the designated taxi driver. As it deals with several tasks, he needs more than one interface to be implemented: \textit{RequestTaxiVisitor}, \textit{Notifications}, \textit{RequestTaxiPassenger} and \textit{MakeReservation} are the required interfaces for this component. It also relates with other components: it uses the \textit{PaymentManager} and the \textit{Data}, in order to complete its operations, and creates the \textit{ChoosePaymentMethod} interface, which is required by the \textit{PaymentManager}.\\
+		The second subsystem is called \textbf{Functions}, as it provides the possible actions that the user can do while using the system. It is composed by four interfaces provided to the \textbf{Controller}: \textit{PaymentManager}, \textit{RequestTaxiPassenger}, \textit{MakeReservation} and \textit{Notifications}.\\
+		This last interface can be accessed from the taxi driver mobile application to see the notifications of the requests, in fact it is produced by the \textit{TaxiDriverArea} interface.
+		The \textit{RequestTaxiPassenger} and \textit{MakeReservation} interfaces, instead, are created by the \textit{PassengerArea} interface, which is part of the subsystem \textbf{Account} with \textit{TaxiDriverArea}. They are used by the passenger when he needs to request a taxi or make a reservation from his personal area.\\
+		Another subsystem is the \textbf{AccountManager} whose main goal is to manage the access of the users, forwarding them to the proper designated area. The \textit{TaxiDriverAreaManager} requires the interface \textit{TaxiDriverArea}, which is provided by the \textit{TaxiDriverArea} interface in \textbf{Account}. The same relation is defined between the \textit{PassengerAreaManager} component and the \textit{PassengerArea}. The third component of this subsystem, the \textit{AccessManager}, which is responsible for the log in and the registration of the users, creates an instance of \textit{PassengerArea}, while requires the interface \textit{Access}.\\
+		The last subsystem is the \textbf{Visitor}, which provides the interface \textit{Access} to the \textit{AccessManager} and another interface, \textit{RequestTaxi} to the \textit{RequestManager}. In fact, this subsystem represent the home page where the visitor can register or log in and request a taxi.
+		
+		
+		\begin{landscape}
+			\newpage
+			\begin{figure}[!h]
+				\includegraphics[scale=0.41]{Diagrams/componentDiagram.png}
+			\end{figure}
+		\end{landscape}
+		
 	\newpage	
 		\subsection{Deployment view}
 		% this is what you have in slide 8, that is, the identification of the artifact that need to be deployed to have the system working
+		\vspace{0,7cm}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.56]{Diagrams/deploymentDiagram.png}
+		\end{figure}
 	\newpage
 		\subsection{Runtime view}
 		%	You can use sequence diagrams to describe the way components interact to accomplish specific tasks typically related to your use cases
 		% this is what you have in slide 9 plus sequence diagrams describing the way components behave in order to accomplish a certain activity
+		\vspace{2cm}
+			\begin{figure}[h]
+				\centering
+				\includegraphics[scale=0.65]{Diagrams/runTime.jpg}
+			\end{figure}
+		%other sequence
 	\newpage
 		\subsection{Component interfaces}
 		% here you define the interfaces of your components, that is, which operations they offer to the external world, their meaning, any input and output parameter (name, possible set of values/type)
@@ -54,9 +85,8 @@
 		\begin{itemize}
 			\item \textbf{Client/Server.} The client/server architecture is the optimal solution for the myTaxiService system, as it is necessary to have a central system that listens, manages and forwards the requests of the different clients. There is a central server that contains the logic of the application and the clients are the users of the system, such as visitors, passengers and taxi drivers.
 			\item \textbf{Three-tier.} It has been adopted a three-tier architectural model, composed by thin client, application server and database.\\ This architecture is the best choice for our system, even if it has some cons, such as the complexity of the structure and the difficulty of set up and maintenance, it still has several pros. For example, it guarantees increased performance and great flexibility, useful if there will be any future change concerning the architecture. Moreover it is granted a great security level, thanks to the decoupling of logic, data and presentation, which is essential as the system deals with several personal data.
-			\item \textbf{Event-Based System.} The myTaxiService application is based on the event firing %triggering?
-			. \\It is necessary, in fact, that the system is reactive and that does different quick operations according to the action of the clients. For example the visitors and passengers make requests and reservations, which the system has to manage and forward to the first taxi of the area, and the taxi drivers can change their availability state and the system has to start or end the monitoring of their position, and they can accept or decline a request and the system has to manage the queue. \\The users and the taxi drivers are registered to different events and expect to receive notifications about what they need, whether it is the arrival of a taxi or the requests of the users.\\ The events are asynchronous and based on a "send and forget" paradigm, where the system only cares for sending the notifications to the designated clients or doing the actions needed in response of the event fired.
-			\item  \textbf{Service Oriented Architecture.} A service-oriented architecture is necessary if the system wants to be more flexible and expandable. In fact, the myTaxiService application needs to provide programmatic interfaces in order to be open to future implementations of additional services. This can be guaranteed with this architectural choice, which is based on the loose coupling of the services, allowing to easily add more functionalities, without starting from scratch when a change is needed, and to simplify the maintenance of the system.
+			\item \textbf{Event-Based System.} The myTaxiService application is based on the event firing. \\It is necessary, in fact, that the system is reactive and that does different quick operations according to the action of the clients. For example the visitors and passengers make requests and reservations, which the system has to manage and forward to the first taxi of the area, and the taxi drivers can change their availability state and the system has to start or end the monitoring of their position, and they can accept or decline a request and the system has to manage the queue. \\The users and the taxi drivers are registered to different events and expect to receive notifications about what they need, whether it is the arrival of a taxi or the requests of the users.\\ The events are asynchronous and based on a "send and forget" paradigm, where the system only cares for sending the notifications to the designated clients or doing the actions needed in response of the event fired.
+			\item  \textbf{Service-Oriented Architecture.} A service-oriented architecture is necessary if the system wants to be more flexible and expandable. In fact, the myTaxiService application needs to provide programmatic interfaces in order to be open to future implementations of additional services. This can be guaranteed with this architectural choice, which is based on the loose coupling of the services, allowing to easily add more functionalities, without starting from scratch when a change is needed, and to simplify the maintenance of the system.
 		\end{itemize}
 							
 %\end{document}
