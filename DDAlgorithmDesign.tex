@@ -40,24 +40,27 @@
 			
 			
 			\newpage
-			\item \textbf{Manage requests.} After the initialization, the taxi drivers are able to take requests. If they accept the request, the function sets their availability to false and stops monitoring their position. It is also possible that a taxi driver declines the request or is not able to give an answer to the server. In this case, the first taxi driver is moved to the last position of the queue and forwards the request to the second of the queue, who is now moved to the first position. This action is iterated in the queue of that area until a taxi accept the request. After accepting the call, the taxi driver is set unavailable and he is deleted from the queue, as it is likely that he will end up in another area.\\
+			\item \textbf{Manage requests.} After the initialization, the taxi drivers are able to take requests. When the taxi driver answers to the request or the timer is over, the system calls the function manageAnswer(). If they accept the request, the function sets their availability to false and stops monitoring their position. It is also possible that a taxi driver declines the request or is not able to give an answer to the server. In this case, the first taxi driver is moved to the last position of the queue and forwards the request to the second of the queue, who is now moved to the first position. This action is iterated in the queue of that area until a taxi accept the request. After accepting the call, the taxi driver is set unavailable and he is deleted from the queue, as it is likely that he will end up in another area.\\
 			 \\\\
 			COMPLEXITY: O(A+Q) with A = number of areas and Q = number of taxi enqueued in that area.\\\\
 				\begin{algorithm}
 					\caption{Manage requests}
 					\begin{algorithmic}[1]
-						\Procedure{manageRequest}{Position pos, Area area}
-						\State $answer \gets \text{"no"}$
+						\Procedure{forwardRequest}{Position pos, Area area}
 						\State $timer \gets \text{new Timer(60)}$
-						\While {$answer = \text{"no"} \text{  }||\text{  } answer = \text{"timeOut"}$}
-							\State $\text{sendRequest}(area.\text{getFirstOfQueue()}, pos)$
-							\State $answer \gets \text{waitAnswer}(timer)$
-							\If{$answer = \text{"no"} \text{ }||\text{  } answer = \text{"timeOut"}$}
-								\State $area.\text{moveToEndOfQueue()}$
-							\EndIf
-						\EndWhile
-						\State $area.\text{getFirstOfQueue()}.setUnavailable()$
-						\State $area.\text{deleteFirstFromQueue()}$
+						\State $\text{sendRequest}(area.\text{getFirstOfQueue()}, pos)$
+						\State $timer.\text{startTimer}()$
+						\EndProcedure
+						\Procedure{manageAnswer}{String answer,Area area}
+						\If{$answer = \text{"no"} \text{ }||\text{  } answer = \text{"timeOut"}$}
+							\State $area.\text{moveFirstToEndOfQueue()}$
+							\State $\text{forwardRequest(pos,area)}$
+						\EndIf
+						\If{$answer = \text{"yes"}$}
+							\State $area.\text{getFirstOfQueue()}.setUnavailable()$
+							\State $area.\text{deleteFirstFromQueue()}$
+						\EndIf
+						\State $timer.\text{stopTimer}()$
 						\EndProcedure
 					\end{algorithmic}
 				\end{algorithm}
