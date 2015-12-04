@@ -13,9 +13,14 @@
 \BOOKMARK [2][-]{subsection.2.6}{Component interfaces}{section.2}% 13
 \BOOKMARK [2][-]{subsection.2.7}{Selected architectural styles and patterns}{section.2}% 14
 \BOOKMARK [1][-]{section.3}{Algorithm Design}{}% 15
-\BOOKMARK [1][-]{section.4}{User Interface Design}{}% 16
-\BOOKMARK [1][-]{section.5}{Requirements Traceability}{}% 17
-\BOOKMARK [1][-]{section.6}{References}{}% 18
-\BOOKMARK [1][-]{section.7}{Appendix}{}% 19
-\BOOKMARK [2][-]{subsection.7.1}{Software and tools used}{section.7}% 20
-\BOOKMARK [2][-]{subsection.7.2}{Hours of work}{section.7}% 21
+\BOOKMARK [2][-]{subsection.3.1}{Initialization}{section.3}% 16
+\BOOKMARK [2][-]{subsection.3.2}{Manage requests}{section.3}% 17
+\BOOKMARK [2][-]{subsection.3.3}{Manage queues}{section.3}% 18
+\BOOKMARK [1][-]{section.4}{User Interface Design}{}% 19
+\BOOKMARK [2][-]{subsection.4.1}{Taxi driver UX diagram}{section.4}% 20
+\BOOKMARK [2][-]{subsection.4.2}{User UX diagram}{section.4}% 21
+\BOOKMARK [1][-]{section.5}{Requirements Traceability}{}% 22
+\BOOKMARK [1][-]{section.6}{References}{}% 23
+\BOOKMARK [1][-]{section.7}{Appendix}{}% 24
+\BOOKMARK [2][-]{subsection.7.1}{Software and tools used}{section.7}% 25
+\BOOKMARK [2][-]{subsection.7.2}{Hours of work}{section.7}% 26

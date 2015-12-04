@@ -13,7 +13,12 @@
 \contentsline {subsection}{\numberline {2.6}Component interfaces}{15}{subsection.2.6}
 \contentsline {subsection}{\numberline {2.7}Selected architectural styles and patterns}{18}{subsection.2.7}
 \contentsline {section}{\numberline {3}Algorithm Design}{19}{section.3}
+\contentsline {subsection}{\numberline {3.1}Initialization}{19}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Manage requests}{20}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Manage queues}{21}{subsection.3.3}
 \contentsline {section}{\numberline {4}User Interface Design}{23}{section.4}
+\contentsline {subsection}{\numberline {4.1}Taxi driver UX diagram}{23}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}User UX diagram}{24}{subsection.4.2}
 \contentsline {section}{\numberline {5}Requirements Traceability}{25}{section.5}
 \contentsline {section}{\numberline {6}References}{26}{section.6}
 \contentsline {section}{\numberline {7}Appendix}{27}{section.7}

@@ -11,8 +11,7 @@
 	%	Focus on the definition of the most relevant algorithmic part of your project
 		The most relevant algorithm of the myTaxiService application is the one implementing the queue management. It is important to optimize its implementation as long as it is the most complex and the one that distinguishes the system.\\
 		Another significant algorithm is the one that manages the forwarding of the requests of the users to the taxi drivers.
-		\begin{itemize}
-			\item \textbf{Initialization.} The class which manages the areas distribution and the queues of the taxi drivers also deals with the initialization of the queues of the taxis. It starts assigning to every area as many taxi as the average number of the requests expected in that area, based on the statistics. Once all the areas have been filled with their optimal number of taxis, the remaining taxi drivers are sent to the areas that are most needy.\\The "needyArea" function, in fact, returns the index of the most needy area at the moment, calculating the area that has the maximum difference between the maximum number of requests recorded and the average of requests.\\
+		\subsection{Initialization} The class which manages the areas distribution and the queues of the taxi drivers also deals with the initialization of the queues of the taxis. It starts assigning to every area as many taxi as the average number of the requests expected in that area, based on the statistics. Once all the areas have been filled with their optimal number of taxis, the remaining taxi drivers are sent to the areas that are most needy.\\The "needyArea" function, in fact, returns the index of the most needy area at the moment, calculating the area that has the maximum difference between the maximum number of requests recorded and the average of requests.\\
 			 \\\\
 			
 			\begin{algorithm}
@@ -39,7 +38,7 @@
 			
 			
 			\newpage
-			\item \textbf{Manage requests.} After the initialization, the taxi drivers are able to take requests. When the taxi driver answers to the request or the timer is over, the system calls the function manageAnswer(). If they accept the request, the function sets their availability to false and stops monitoring their position. It is also possible that a taxi driver declines the request or is not able to give an answer to the server. In this case, the first taxi driver is moved to the last position of the queue and the system forwards the request to the second of the queue, who is now moved to the first position. This action is iterated in the queue of that area until a taxi accept the request. After accepting the call, the taxi driver is set unavailable and he is deleted from the queue, as it is likely that he will end up in another area.\\
+				\subsection{Manage requests} After the initialization, the taxi drivers are able to take requests. When the taxi driver answers to the request or the timer is over, the system calls the function manageAnswer(). If they accept the request, the function sets their availability to false and stops monitoring their position. It is also possible that a taxi driver declines the request or is not able to give an answer to the server. In this case, the first taxi driver is moved to the last position of the queue and the system forwards the request to the second of the queue, who is now moved to the first position. This action is iterated in the queue of that area until a taxi accept the request. After accepting the call, the taxi driver is set unavailable and he is deleted from the queue, as it is likely that he will end up in another area.\\
 			 \\\\
 				\begin{algorithm}
 					\caption{Manage requests}
@@ -64,7 +63,7 @@
 				\end{algorithm}
 			
 			\newpage
-			\item \textbf{Manage queues.} The areas of the city are represented by a graph with an array of adjacencies, which is a useful representation in order to decide how to distribute and move the taxi drivers within the areas.\\
+				\subsection{Manage queues} The areas of the city are represented by a graph with an array of adjacencies, which is a useful representation in order to decide how to distribute and move the taxi drivers within the areas.\\
 			In the first place the function search for the area where the taxi is in and sets the "startingArea" variable to the index of that area, then adds the taxi driver to the queue of the area if it has not reached the maximum number of taxi. If the area is completely full it is necessary to iterate on the areas, exploiting a breadth-first search algorithm.\\The function searches for adjacent areas with the number of taxi lower than the average of the requests and, if it does not find any, it looks for adjacent areas with the number of taxi lower than the maximum allowed for that area.\\ If these two conditions are not supplied, the function assign this taxi driver to the first adjacent area visited and takes from that area the last taxi of the queue. This "rejectedTaxi" is moved to an adjacent needy area, repeating the iterations done before, searching needy areas and moving taxi drivers, until it is possible to reach an equilibrium state.\\
 			It is always feasible to exit the while cycle because the number of taxi driver can not be the maximum for all the areas, as it is not cost efficient. The system only ensures that the minimum number of taxi drivers per area is guaranteed.\\
 			The complexity of this algorithm is O(A) with A = number of areas.
@@ -117,8 +116,7 @@
 					\EndProcedure
 				\end{algorithmic}
 			\end{algorithm}
-			
-		\end{itemize}
+		
 	
 	
 	

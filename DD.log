@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.22)  4 DEC 2015 16:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.22)  4 DEC 2015 17:33
 entering extended mode
 **DD.tex
 (DD.tex
@@ -311,7 +311,7 @@ LaTeX Info: Redefining \nameref on input line 12.
 \MPnumerator=\count124
 \makeMPintoPDFobject=\count125
 \everyMPtoPDFconversion=\toks24
-) <logo-polimi.png, id=87, 722.7pt x 722.7pt>
+) <logo-polimi.png, id=107, 722.7pt x 722.7pt>
 File: logo-polimi.png Graphic file (type png)
  <use logo-polimi.png>
 Package pdftex.def Info: logo-polimi.png used on input line 15.
@@ -337,7 +337,7 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 19.
 
-Overfull \hbox (1.55618pt too wide) in paragraph at lines 39--40
+Overfull \hbox (1.55618pt too wide) in paragraph at lines 40--41
 []\OT1/cmr/m/n/10 myTaxiService Re-quire-ment Anal-y-sis and Spec-i-fi-ca-tion 
 Doc-u-ment (RASD) 
  []
@@ -346,14 +346,19 @@ Doc-u-ment (RASD)
 
 
 ]
-<Diagrams/HighLevelComp2.png, id=142, 685.56125pt x 359.3425pt>
-File: Diagrams/HighLevelComp2.png Graphic file (type png)
+<Diagrams/HighLevelComp.png, id=167, 778.91pt x 427.5975pt>
+File: Diagrams/HighLevelComp.png Graphic file (type png)
 
-<use Diagrams/HighLevelComp2.png>
-Package pdftex.def Info: Diagrams/HighLevelComp2.png used on input line 24.
-(pdftex.def)             Requested size: 308.49971pt x 161.70262pt.
- [6 <./Diagrams/HighLevelComp2.png>] [7]
-<Diagrams/componentDiagram.png, id=154, 1720.4275pt x 858.20625pt>
+<use Diagrams/HighLevelComp.png>
+Package pdftex.def Info: Diagrams/HighLevelComp.png used on input line 24.
+(pdftex.def)             Requested size: 358.30295pt x 196.69724pt.
+
+Overfull \hbox (13.30295pt too wide) in paragraph at lines 24--25
+ [][] 
+ []
+
+[6 <./Diagrams/HighLevelComp.png>] [7]
+<Diagrams/componentDiagram.png, id=179, 1720.4275pt x 858.20625pt>
 File: Diagrams/componentDiagram.png Graphic file (type png)
 
 <use Diagrams/componentDiagram.png>
@@ -371,7 +376,7 @@ LaTeX Warning: Float too large for page by 6.86684pt on input line 48.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [8 <./Diagrams/componentDiagram.png>]
-<Diagrams/deploymentDiagram.png, id=160, 484.81125pt x 826.08624pt>
+<Diagrams/deploymentDiagram.png, id=185, 484.81125pt x 826.08624pt>
 File: Diagrams/deploymentDiagram.png Graphic file (type png)
 
 <use Diagrams/deploymentDiagram.png>
@@ -381,19 +386,19 @@ Package pdftex.def Info: Diagrams/deploymentDiagram.png used on input line 58.
 
 
  <./Diagrams/deploymentDiagram.png>]
-<Diagrams/runTime.jpg, id=166, 621.32124pt x 542.025pt>
-File: Diagrams/runTime.jpg Graphic file (type jpg)
+<Diagrams/RunTimeView.png, id=191, 689.57625pt x 785.93625pt>
+File: Diagrams/RunTimeView.png Graphic file (type png)
 
-<use Diagrams/runTime.jpg>
-Package pdftex.def Info: Diagrams/runTime.jpg used on input line 69.
-(pdftex.def)             Requested size: 403.85402pt x 352.31207pt.
+<use Diagrams/RunTimeView.png>
+Package pdftex.def Info: Diagrams/RunTimeView.png used on input line 69.
+(pdftex.def)             Requested size: 379.2681pt x 432.26627pt.
 
-Overfull \hbox (58.85402pt too wide) in paragraph at lines 69--70
+Overfull \hbox (34.2681pt too wide) in paragraph at lines 69--70
  [][] 
  []
 
-[10 <./Diagrams/runTime.jpg>]
-<Diagrams/SDRequest.jpg, id=171, 937.5025pt x 646.415pt>
+[10 <./Diagrams/RunTimeView.png>]
+<Diagrams/SDRequest.jpg, id=197, 937.5025pt x 646.415pt>
 File: Diagrams/SDRequest.jpg Graphic file (type jpg)
 
 <use Diagrams/SDRequest.jpg>
@@ -410,7 +415,7 @@ LaTeX Warning: Float too large for page by 75.16476pt on input line 76.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Diagrams/SDSignup.jpg, id=172, 626.34pt x 385.44pt>
+<Diagrams/SDSignup.jpg, id=198, 626.34pt x 385.44pt>
 File: Diagrams/SDSignup.jpg Graphic file (type jpg)
 
 <use Diagrams/SDSignup.jpg>
@@ -423,7 +428,7 @@ LaTeX Warning: Float too large for page by 21.16592pt on input line 81.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Diagrams/SDLogin.jpg, id=173, 796.9775pt x 475.7775pt>
+<Diagrams/SDLogin.jpg, id=199, 796.9775pt x 475.7775pt>
 File: Diagrams/SDLogin.jpg Graphic file (type jpg)
 
 <use Diagrams/SDLogin.jpg>
@@ -436,7 +441,7 @@ LaTeX Warning: Float too large for page by 11.83223pt on input line 86.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Diagrams/SDAvailability.jpg, id=174, 746.79pt x 355.3275pt>
+<Diagrams/SDAvailability.jpg, id=200, 746.79pt x 355.3275pt>
 File: Diagrams/SDAvailability.jpg Graphic file (type jpg)
 
 <use Diagrams/SDAvailability.jpg>
@@ -456,90 +461,90 @@ SDLogin.jpg>] [14 <./Diagrams/SDAvailability.jpg>] [15
 
 ] [16] [17]) [18]
 (DDAlgorithmDesign.tex
-Underfull \hbox (badness 10000) in paragraph at lines 15--17
+Underfull \hbox (badness 10000) in paragraph at lines 14--16
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 15--17
+Underfull \hbox (badness 10000) in paragraph at lines 14--16
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 15--17
+Underfull \hbox (badness 10000) in paragraph at lines 14--16
 
  []
 
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 19.
+put line 18.
 [19
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 42--65
+Underfull \hbox (badness 10000) in paragraph at lines 41--64
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 42--65
+Underfull \hbox (badness 10000) in paragraph at lines 41--64
 
  []
 
 [20]
-Underfull \hbox (badness 10000) in paragraph at lines 67--72
+Underfull \hbox (badness 10000) in paragraph at lines 66--71
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 67--72
+Underfull \hbox (badness 10000) in paragraph at lines 66--71
 
  []
 
 ) [21] [22]
-<Diagrams/UXDiagramTaxiDriver.jpg, id=231, 539.76656pt x 607.51968pt>
+<Diagrams/UXDiagramTaxiDriver.jpg, id=257, 539.76656pt x 607.51968pt>
 File: Diagrams/UXDiagramTaxiDriver.jpg Graphic file (type jpg)
 
 <use Diagrams/UXDiagramTaxiDriver.jpg>
-Package pdftex.def Info: Diagrams/UXDiagramTaxiDriver.jpg used on input line 38
+Package pdftex.def Info: Diagrams/UXDiagramTaxiDriver.jpg used on input line 39
 .
 (pdftex.def)             Requested size: 377.83401pt x 425.26086pt.
 
-Overfull \hbox (32.83401pt too wide) in paragraph at lines 38--39
+Overfull \hbox (32.83401pt too wide) in paragraph at lines 39--40
  [][] 
  []
 
 [23
 
  <./Diagrams/UXDiagramTaxiDriver.jpg>]
-<Diagrams/UXDiagramPassenger.jpg, id=236, 943.525pt x 903.375pt>
+<Diagrams/UXDiagramPassenger.jpg, id=262, 943.525pt x 903.375pt>
 File: Diagrams/UXDiagramPassenger.jpg Graphic file (type jpg)
 
 <use Diagrams/UXDiagramPassenger.jpg>
-Package pdftex.def Info: Diagrams/UXDiagramPassenger.jpg used on input line 44.
+Package pdftex.def Info: Diagrams/UXDiagramPassenger.jpg used on input line 47.
 
 (pdftex.def)             Requested size: 434.02676pt x 415.55754pt.
 
-Overfull \hbox (89.02676pt too wide) in paragraph at lines 44--45
+Overfull \hbox (89.02676pt too wide) in paragraph at lines 47--48
  [][] 
  []
 
 [24 <./Diagrams/UXDiagramPassenger.jpg>] [25] [26]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 104.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 108.
  [27]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 104.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 108.
  (DD.aux
 (DDIntroduction.aux) (DDArchitecturalDesign.aux) (DDAlgorithmDesign.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 104.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 104.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 108.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 108.
 Package rerunfilecheck Info: File `DD.out' has not changed.
-(rerunfilecheck)             Checksum: 0974A32DBBCEC2E2144EB0B2D9A9093C;1351.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 104.
+(rerunfilecheck)             Checksum: 75319ABA0790D282B2258949B2A1F06F;1685.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 108.
  ) 
 Here is how much of TeX's memory you used:
- 6381 strings out of 493673
- 92416 string characters out of 3143143
- 181088 words of memory out of 3000000
- 9592 multiletter control sequences out of 15000+200000
+ 6391 strings out of 493673
+ 92581 string characters out of 3143143
+ 181094 words of memory out of 3000000
+ 9597 multiletter control sequences out of 15000+200000
  10843 words of font info for 39 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  29i,7n,30p,1063b,420s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -555,9 +560,9 @@ amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeK/fonts/type1/public/amsfon
 ts/cm/cmsy7.pfb><C:/Program Files (x86)/MiKTeK/fonts/type1/public/amsfonts/cm/c
 mti10.pfb><C:/Program Files (x86)/MiKTeK/fonts/type1/public/amsfonts/cm/cmtt10.
 pfb>
-Output written on DD.pdf (28 pages, 864649 bytes).
+Output written on DD.pdf (28 pages, 866766 bytes).
 PDF statistics:
- 311 PDF objects out of 1000 (max. 8388607)
- 53 named destinations out of 1000 (max. 500000)
- 224 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 339 PDF objects out of 1000 (max. 8388607)
+ 58 named destinations out of 1000 (max. 500000)
+ 264 words of extra memory for PDF output out of 10000 (max. 10000000)
 
