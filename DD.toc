@@ -10,12 +10,12 @@
 \contentsline {subsection}{\numberline {2.3}Component view}{7}{subsection.2.3}
 \contentsline {subsection}{\numberline {2.4}Deployment view}{9}{subsection.2.4}
 \contentsline {subsection}{\numberline {2.5}Runtime view}{10}{subsection.2.5}
-\contentsline {subsection}{\numberline {2.6}Component interfaces}{11}{subsection.2.6}
-\contentsline {subsection}{\numberline {2.7}Selected architectural styles and patterns}{14}{subsection.2.7}
-\contentsline {section}{\numberline {3}Algorithm Design}{15}{section.3}
-\contentsline {section}{\numberline {4}User Interface Design}{19}{section.4}
-\contentsline {section}{\numberline {5}Requirements Traceability}{20}{section.5}
-\contentsline {section}{\numberline {6}References}{21}{section.6}
-\contentsline {section}{\numberline {7}Appendix}{22}{section.7}
-\contentsline {subsection}{\numberline {7.1}Software and tools used}{22}{subsection.7.1}
-\contentsline {subsection}{\numberline {7.2}Hours of work}{22}{subsection.7.2}
+\contentsline {subsection}{\numberline {2.6}Component interfaces}{15}{subsection.2.6}
+\contentsline {subsection}{\numberline {2.7}Selected architectural styles and patterns}{18}{subsection.2.7}
+\contentsline {section}{\numberline {3}Algorithm Design}{19}{section.3}
+\contentsline {section}{\numberline {4}User Interface Design}{23}{section.4}
+\contentsline {section}{\numberline {5}Requirements Traceability}{25}{section.5}
+\contentsline {section}{\numberline {6}References}{26}{section.6}
+\contentsline {section}{\numberline {7}Appendix}{27}{section.7}
+\contentsline {subsection}{\numberline {7.1}Software and tools used}{27}{subsection.7.1}
+\contentsline {subsection}{\numberline {7.2}Hours of work}{27}{subsection.7.2}

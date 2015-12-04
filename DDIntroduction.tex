@@ -6,12 +6,12 @@
 \newpage
 \section{Introduction}		
 	\subsection{Purpose}
-		This document represents the Design Document, which main goal is to describe the overall system architecture and to show the technical design decisions made, with the support of schema and diagrams.\\ It delineates how the software system will be structured in order to satisfy the requirements defined in the Requirement Analysis and Specification Document (RASD), each one translated into a representation of components, interfaces, and data necessary in the implementation phase.
+		This document represents the Design Document, whose main goal is to describe the overall system architecture and to show the technical design decisions made, with the support of schema and diagrams.\\ It delineates how the software system will be structured in order to satisfy the requirements defined in the Requirement Analysis and Specification Document (RASD), each one translated into a representation of components, interfaces, and data necessary in the implementation phase.
 		\\This document is addressed to the project development teams, technical architects, database designers and testers, as long as it has useful guidelines and a specific description of the design implementation of the system.
 		
 	\subsection{Scope}
 		The system aims at simplifying the access of the passengers and guaranteeing a fair management of taxi queues.\\
-		The server listens for the requests of the clients, which can be taxi drivers or users and access to their GPS position.\\
+		The server listens for the requests of the clients, which can be taxi drivers or users and it access to their GPS positions.\\
 		The user clients are able to request a taxi and, if logged into the system, they can also make reservations and choose the payment method they prefer. On the other hand, taxi driver clients can change their status from available to unavailable, accept or decline the requests of the users and see their position in the queue of the area they are in.\\The server manages the notifications to forward to the clients, for example the arrival of a taxi for a user or the requests of the users for the taxi drivers. 
 \newpage
 	\subsection{Definitions, Acronyms, Abbreviations}
@@ -30,9 +30,8 @@
 				\item[-] \textbf{JEE}: Java Enterprise Edition
 				\item[-] \textbf{API}: Application Programming Interface
 				\item[-] \textbf{UML}: Unified Modeling Language
-				\item[-] \textbf{HTML}: HyperText Markup Language
 				\item[-] \textbf{HTTP}: HyperText Transfer Protocol
-				\item[-] \textbf{MVC}: Model View Controller
+				\item[-] \textbf{UX}: User eXperience
 			
 		\end{itemize}
 	\subsection{Reference documents}
@@ -44,9 +43,9 @@
 		This document is divided in six main parts:
 		\begin{itemize}
 			\item \textbf{Introduction}: this section describes the document in general and its purpose.
-			\item \textbf{Architectural Design}: this section specifies the architectural design part, giving information about the components involved.
+			\item \textbf{Architectural Design}: this section specifies the architectural design part, giving information about the components involved and the architectural styles adopted.
 			\item \textbf{Algorithm Design}: this section provides a general description of the main algorithms used during implementation.
-			\item\textbf{ User Interface Design}: this section outlines an overview on how the user interfaces of the system will look like. 
+			\item\textbf{User Interface Design}: this section outlines an overview on how the user interfaces of the system will look like. 
 			\item \textbf{Requirements Traceability}: this section explains the connection between the requirements already defined in the RASD and the design elements introduced in this document.
 			\item \textbf{References}: this section contains the references to external documents used to redact this document.
 			\item \textbf{Appendix}: this section provides information about the tools used to redact this document and how many hours of work each author has spent. 
