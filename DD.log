@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.22)  4 DEC 2015 17:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.22)  4 DEC 2015 18:38
 entering extended mode
 **DD.tex
 (DD.tex
@@ -529,16 +529,16 @@ Overfull \hbox (89.02676pt too wide) in paragraph at lines 47--48
  []
 
 [24 <./Diagrams/UXDiagramPassenger.jpg>] [25] [26]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 108.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 111.
  [27]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 108.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 111.
  (DD.aux
 (DDIntroduction.aux) (DDArchitecturalDesign.aux) (DDAlgorithmDesign.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 108.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 108.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 111.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 111.
 Package rerunfilecheck Info: File `DD.out' has not changed.
 (rerunfilecheck)             Checksum: 75319ABA0790D282B2258949B2A1F06F;1685.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 108.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 111.
  ) 
 Here is how much of TeX's memory you used:
  6391 strings out of 493673
@@ -560,7 +560,7 @@ amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeK/fonts/type1/public/amsfon
 ts/cm/cmsy7.pfb><C:/Program Files (x86)/MiKTeK/fonts/type1/public/amsfonts/cm/c
 mti10.pfb><C:/Program Files (x86)/MiKTeK/fonts/type1/public/amsfonts/cm/cmtt10.
 pfb>
-Output written on DD.pdf (28 pages, 866766 bytes).
+Output written on DD.pdf (28 pages, 866797 bytes).
 PDF statistics:
  339 PDF objects out of 1000 (max. 8388607)
  58 named destinations out of 1000 (max. 500000)
