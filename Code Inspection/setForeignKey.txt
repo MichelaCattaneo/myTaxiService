@@ -1,0 +1,45 @@
+/**
+     * Sets the foreign key corresponding to the relationship field
+     * <code>fieldDesc</code>. Usually the foreign key columns are not mapped
+     * explicitly by the user. For this reason the runtime creates hidden fields
+     * representing the foreign key columns internally. We determine the local
+     * fields by iterating appropriate field list of either
+     * <code>fieldDesc</code> or <code>inverseFieldDesc</code>.
+     *
+     * To ensure referentional integrity constraints in the database,
+     * the added object has to be written to the store, before the
+     * foreign key can be set. The same dependency applies to relationships
+     * mapped to jointables, see {@link #addJoinTableEntry}.
+     *
+     * @param fieldDesc Updated relationship field.
+     * @param addedSM State manager of the added object.
+     * @param inverseFieldDesc Inverse relationship field.
+     */
+    private void setForeignKey(ForeignFieldDesc fieldDesc,
+                               SQLStateManager addedSM,
+                               ForeignFieldDesc inverseFieldDesc) {
+
+        if (!isDeleted()) {
+            // fieldDesc can be null for one-directional relationships. We are
+            // only interested in the LocalFieldDescs for the foreign key columns,
+            // which can also be retrieved from inverseFieldDesc.
+            if (fieldDesc != null) {
+                for (int i = 0; i < fieldDesc.localFields.size(); i++) {
+                    LocalFieldDesc la = (LocalFieldDesc) fieldDesc.localFields.get(i);
+                    LocalFieldDesc fa = (LocalFieldDesc) fieldDesc.foreignFields.get(i);
+
+                    setForeignKey(fieldDesc, la, fa.getValue(addedSM));
+                }
+            } else {
+                for (int i = 0; i < inverseFieldDesc.foreignFields.size(); i++) {
+                    LocalFieldDesc la = (LocalFieldDesc) inverseFieldDesc.foreignFields.get(i);
+                    LocalFieldDesc fa = (LocalFieldDesc) inverseFieldDesc.localFields.get(i);
+
+                    setForeignKey(fieldDesc, la, fa.getValue(addedSM));
+                }
+            }
+        }
+
+        // The referred object has to be written to the store before the foreign key can be set.
+        registerCreateDependency(inverseFieldDesc, addedSM);
+    }

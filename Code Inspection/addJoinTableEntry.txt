@@ -1,0 +1,48 @@
+/**
+     * Schedules the creation of a jointable entry between this and the added
+     * state manager. A scheduled removal of the jointable entry between these
+     * two is simply removed. The creation is scheduled on the local side.
+     *
+     * For dependency management, the side creating the jointable entry has
+     * to wait for the other to become persistent. The same dependency applies
+     * to foreign key relationships, see {@link #setForeignKey}.
+     *
+     * RESOLVE: What happens, if a field descriptor is null, e.g. for one
+     * way relationships, as the descriptors are taken as keys during scheduling?
+     *
+     * @param fieldDesc Updated relationship field. This field is mapped to a jointable.
+     * @param addedSM State manager of the added object.
+     * @param inverseFieldDesc Inverse relationship field.
+     */
+    private void addJoinTableEntry(ForeignFieldDesc fieldDesc,
+                                   SQLStateManager addedSM,
+                                   ForeignFieldDesc inverseFieldDesc) {
+
+        // Cleanup dependencies.
+        // Note: The following lines break deadlock detection for circular dependencies.
+        //this.removeUpdatedForeignReference(addedSM);
+        //addedSM.removeUpdatedForeignReference(this);
+
+        // Remove scheduled removal on this side.
+        if (fieldDesc != null && getUpdateDesc().removeUpdatedJoinTableRelationship(
+                fieldDesc, addedSM, ActionDesc.LOG_DESTROY) == false) {
+
+            // Remove scheduled removal on the other side.
+            if (inverseFieldDesc == null || addedSM.getUpdateDesc().removeUpdatedJoinTableRelationship(
+                    inverseFieldDesc, this, ActionDesc.LOG_DESTROY) == false) {
+
+                // Schedule creation on this side.
+                // The field descriptor taken as key must not be null, see above!
+                getUpdateDesc().recordUpdatedJoinTableRelationship(
+                        fieldDesc, this, addedSM, ActionDesc.LOG_CREATE);
+
+                // The side creating the jointable entry has to wait for the other to become persistent.
+                registerCreateDependency(inverseFieldDesc, addedSM);
+            }
+        } else if (fieldDesc == null) {
+            throw new JDOFatalInternalException(I18NHelper.getMessage(messages,
+                    "core.statemanager.cantschedulejointable", // NOI18N
+                    this.getPersistenceConfig().getPersistenceCapableClass().getName(),
+                    addedSM.getPersistenceConfig().getPersistenceCapableClass().getName()));
+        }
+    }

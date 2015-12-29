@@ -1,0 +1,106 @@
+/**
+     * This is a special version of prepareUpdateField that does not do navigation
+     * if a field is not loaded. We don't need to reload the field, because the
+     * before image value is given as parameter! This method is mostly called
+     * during relatioship management, as the before image value is already know
+     * in this case.
+     * <p>
+     * The <code>createDeferredCollection</code> parameter should be true
+     * only if <code>fieldDesc</code> corresponds to a collection field. Note:
+     * <ul>
+     * <li><code>createDeferredCollection</code> == false
+     *   ==> <code>beforeImageValue</code> must be non-null.</li>
+     * <li><code>createDeferredCollection</code> == true
+     *   ==> <code>beforeImageValue</code> is null.</li>
+     * </ul>.
+     *
+     * @param fieldDesc The field to be prepared.
+     * @param beforeImageValue The before image value.
+     * @param createDeferredCollection
+     *   Indicates whether to create a deferred SCOCollection. Deferred collections
+     *   are created during relationship management if the inverse field is not
+     *   loaded.
+     * @see #prepareUpdateField
+     */
+    private synchronized void prepareUpdateFieldSpecial(FieldDesc fieldDesc,
+                                                        Object beforeImageValue,
+                                                        boolean createDeferredCollection) {
+        if (fieldDesc.isKeyField()) {
+            throw new JDOUnsupportedOptionException(I18NHelper.getMessage(messages,
+                    "core.statemanager.nopkupdate")); // NOI18N
+        }
+
+        getUpdateDesc().markRelationshipChange(fieldDesc);
+
+        boolean debug = logger.isLoggable();
+
+        if (debug) {
+            Object[] items = new Object[] {fieldDesc.getName(),state};
+            logger.fine("sqlstore.sqlstatemanager.prepareupdatefieldspl", items); // NOI18N
+        }
+
+        boolean optimistic = persistenceManager.isOptimisticTransaction();
+        boolean xactActive = persistenceManager.isActiveTransaction();
+        boolean nontransactionalRead = persistenceManager.isNontransactionalRead();
+
+        if (state.needsReload(optimistic, nontransactionalRead, xactActive)) {
+            if (!optimistic) {
+                persistenceManager.clearFields(this.persistentObject);
+            }
+
+            reload(null);
+        }
+
+        LifeCycleState oldstate = state;
+        state = state.transitionWriteField(xactActive);
+        registerInstance(false, null, oldstate);
+
+        if (getSetMaskBit(fieldDesc.absoluteID)) {
+            // Note: The set mask is set for all fields on make persistent.
+            return;
+        }
+
+        if (!getPresenceMaskBit(fieldDesc.absoluteID)) {
+            if (!createDeferredCollection) {
+                if (!(beforeImageValue instanceof SCOCollection) ||
+                        !((SCOCollection) beforeImageValue).isDeferred()) {
+
+                    updateBeforeImage(fieldDesc, beforeImageValue);
+
+                    // Set the presence mask for a non deferred collection.
+                    setPresenceMaskBit(fieldDesc.absoluteID);
+                }
+            } else {
+                // Deferred collection handling.
+                if (!(fieldDesc instanceof ForeignFieldDesc) ||
+                        (((ForeignFieldDesc) fieldDesc).cardinalityUPB <= 1)) {
+                    //should throw an exception
+                    return;
+                }
+
+                Object value = fieldDesc.getValue(this);
+
+                if (value == null) {
+                    // If the collection field is null, we need to create a
+                    // deferred SCOCollection.
+                    SCOCollection c = (SCOCollection) persistenceManager.newCollectionInstanceInternal(
+                            fieldDesc.getType(),
+                            persistentObject,
+                            fieldDesc.getName(),
+                            fieldDesc.getComponentType(),
+                            false,
+                            10);
+                    c.markDeferred();
+                    fieldDesc.setValue(this, c);
+                }
+                // NOTE: We don't set the presence mask bit for deferred collections,
+                // because deferred collections MUST be reloaded on the first read access!
+            }
+        }
+
+        recordUpdatedField(fieldDesc);
+
+        if (debug) {
+            logger.fine("sqlstore.sqlstatemanager.prepareupdatefieldspl.exit"); // NOI18N
+        }
+    }

@@ -1,0 +1,66 @@
+/**
+     * Sets the relationship for the objects added to a collection relationship.
+     *
+     * @param fieldDesc Updated relationship field.
+     * @param addedList List of objects to be added to the relationship.
+     * @param inverseFieldDesc Inverse relationship field.
+     * @param newlyRegisteredSMs
+     *   State managers for autopersistent objects will be added to this list.
+     * @param updateInverseRelationshipField
+     *   True, if we need to update the inverse relationship side.
+     * @param managedRelationshipInProgress
+     *   True during relationship management. NOTE: This parameter is always
+     *   false, as the method is never called during relationship management.
+     * @exception JDOUserException  Thrown if objects in <code>addedList</code> have been deleted.
+     * @see #processCollectionUpdates
+     */
+    private void addCollectionRelationship(ForeignFieldDesc fieldDesc,
+                                           ArrayList addedList,
+                                           ForeignFieldDesc inverseFieldDesc,
+                                           ArrayList newlyRegisteredSMs,
+                                           boolean updateInverseRelationshipField,
+                                           boolean managedRelationshipInProgress) {
+
+        JDOUserException ex = null;
+
+        for (int i = 0; i < addedList.size(); i++) {
+            Object addedObject = addedList.get(i);
+            SQLStateManager addedSM = getAddedSM(addedObject, newlyRegisteredSMs);
+
+            // addedSM == null can happen if the collection is non-SCO and contains
+            // transient instances which don't become persistent until commit.
+            if (addedSM != null) {
+
+                if (addedSM.isDeleted()) {
+                    // For managed relationships, if the addedObject is deleted, we need
+                    // to throw an exception at the end and the exception should include
+                    // the deleted objects in its failedObjectArray.
+                    if (inverseFieldDesc != null) {
+                        if (ex == null) {
+                            ex = new JDOUserException(I18NHelper.getMessage(messages,
+                                    "jdo.lifecycle.deleted.accessField")); // NOI18N
+                        }
+
+                        ex.addFailedObject(addedObject);
+                    }
+                    continue;
+                }
+
+                // The collection side never has the foreign key, i.e.
+                // it's never processed during relationship management,
+                // because data store updates are already done at that time.
+                if (!managedRelationshipInProgress) {
+                    updateRelationshipInDataStore(fieldDesc, addedSM, null, inverseFieldDesc, false);
+
+                    // Relationship management
+                    if (updateInverseRelationshipField && inverseFieldDesc != null) {
+                        addedSM.addRelationship(inverseFieldDesc, this);
+                    }
+                }
+            }
+        }
+
+        if (ex != null) {
+            throw ex;
+        }
+    }
