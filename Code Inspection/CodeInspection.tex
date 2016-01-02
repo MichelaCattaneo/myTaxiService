@@ -40,23 +40,29 @@
 		\item  \textbf{Methods:}
 			\begin{itemize}
 				\item[-] addCollectionRelationship
+				\item[-] setForeignKey
 				\item[-] addJoinTableEntry
 				\item[-] prepareUpdateFieldSpecial
-				\item[-] setForeignKey
+				
 			\end{itemize}
 	\end{itemize}
 		
 \newpage
 \section{Functional Roles}
 	\subsection{addCollectionRelationship}
-	This method sets the relationship for the objects added to a collection relationship. Given a list of object to add to the relationship and a list of newly registered state managers, this method transforms and adds all the elements of the addedList to the newlyRegisteredSMs list, by checking that the elements are not null and making them autopersistent. Then it checks that the element added has not been deleted and updates the relationship in the data store.
-	It is used when it is necessary to apply the updates in the data store, in particular it processes the updates in the collections by adding the relationships between them.
-	
-	Evidence: javadoc, function calls
-	
-	\subsection{addJoinTableEntry}
-	\subsection{prepareUpdateFieldSpecial}
+		This method sets the relationship for the objects added to a collection relationship. Given a list of object to add to the relationship and a list of newly registered state managers, this method transforms and adds all the elements of the addedList to the newlyRegisteredSMs list, by checking that the elements are not null and making them autopersistent. Then it checks that the element added has not been deleted and updates the relationship in the data store.
+		It is used when it is necessary to apply the updates in the data store, in particular it processes the updates in the collections by adding the relationships between them.
+		
+		Evidence: javadoc, function calls.
 	\subsection{setForeignKey}
+		This method is used to set the foreign key corresponding to the relationship field. The fieldDesc and inverseFieldDesc parameters are used for the iteration on the local or foreign fields. This method calls setForeignKey, a method with other parameters that actually sets the local field corresponding to a foreign key column to the new value for the relationship update.
+		This method is called in the processForeignKey in order to set the foreign key on the added object. It is useful when an update of relationships in the data store is needed.
+		
+		Evidence: javadoc, function calls.
+	\subsection{addJoinTableEntry}
+	
+	\subsection{prepareUpdateFieldSpecial}
+	
 
 \newpage
 \section{Issues}
@@ -106,14 +112,18 @@
 		\item addCollectionRelationship:
 			\begin{itemize}
 				\item[-] line 3384:  SQLStateManager addedSM = getAddedSM(addedObject, newlyRegisteredSMs);\\
-				This line exceeds the 80 characters suggested at point 13 of the checklist and it is possible to reduce the number of characters in this line, by wrapping after the comma in the getAddedSM call, as said at point 15 of the checklist.
+				This line exceeds the 80 characters suggested at point 13 of the checklist and it is possible to reduce the number of characters in this line, by wrapping after the comma in the \textit{getAddedSM} call, as said at point 15 of the checklist.
 				\item[-] line 3409: updateRelationshipInDataStore(fieldDesc, addedSM, null, inverseFieldDesc, false);\\
 				This line exceeds the 80 characters suggested at point 13 of the checklist and it is possible to reduce the number of characters in this line, by wrapping after the commas that separates the parameters of the method, as said at point 15 of the checklist.
 			\end{itemize}
 		\item setForeignKey:
 			\begin{itemize}
-				\item[-] line 
-				\item[-] line 
+				\item[-] line 3451-3452: LocalFieldDesc la = (LocalFieldDesc) fieldDesc.localFields.get(i);\\
+				LocalFieldDesc fa = (LocalFieldDesc) fieldDesc.foreignFields.get(i);\\
+				This lines exceed the 80 characters suggested at point 13 of the checklist and it is possible to reduce the number of characters in this lines, by wrapping after the equal operator after \textit{la} and \textit{fa}, as said at point 15 of the checklist.
+				\item[-] line 3458-3459: LocalFieldDesc la = (LocalFieldDesc) inverseFieldDesc.foreignFields.get(i);\\
+				LocalFieldDesc fa = (LocalFieldDesc) inverseFieldDesc.localFields.get(i);\\
+				This lines exceed the 80 characters suggested at point 13 of the checklist and it is possible to reduce the number of characters in this lines, by wrapping after the equal operator after \textit{la} and \textit{fa}, as said at point 15 of the checklist.
 			\end{itemize}
 		\item addJoinTableEntry:
 		\begin{itemize}

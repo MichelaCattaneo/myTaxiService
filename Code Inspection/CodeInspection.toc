@@ -4,8 +4,8 @@
 \contentsline {section}{\numberline {2}Classes Assigned}{3}{section.2}
 \contentsline {section}{\numberline {3}Functional Roles}{4}{section.3}
 \contentsline {subsection}{\numberline {3.1}addCollectionRelationship}{4}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}addJoinTableEntry}{4}{subsection.3.2}
-\contentsline {subsection}{\numberline {3.3}prepareUpdateFieldSpecial}{4}{subsection.3.3}
-\contentsline {subsection}{\numberline {3.4}setForeignKey}{4}{subsection.3.4}
+\contentsline {subsection}{\numberline {3.2}setForeignKey}{4}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}addJoinTableEntry}{4}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}prepareUpdateFieldSpecial}{4}{subsection.3.4}
 \contentsline {section}{\numberline {4}Issues}{5}{section.4}
 \contentsline {section}{\numberline {5}Other Problems}{7}{section.5}
