@@ -34,16 +34,99 @@
 
 \newpage	
 \section{Classes Assigned}
-
+	\begin{itemize}
+		\item  \textbf{Package:} com.sun.jdo.spi.persistence.support.sqlstore
+		\item  \textbf{Class:} SQLStateManager
+		\item  \textbf{Methods:}
+			\begin{itemize}
+				\item[-] addCollectionRelationship
+				\item[-] addJoinTableEntry
+				\item[-] prepareUpdateFieldSpecial
+				\item[-] setForeignKey
+			\end{itemize}
+	\end{itemize}
+		
 \newpage
 \section{Functional Roles}
 	\subsection{addCollectionRelationship}
+	This method sets the relationship for the objects added to a collection relationship. Given a list of object to add to the relationship and a list of newly registered state managers, this method transforms and adds all the elements of the addedList to the newlyRegisteredSMs list, by checking that the elements are not null and making them autopersistent. Then it checks that the element added has not been deleted and updates the relationship in the data store.
+	It is used when it is necessary to apply the updates in the data store, in particular it processes the updates in the collections by adding the relationships between them.
+	
+	Evidence: javadoc, function calls
+	
 	\subsection{addJoinTableEntry}
 	\subsection{prepareUpdateFieldSpecial}
 	\subsection{setForeignKey}
 
 \newpage
 \section{Issues}
+	\begin{itemize}
+		\item Class:
+			\begin{itemize}
+				\item[-] line 75: There is no JavaDoc for the class.
+				\item[-] line 151: /** I18N message handler. */\\
+				private final static ResourceBundle messages = I18NHelper.loadBundle(
+				SQLStateManager.class);\\
+				Here the ResourceBundle is declared as a constant and it is not capitalized, as it is said in the naming conventions at point 7 of the checklist.
+				\item[-] line 219: private void registerInstance(boolean throwDuplicateException,
+				ArrayList newlyRegisteredSMs, LifeCycleState oldstate);\\
+				There is no JavaDoc for this method.
+				\item[-] line 270: private void unsetMaskBit(int index, int mask);\\
+				There is no JavaDoc for this method.
+				\item[-] line 283: private void clearMask(int mask);\\
+				There is no JavaDoc for this method.
+				\item[-] line 308: private void newFieldMasks();\\
+				There is no JavaDoc for this method.
+				\item[-] line 400: public synchronized void replaceObjectField(String fieldName, Object o);\\
+				There is no JavaDoc for this method.
+				\item[-] line 408: public synchronized void makeDirty(String fieldName);
+				\\There is no JavaDoc for this method.
+				\item[-] line 508: public void makePresent(String fieldName, Object value);
+				\\There is no JavaDoc for this method.
+				\item[-] line 560: private void makeAutoPersistent(Object pc);
+				\\There is no JavaDoc for this method.
+				\item[-] line 1108: private boolean compareUpdatedFields(SQLStateManager next);
+				\\There is no JavaDoc for this method.
+				\item[-] line 1542: private void reset(boolean retainValues, boolean wasNew, boolean keepState);
+				\\There is no JavaDoc for this method.
+				\item[-] line 1706: private void markKeyFieldsPresent();
+				\\There is no JavaDoc for this method.
+				\item[-] line 2154: private SQLStateManager copyPersistent();
+				\\There is no JavaDoc for this method.
+				\item[-] line 2240: private Object cloneObjectMaybe(Object source);
+				\\There is no JavaDoc for this method.
+				\item[-] line 4087: private void assertNotPK(int fieldNumber);
+				\\There is no JavaDoc for this method.
+				\item[-] line 4093: private void assertPKUpdate(FieldDesc f, Object value);
+				\\There is no JavaDoc for this method.
+				\item[-] line 77-162: these lines does not respect the point 25.D and 25.E of the checklist, the public static or instance variables are not declared before the private ones.
+				
+				
+			\end{itemize}
+		\item addCollectionRelationship:
+			\begin{itemize}
+				\item[-] line 3384:  SQLStateManager addedSM = getAddedSM(addedObject, newlyRegisteredSMs);\\
+				This line exceeds the 80 characters suggested at point 13 of the checklist and it is possible to reduce the number of characters in this line, by wrapping after the comma in the getAddedSM call, as said at point 15 of the checklist.
+				\item[-] line 3409: updateRelationshipInDataStore(fieldDesc, addedSM, null, inverseFieldDesc, false);\\
+				This line exceeds the 80 characters suggested at point 13 of the checklist and it is possible to reduce the number of characters in this line, by wrapping after the commas that separates the parameters of the method, as said at point 15 of the checklist.
+			\end{itemize}
+		\item setForeignKey:
+			\begin{itemize}
+				\item[-] line 
+				\item[-] line 
+			\end{itemize}
+		\item addJoinTableEntry:
+		\begin{itemize}
+			\item[-] line 
+			\item[-] line 
+		\end{itemize}
+		\item prepareUpdateFieldSpecial:
+		\begin{itemize}
+			\item[-] line 
+			\item[-] line 
+		\end{itemize}
+		
+	\end{itemize}
 
 \newpage
 \section{Other Problems}
