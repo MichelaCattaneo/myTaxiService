@@ -51,18 +51,19 @@
 \section{Functional Roles}
 	\subsection{addCollectionRelationship}
 		This method sets the relationship for the objects added to a collection relationship. Given a list of object to add to the relationship and a list of newly registered state managers, this method transforms and adds all the elements of the addedList to the newlyRegisteredSMs list, by checking that the elements are not null and making them autopersistent. Then it checks that the element added has not been deleted and updates the relationship in the data store.
-		It is used when it is necessary to apply the updates in the data store, in particular it processes the updates in the collections by adding the relationships between them.
-		
+		It is used when it is necessary to apply the updates in the data store, in particular it processes the updates in the collections by adding the relationships between them.\\		
 		Evidence: javadoc, function calls.
 	\subsection{setForeignKey}
 		This method is used to set the foreign key corresponding to the relationship field. The fieldDesc and inverseFieldDesc parameters are used for the iteration on the local or foreign fields. This method calls setForeignKey, a method with other parameters that actually sets the local field corresponding to a foreign key column to the new value for the relationship update.
-		This method is called in the processForeignKey in order to set the foreign key on the added object. It is useful when an update of relationships in the data store is needed.
-		
+		This method is called in the processForeignKey in order to set the foreign key on the added object. It is useful when an update of relationships in the data store is needed.\\		
 		Evidence: javadoc, function calls.
 	\subsection{addJoinTableEntry}
-	
+		This method is used to schedule the creation of a jointable entry between this and the added State Manager, after removing every scheduled removal. Note that the side creating the jointable entry has to wait for the other to become persistent and the situation in which the field descriptor passed is null needs to be handled.\\
+		It is needed in order to process the join table entries, in particular to schedule the jointable entry to the added object. It is part of the update of the relationships in the data store.\\
+		Evidence: javadoc, function calls.
 	\subsection{prepareUpdateFieldSpecial}
-	
+		This is a different version of the \textit{prepareUpdateField} method and they are  very important for the recording of changes to fields, as it prepares the field described by the parameter \textit{fieldDesc} for update. In fact it is called in different other methods, with different functionalities: when a relationship is removed or added and when it is necessary to update the values for fields tracking field.
+		Evidence: javadoc, function calls.
 
 \newpage
 \section{Issues}
@@ -127,13 +128,36 @@
 			\end{itemize}
 		\item addJoinTableEntry:
 		\begin{itemize}
-			\item[-] line 
-			\item[-] line 
+			\item[-] line 3509: * RESOLVE: What happens, if a field descriptor is null, e.g. for one\\
+			* way relationships, as the descriptors are taken as keys during scheduling?\\
+			This comment can be deleted as long as it is no longer needed, this is handled by the exception thrown at line 3542.
+			\item[-] line 3526: if (fieldDesc != null \&\& getUpdateDesc().removeUpdatedJoinTableRelationship(
+			fieldDesc, addedSM, ActionDesc.LOG\_DESTROY) == false)\\
+			This line does not agree with point 44 of the checklist: in fact the second expression of the \textit{if} returns a boolean value and it is not necessary to compare it with \textit{false}. Denying the expression, adding the pertinent parenthesis, is a better solution. It does not respect the point 13 and 15, because it is better to wrap the line after the \&\& operator and after the commas that separate the parameters, in order to reduce the characters.
+			\item[-] line 3530: if (inverseFieldDesc == null OR addedSM.getUpdateDesc().removeUpdatedJoinTableRelationship(
+			inverseFieldDesc, this, ActionDesc.LOG\_DESTROY) == false)\\
+			This line does not agree with point 44 of the checklist: in fact the second expression of the \textit{if} returns a boolean value and it is not necessary to compare it with \textit{false}. Denying the expression, adding the pertinent parenthesis, is a better solution. It does not respect the point 13 and 15, because it is better to wrap the line after the OR operator and after the commas that separate the parameters, in order to reduce the characters.
+			\item[-] line 3535: getUpdateDesc().recordUpdatedJoinTableRelationship(\\fieldDesc, this, addedSM, ActionDesc.LOG\_CREATE);\\
+			This line does not respect point 15 of the checklist where it is said that line breaks occurs after a comma or an operator. Wrapping this line after the comma that separates the parameters is a better solution, that still respects point 13.
+			\item[-] line 3664: //should throw an exception\\
+			According to point 52, here it is necessary to handle the exception, as suggested in the comment.
 		\end{itemize}
 		\item prepareUpdateFieldSpecial:
 		\begin{itemize}
-			\item[-] line 
-			\item[-] line 
+			\item[-] line 3626: logger.fine("sqlstore.sqlstatemanager.prepareupdatefieldspl", items);
+			This line exceeds the 80 characters suggested at point 13 of the checklist and it is possible to reduce the number of characters in this line, by wrapping after the commas that separates the parameters of the method, as said at point 15 of the checklist.
+			\item[-] line 3673: SCOCollection c = (SCOCollection) persistenceManager.newCollectionInstanceInternal(\\
+			This line exceeds the 80 characters suggested at point 13 of the checklist and it is possible to reduce the number of characters in this line, by wrapping after the equal operator and bring on the same line the first parameter of the method, as said at point 15 of the checklist. Doing so, it does not exceed the 120 characters suggested at point 14.
+			\item[-] line 3622: boolean debug = logger.isLoggable();\\
+			This variable should be declared at the beginning of the block, which is at the beginning of the function, as said at point 33 of the checklist.
+			\item[-] line 3629-3631: boolean optimistic = persistenceManager.isOptimisticTransaction();\\
+			boolean xactActive = persistenceManager.isActiveTransaction();\\
+			boolean nontransactionalRead = persistenceManager.isNontransactionalRead();\\
+			These variables should be declared at the beginning of the block, which is at the beginning of the function, as said at point 33 of the checklist.
+			\item[-] line 3641: LifeCycleState oldstate = state;\\
+			This variable should be declared at the beginning of the block, which is at the beginning of the function, as said at point 33 of the checklist.
+			\item[-] line 3668: Object value = fieldDesc.getValue(this);\\
+			This variable should be declared at the beginning of the \textit{else} block, as said at point 33 of the checklist.
 		\end{itemize}
 		
 	\end{itemize}
