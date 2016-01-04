@@ -2,6 +2,14 @@
 
 \usepackage[hidelinks]{hyperref}
 \usepackage[pdftex]{graphicx}
+\usepackage{fancyvrb}
+\usepackage[margin=1in]{geometry}
+\usepackage{listings}
+\usepackage{lstautogobble}
+
+\lstset{basicstyle=\ttfamily,
+	mathescape=true,
+	autogobble}
 
 \begin{document}
 \begin{figure}[t]
@@ -33,19 +41,18 @@
 		\end{itemize}
 
 \newpage	
-\section{Classes Assigned}
-	\begin{itemize}
-		\item  \textbf{Package:} com.sun.jdo.spi.persistence.support.sqlstore
-		\item  \textbf{Class:} SQLStateManager
-		\item  \textbf{Methods:}
-			\begin{itemize}
-				\item[-] addCollectionRelationship
-				\item[-] setForeignKey
-				\item[-] addJoinTableEntry
-				\item[-] prepareUpdateFieldSpecial
-				
-			\end{itemize}
-	\end{itemize}
+\section{Classes And Methods Assigned}
+	\subsection{Package}
+		com.sun.jdo.spi.persistence.support.sqlstore
+	\subsection{Class}
+		SQLStateManager
+	\subsection{Methods}
+		\begin{itemize}
+			\item addCollectionRelationship
+			\item setForeignKey
+			\item addJoinTableEntry
+			\item prepareUpdateFieldSpecial
+		\end{itemize}
 		
 \newpage
 \section{Functional Roles}
@@ -67,103 +74,218 @@
 
 \newpage
 \section{Issues}
-	\begin{itemize}
-		\item Class:
+	These are the list of the lines of code with the issues found applying the checklist.
+		\subsection{Class}
 			\begin{itemize}
-				\item[-] line 75: There is no JavaDoc for the class.
-				\item[-] line 151: /** I18N message handler. */\\
-				private final static ResourceBundle messages = I18NHelper.loadBundle(
-				SQLStateManager.class);\\
+				\item \textbf{line 75:} There is no JavaDoc for the class.
+				\item \textbf{line 77-162:} these lines does not respect the point 25.D and 25.E of the checklist, the public static or instance variables are not declared before the private ones.
+				\item \textbf{line 151:} \begin{lstlisting}
+					private final static ResourceBundle messages = I18NHelper.loadBundle(
+										SQLStateManager.class);
+					\end{lstlisting}
+				\vspace{0.1cm}
 				Here the ResourceBundle is declared as a constant and it is not capitalized, as it is said in the naming conventions at point 7 of the checklist.
-				\item[-] line 219: private void registerInstance(boolean throwDuplicateException,
-				ArrayList newlyRegisteredSMs, LifeCycleState oldstate);\\
+				\item \textbf{line 219:} \begin{lstlisting}
+				private void registerInstance(boolean throwDuplicateException,
+						ArrayList newlyRegisteredSMs, LifeCycleState oldstate);
+				\end{lstlisting}
+				\vspace{0.1cm}
 				There is no JavaDoc for this method.
-				\item[-] line 270: private void unsetMaskBit(int index, int mask);\\
+				\item \textbf{line 270:} 
+				\begin{lstlisting}
+				private void unsetMaskBit(int index, int mask);
+				\end{lstlisting}
+				\vspace{0.1cm}
 				There is no JavaDoc for this method.
-				\item[-] line 283: private void clearMask(int mask);\\
+				\item \textbf{line 283:}
+				\begin{lstlisting}
+				private void clearMask(int mask);
+				\end{lstlisting}
+				\vspace{0.1cm}
 				There is no JavaDoc for this method.
-				\item[-] line 308: private void newFieldMasks();\\
+				\item \textbf{line 308:} \begin{lstlisting}
+				private void newFieldMasks();
+				\end{lstlisting}
+				\vspace{0.1cm}
 				There is no JavaDoc for this method.
-				\item[-] line 400: public synchronized void replaceObjectField(String fieldName, Object o);\\
+				\item \textbf{line 400:} \begin{lstlisting}
+				public synchronized void replaceObjectField(String fieldName, Object o);
+				\end{lstlisting}
+				\vspace{0.1cm}
 				There is no JavaDoc for this method.
-				\item[-] line 408: public synchronized void makeDirty(String fieldName);
-				\\There is no JavaDoc for this method.
-				\item[-] line 508: public void makePresent(String fieldName, Object value);
-				\\There is no JavaDoc for this method.
-				\item[-] line 560: private void makeAutoPersistent(Object pc);
-				\\There is no JavaDoc for this method.
-				\item[-] line 1108: private boolean compareUpdatedFields(SQLStateManager next);
-				\\There is no JavaDoc for this method.
-				\item[-] line 1542: private void reset(boolean retainValues, boolean wasNew, boolean keepState);
-				\\There is no JavaDoc for this method.
-				\item[-] line 1706: private void markKeyFieldsPresent();
-				\\There is no JavaDoc for this method.
-				\item[-] line 2154: private SQLStateManager copyPersistent();
-				\\There is no JavaDoc for this method.
-				\item[-] line 2240: private Object cloneObjectMaybe(Object source);
-				\\There is no JavaDoc for this method.
-				\item[-] line 4087: private void assertNotPK(int fieldNumber);
-				\\There is no JavaDoc for this method.
-				\item[-] line 4093: private void assertPKUpdate(FieldDesc f, Object value);
-				\\There is no JavaDoc for this method.
-				\item[-] line 77-162: these lines does not respect the point 25.D and 25.E of the checklist, the public static or instance variables are not declared before the private ones.
+				\item \textbf{line 408:} \begin{lstlisting}
+				public synchronized void makeDirty(String fieldName);
+				\end{lstlisting}
+				\vspace{0.1cm}
+				
+				There is no JavaDoc for this method.
+				\item \textbf{line 508:} \begin{lstlisting}
+				public void makePresent(String fieldName, Object value);
+				\end{lstlisting}
+				\vspace{0.1cm}
+				
+	
+				There is no JavaDoc for this method.
+				\item \textbf{line 560:} \begin{lstlisting}
+				private void makeAutoPersistent(Object pc);
+				\end{lstlisting}
+				\vspace{0.1cm}
+				
+				There is no JavaDoc for this method.
+				\item \textbf{line 1108:} \begin{lstlisting}
+				private boolean compareUpdatedFields(SQLStateManager next);
+				\end{lstlisting}
+				\vspace{0.1cm}
+				
+				There is no JavaDoc for this method.
+				\item \textbf{line 1542:} \begin{lstlisting}
+				private void reset(boolean retainValues, boolean wasNew, boolean keepState);
+				\end{lstlisting}
+				\vspace{0.1cm}
+				There is no JavaDoc for this method.
+				\item \textbf{line 1706:} \begin{lstlisting}
+				private void markKeyFieldsPresent();
+				\end{lstlisting}
+				\vspace{0.1cm}
+				There is no JavaDoc for this method.
+				\item \textbf{line 2154:} \begin{lstlisting}
+				private SQLStateManager copyPersistent();
+				\end{lstlisting}
+				\vspace{0.1cm}
+				
+				There is no JavaDoc for this method.
+				\item \textbf{line 2240:} \begin{lstlisting}
+				private Object cloneObjectMaybe(Object source);
+				\end{lstlisting}
+				\vspace{0.1cm}
+				
+				There is no JavaDoc for this method.
+				\item \textbf{line 4087:} \begin{lstlisting}
+				private void assertNotPK(int fieldNumber);
+				\end{lstlisting}
+				\vspace{0.1cm}
+				
+				There is no JavaDoc for this method.
+				\item \textbf{line 4093:} \begin{lstlisting}
+				private void assertPKUpdate(FieldDesc f, Object value);
+				\end{lstlisting}
+				\vspace{0.1cm}
+				
+				There is no JavaDoc for this method.
+				
 				
 				
 			\end{itemize}
-		\item addCollectionRelationship:
+		\subsection{addCollectionRelationship}
 			\begin{itemize}
-				\item[-] line 3384:  SQLStateManager addedSM = getAddedSM(addedObject, newlyRegisteredSMs);\\
-				This line exceeds the 80 characters suggested at point 13 of the checklist and it is possible to reduce the number of characters in this line, by wrapping after the comma in the \textit{getAddedSM} call, as said at point 15 of the checklist.
-				\item[-] line 3409: updateRelationshipInDataStore(fieldDesc, addedSM, null, inverseFieldDesc, false);\\
+				\item \textbf{line 3384:} \begin{lstlisting}
+				SQLStateManager addedSM = getAddedSM(addedObject, newlyRegisteredSMs);
+				\end{lstlisting}
+				\vspace{0.1cm}
+				This line exceeds the 80 characters suggested at point 13 of the checklist and it is possible to reduce the number of characters in this line, by wrapping after the comma in the \textbf{getAddedSM} call, as said at point 15 of the checklist.
+				\item \textbf{line 3409:} \begin{lstlisting}
+				updateRelationshipInDataStore(fieldDesc, addedSM, null, inverseFieldDesc,
+				false);
+				\end{lstlisting}
+				\vspace{0.1cm}
 				This line exceeds the 80 characters suggested at point 13 of the checklist and it is possible to reduce the number of characters in this line, by wrapping after the commas that separates the parameters of the method, as said at point 15 of the checklist.
 			\end{itemize}
-		\item setForeignKey:
+		\subsection{setForeignKey}
 			\begin{itemize}
-				\item[-] line 3451-3452: LocalFieldDesc la = (LocalFieldDesc) fieldDesc.localFields.get(i);\\
-				LocalFieldDesc fa = (LocalFieldDesc) fieldDesc.foreignFields.get(i);\\
-				This lines exceed the 80 characters suggested at point 13 of the checklist and it is possible to reduce the number of characters in this lines, by wrapping after the equal operator after \textit{la} and \textit{fa}, as said at point 15 of the checklist.
-				\item[-] line 3458-3459: LocalFieldDesc la = (LocalFieldDesc) inverseFieldDesc.foreignFields.get(i);\\
-				LocalFieldDesc fa = (LocalFieldDesc) inverseFieldDesc.localFields.get(i);\\
-				This lines exceed the 80 characters suggested at point 13 of the checklist and it is possible to reduce the number of characters in this lines, by wrapping after the equal operator after \textit{la} and \textit{fa}, as said at point 15 of the checklist.
+				\item \textbf{line 3451-3452:} \begin{lstlisting}
+				LocalFieldDesc la = (LocalFieldDesc) fieldDesc.localFields.get(i);
+				LocalFieldDesc fa = (LocalFieldDesc) fieldDesc.foreignFields.get(i);
+				\end{lstlisting}
+				\vspace{0.1cm}
+				This lines exceed the 80 characters suggested at point 13 of the checklist and it is possible to reduce the number of characters in this lines, by wrapping after the equal operator after \textbf{la} and \textbf{fa}, as said at point 15 of the checklist.
+				\item \textbf{line 3458-3459:} \begin{lstlisting}
+				LocalFieldDesc la = (LocalFieldDesc) inverseFieldDesc.foreignFields.get(i);
+				LocalFieldDesc fa = (LocalFieldDesc) inverseFieldDesc.localFields.get(i);
+				\end{lstlisting}
+				\vspace{0.1cm}
+				This lines exceed the 80 characters suggested at point 13 of the checklist and it is possible to reduce the number of characters in this lines, by wrapping after the equal operator after \textbf{la} and \textbf{fa}, as said at point 15 of the checklist.
 			\end{itemize}
-		\item addJoinTableEntry:
+		\subsection{addJoinTableEntry}
 		\begin{itemize}
-			\item[-] line 3509: * RESOLVE: What happens, if a field descriptor is null, e.g. for one\\
-			* way relationships, as the descriptors are taken as keys during scheduling?\\
+			\item \textbf{line 3509:} \begin{lstlisting}
+			* RESOLVE: What happens, if a field descriptor is null, e.g. for one
+			* way relationships, as the descriptors are taken as keys during scheduling?
+			\end{lstlisting}
+			\vspace{0.1cm}
+			
 			This comment can be deleted as long as it is no longer needed, this is handled by the exception thrown at line 3542.
-			\item[-] line 3526: if (fieldDesc != null \&\& getUpdateDesc().removeUpdatedJoinTableRelationship(
-			fieldDesc, addedSM, ActionDesc.LOG\_DESTROY) == false)\\
-			This line does not agree with point 44 of the checklist: in fact the second expression of the \textit{if} returns a boolean value and it is not necessary to compare it with \textit{false}. Denying the expression, adding the pertinent parenthesis, is a better solution. It does not respect the point 13 and 15, because it is better to wrap the line after the \&\& operator and after the commas that separate the parameters, in order to reduce the characters.
-			\item[-] line 3530: if (inverseFieldDesc == null OR addedSM.getUpdateDesc().removeUpdatedJoinTableRelationship(
-			inverseFieldDesc, this, ActionDesc.LOG\_DESTROY) == false)\\
-			This line does not agree with point 44 of the checklist: in fact the second expression of the \textit{if} returns a boolean value and it is not necessary to compare it with \textit{false}. Denying the expression, adding the pertinent parenthesis, is a better solution. It does not respect the point 13 and 15, because it is better to wrap the line after the OR operator and after the commas that separate the parameters, in order to reduce the characters.
-			\item[-] line 3535: getUpdateDesc().recordUpdatedJoinTableRelationship(\\fieldDesc, this, addedSM, ActionDesc.LOG\_CREATE);\\
+			\item \textbf{line 3526:} \begin{lstlisting}
+			if (fieldDesc != null && getUpdateDesc().removeUpdatedJoinTableRelationship(
+			fieldDesc, addedSM, ActionDesc.LOG_DESTROY) == false)
+			\end{lstlisting}
+			\vspace{0.1cm}
+			This line does not agree with point 44 of the checklist: in fact the second expression of the \textbf{if} returns a boolean value and it is not necessary to compare it with \textbf{false}. Denying the expression, adding the pertinent parenthesis, is a better solution. It does not respect the point 13 and 15, because it is better to wrap the line after the AND operator and after the commas that separate the parameters, in order to reduce the characters.
+			\item \textbf{line 3530:} \begin{lstlisting}
+			if (inverseFieldDesc == null || addedSM.getUpdateDesc().
+				removeUpdatedJoinTableRelationship(
+					inverseFieldDesc, this, ActionDesc.LOG_DESTROY) == false)
+			\end{lstlisting}
+			\vspace{0.1cm}
+			
+			This line does not agree with point 44 of the checklist: in fact the second expression of the \textbf{if} returns a boolean value and it is not necessary to compare it with \textbf{false}. Denying the expression, adding the pertinent parenthesis, is a better solution. It does not respect the point 13 and 15, because it is better to wrap the line after the OR operator and after the commas that separate the parameters, in order to reduce the characters.
+			\item \textbf{line 3535:} \begin{lstlisting}
+			getUpdateDesc().recordUpdatedJoinTableRelationship(
+			\end{lstlisting}
+			\vspace{0.1cm}
 			This line does not respect point 15 of the checklist where it is said that line breaks occurs after a comma or an operator. Wrapping this line after the comma that separates the parameters is a better solution, that still respects point 13.
-			\item[-] line 3664: //should throw an exception\\
+			\item \textbf{line 3664:} \begin{lstlisting}
+			//should throw an exception
+			\end{lstlisting}
+			\vspace{0.1cm}
 			According to point 52, here it is necessary to handle the exception, as suggested in the comment.
 		\end{itemize}
-		\item prepareUpdateFieldSpecial:
+		\subsection{prepareUpdateFieldSpecial}
 		\begin{itemize}
-			\item[-] line 3626: logger.fine("sqlstore.sqlstatemanager.prepareupdatefieldspl", items);
+			\item \textbf{line 3626:} \begin{lstlisting}
+			logger.fine("sqlstore.sqlstatemanager.prepareupdatefieldspl", items);
+			\end{lstlisting}
+			\vspace{0.1cm}
+			
 			This line exceeds the 80 characters suggested at point 13 of the checklist and it is possible to reduce the number of characters in this line, by wrapping after the commas that separates the parameters of the method, as said at point 15 of the checklist.
-			\item[-] line 3673: SCOCollection c = (SCOCollection) persistenceManager.newCollectionInstanceInternal(\\
+			\item \textbf{line 3673:} \begin{lstlisting}
+			SCOCollection c = (SCOCollection) persistenceManager.
+							newCollectionInstanceInternal(
+			\end{lstlisting}
+			\vspace{0.1cm}
 			This line exceeds the 80 characters suggested at point 13 of the checklist and it is possible to reduce the number of characters in this line, by wrapping after the equal operator and bring on the same line the first parameter of the method, as said at point 15 of the checklist. Doing so, it does not exceed the 120 characters suggested at point 14.
-			\item[-] line 3622: boolean debug = logger.isLoggable();\\
+			\item \textbf{line 3622:} \begin{lstlisting}
+			boolean debug = logger.isLoggable();
+			\end{lstlisting}
+			\vspace{0.1cm}
 			This variable should be declared at the beginning of the block, which is at the beginning of the function, as said at point 33 of the checklist.
-			\item[-] line 3629-3631: boolean optimistic = persistenceManager.isOptimisticTransaction();\\
-			boolean xactActive = persistenceManager.isActiveTransaction();\\
-			boolean nontransactionalRead = persistenceManager.isNontransactionalRead();\\
+			\item \textbf{line 3629-3631:} \begin{lstlisting}
+			boolean optimistic = persistenceManager.isOptimisticTransaction();
+			boolean xactActive = persistenceManager.isActiveTransaction();
+			boolean nontransactionalRead = persistenceManager.isNontransactionalRead();
+			\end{lstlisting}
+			\vspace{0.1cm}
 			These variables should be declared at the beginning of the block, which is at the beginning of the function, as said at point 33 of the checklist.
-			\item[-] line 3641: LifeCycleState oldstate = state;\\
+			\item \textbf{line 3641:} \begin{lstlisting}
+			LifeCycleState oldstate = state;
+			\end{lstlisting}
+			\vspace{0.1cm}
 			This variable should be declared at the beginning of the block, which is at the beginning of the function, as said at point 33 of the checklist.
-			\item[-] line 3668: Object value = fieldDesc.getValue(this);\\
+			\item \textbf{line 3668:}  \begin{lstlisting}
+			Object value = fieldDesc.getValue(this);
+			\end{lstlisting}
+			\vspace{0.1cm}
 			This variable should be declared at the beginning of the \textit{else} block, as said at point 33 of the checklist.
 		\end{itemize}
-		
-	\end{itemize}
 
 \newpage
 \section{Other Problems}
-
-
+	No other problems have been highlighted.
+\section{References}
+	\begin{itemize}
+		\item Code inspection assignment\\ (\url{https://github.com/AntoniniP/CodeInspectionChecklist/blob/master/original.pdf})
+		\item Checklist\\ (\url{https://github.com/AntoniniP/CodeInspectionChecklist/blob/master/document.pdf})
+		\item Code documentation (\url{glassfish.pompel.me})
+		\item Source code (\url{https://svn.java.net/svn/glassfish~svn/tags/4.1.1})
+	\end{itemize}
+	
 \end{document}
