@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.22)  4 JAN 2016 17:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.22)  4 JAN 2016 18:07
 entering extended mode
 **CodeInspection.tex
 (CodeInspection.tex
@@ -341,90 +341,90 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 36.
 
 [2] [3] [4]
-Overfull \hbox (6.7313pt too wide) in paragraph at lines 83--84
+Overfull \hbox (6.7313pt too wide) in paragraph at lines 85--86
 [][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (19.33127pt too wide) in paragraph at lines 90--91
+Overfull \hbox (19.33127pt too wide) in paragraph at lines 92--93
 [][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (25.63126pt too wide) in paragraph at lines 112--113
+Overfull \hbox (25.63126pt too wide) in paragraph at lines 114--115
 [][][][][][][][][][][][][][][][][][][][] 
  []
 
 [5]
-Overfull \hbox (50.8312pt too wide) in paragraph at lines 142--143
+Overfull \hbox (50.8312pt too wide) in paragraph at lines 144--145
 [][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (13.03128pt too wide) in paragraph at lines 182--183
+Overfull \hbox (13.03128pt too wide) in paragraph at lines 185--186
 [][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (31.93124pt too wide) in paragraph at lines 187--188
+Overfull \hbox (31.93124pt too wide) in paragraph at lines 190--191
 [][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (0.4313pt too wide) in paragraph at lines 197--198
+Overfull \hbox (0.4313pt too wide) in paragraph at lines 200--201
 [][][][][][][][][][][][][][][][][][][][][] 
  []
 
 [6]
-Overfull \hbox (44.53122pt too wide) in paragraph at lines 202--203
+Overfull \hbox (44.53122pt too wide) in paragraph at lines 205--206
 [][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (31.93124pt too wide) in paragraph at lines 203--204
+Overfull \hbox (31.93124pt too wide) in paragraph at lines 206--207
 [][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (0.4313pt too wide) in paragraph at lines 211--212
+Overfull \hbox (0.4313pt too wide) in paragraph at lines 214--215
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (50.8312pt too wide) in paragraph at lines 212--213
+Overfull \hbox (50.8312pt too wide) in paragraph at lines 215--216
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (50.8312pt too wide) in paragraph at lines 218--219
+Overfull \hbox (50.8312pt too wide) in paragraph at lines 221--222
 [][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (31.93124pt too wide) in paragraph at lines 226--227
+Overfull \hbox (31.93124pt too wide) in paragraph at lines 229--230
 [][][][][][][][][][][][][][][][][][][] 
  []
 
 [7]
-Overfull \hbox (6.7313pt too wide) in paragraph at lines 245--246
+Overfull \hbox (6.7313pt too wide) in paragraph at lines 248--249
 [][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (44.53122pt too wide) in paragraph at lines 264--265
+Overfull \hbox (44.53122pt too wide) in paragraph at lines 267--268
 [][][][][][][][][][][][][] 
  []
 
 [8]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 291.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 294.
  [9]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 291.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 294.
  (CodeInspection.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 291.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 291.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 294.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 294.
 Package rerunfilecheck Info: File `CodeInspection.out' has not changed.
-(rerunfilecheck)             Checksum: B75FD98F64E489475C58740A6B937DD8;1222.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 291.
+(rerunfilecheck)             Checksum: 8CED6F1C064027A9AE7213C89B5B59DD;1302.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 294.
  ) 
 Here is how much of TeX's memory you used:
  7090 strings out of 493673
@@ -433,7 +433,7 @@ Here is how much of TeX's memory you used:
  10300 multiletter control sequences out of 15000+200000
  8716 words of font info for 31 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 29i,6n,32p,496b,950s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 29i,6n,32p,523b,950s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeK/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/
 Program Files (x86)/MiKTeK/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Progra
 m Files (x86)/MiKTeK/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files
@@ -442,7 +442,7 @@ MiKTeK/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files (x86)/MiKTeK/
 fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeK/fonts/
 type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files (x86)/MiKTeK/fonts/type1/
 public/amsfonts/cm/cmtt10.pfb>
-Output written on CodeInspection.pdf (10 pages, 252996 bytes).
+Output written on CodeInspection.pdf (10 pages, 252454 bytes).
 PDF statistics:
  284 PDF objects out of 1000 (max. 8388607)
  105 named destinations out of 1000 (max. 500000)

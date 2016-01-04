@@ -35,9 +35,10 @@
 		\begin{itemize}
 			\item \textbf{Introduction:} this section describes the document in general and its purpose.
 			\item  \textbf{Classes assigned:} this section specifies the name of the classes and methods assigned to the group.
-			\item  \textbf{Functional roles:} this section shows the role of each method assigned and their functions in the class.
-			\item  \textbf{Issues:} this section verifies that all the points of the code inspection checklist are respected in the classes assigned.
+			\item  \textbf{Functional roles:} this section shows the role of the class and of each method assigned and their functionalities.
+			\item  \textbf{Issues:} this section verifies that all the points of the code inspection checklist are respected in the classes and methods assigned.
 			\item  \textbf{Other problems:} this section deals with other possible issues found in the code, referring to the lines generating a bug and how it can create problems in the program.
+			\item \textbf{References}: this section lists all the useful materials necessary for this document.
 		\end{itemize}
 
 \newpage	
@@ -56,21 +57,22 @@
 		
 \newpage
 \section{Functional Roles}
-	\subsection{addCollectionRelationship}
-		This method sets the relationship for the objects added to a collection relationship. Given a list of object to add to the relationship and a list of newly registered state managers, this method transforms and adds all the elements of the addedList to the newlyRegisteredSMs list, by checking that the elements are not null and making them autopersistent. Then it checks that the element added has not been deleted and updates the relationship in the data store.
-		It is used when it is necessary to apply the updates in the data store, in particular it processes the updates in the collections by adding the relationships between them.\\		
-		Evidence: javadoc, function calls.
-	\subsection{setForeignKey}
-		This method is used to set the foreign key corresponding to the relationship field. The fieldDesc and inverseFieldDesc parameters are used for the iteration on the local or foreign fields. This method calls setForeignKey, a method with other parameters that actually sets the local field corresponding to a foreign key column to the new value for the relationship update.
-		This method is called in the processForeignKey in order to set the foreign key on the added object. It is useful when an update of relationships in the data store is needed.\\		
-		Evidence: javadoc, function calls.
-	\subsection{addJoinTableEntry}
-		This method is used to schedule the creation of a jointable entry between this and the added State Manager, after removing every scheduled removal. Note that the side creating the jointable entry has to wait for the other to become persistent and the situation in which the field descriptor passed is null needs to be handled.\\
-		It is needed in order to process the join table entries, in particular to schedule the jointable entry to the added object. It is part of the update of the relationships in the data store.\\
-		Evidence: javadoc, function calls.
-	\subsection{prepareUpdateFieldSpecial}
-		This is a different version of the \textit{prepareUpdateField} method and they are  very important for the recording of changes to fields, as it prepares the field described by the parameter \textit{fieldDesc} for update. In fact it is called in different other methods, with different functionalities: when a relationship is removed or added and when it is necessary to update the values for fields tracking field.
-		Evidence: javadoc, function calls.
+	These methods are part of the SQLStateManager, the class that manages the state transitions and the contents of the fields, taking care of adding, removing and updating the values and the operations in the tables and the relationships between the fields.
+	\subsection{Method 1: addCollectionRelationship}
+		This method sets the relationship for the objects added to a collection relationship. Given a list of object to add to the relationship and a list of newly registered state managers, this function transforms and adds all the elements of the \textbf{addedList} to the \textbf{newlyRegisteredSMs} list, by checking that the elements are not null and making them autopersistent. It also checks that the element added has not been deleted and updates the relationship in the data store.\\
+		This method is used when it is necessary to apply the updates in the data store, in particular it processes the updates in the collections by adding the relationships between them.\\		
+		The evidence of its functionality can be found in the JavaDoc and checking the function calls in the SQLStateManager class.
+	\subsection{Method 2: setForeignKey}
+		This method is used to set the foreign key corresponding to the relationship field.\\ The \textbf{fieldDesc} and \textbf{inverseFieldDesc} parameters are used for the iteration on the local or foreign fields. This function calls its homonym \textbf{setForeignKey}, a method with other parameters, that actually sets the local field corresponding to a foreign key column to the new value for the relationship update.\\
+		This method is called in the \textbf{processForeignKey} method in order to set the foreign key on the added object. It is useful when an update of a relationships in the data store is needed.\\		
+		The evidence of its functionality can be found in the JavaDoc and checking the function calls in the SQLStateManager class.
+	\subsection{Method 3: addJoinTableEntry}
+		This method is used to schedule the creation of a join table entry between this and the added State Manager, after removing every scheduled removal. Note that the side creating the join table entry has to wait for the other to become persistent and the situation in which the field descriptor passed is null needs to be handled.\\
+		It is needed in order to process the join table entries, in particular to schedule the join table entry to the added object. It is part of the update of the relationships in the data store.\\
+		The evidence of its functionality can be found in the JavaDoc and checking the function calls in the SQLStateManager class.
+	\subsection{Method 4: prepareUpdateFieldSpecial}
+		This is a different version of the \textbf{prepareUpdateField} method. They both are very important for the recording of changes to fields, as they prepares the field described by the parameter \textbf{fieldDesc} for update. In fact this method is called in different other methods, with various functionalities: when a relationship is removed or added and when it is necessary to update the values for fields tracking field.
+		The evidence of its functionality can be found in the JavaDoc and checking the function calls in the SQLStateManager class.
 
 \newpage
 \section{Issues}
@@ -176,7 +178,8 @@
 				
 				
 			\end{itemize}
-		\subsection{addCollectionRelationship}
+			
+		\subsection{Method 1: addCollectionRelationship}
 			\begin{itemize}
 				\item \textbf{line 3384:} \begin{lstlisting}
 				SQLStateManager addedSM = getAddedSM(addedObject, newlyRegisteredSMs);
@@ -190,7 +193,7 @@
 				\vspace{0.1cm}
 				This line exceeds the 80 characters suggested at point 13 of the checklist and it is possible to reduce the number of characters in this line, by wrapping after the commas that separates the parameters of the method, as said at point 15 of the checklist.
 			\end{itemize}
-		\subsection{setForeignKey}
+		\subsection{Method 2: setForeignKey}
 			\begin{itemize}
 				\item \textbf{line 3451-3452:} \begin{lstlisting}
 				LocalFieldDesc la = (LocalFieldDesc) fieldDesc.localFields.get(i);
@@ -205,7 +208,7 @@
 				\vspace{0.1cm}
 				This lines exceed the 80 characters suggested at point 13 of the checklist and it is possible to reduce the number of characters in this lines, by wrapping after the equal operator after \textbf{la} and \textbf{fa}, as said at point 15 of the checklist.
 			\end{itemize}
-		\subsection{addJoinTableEntry}
+		\subsection{Method 3: addJoinTableEntry}
 		\begin{itemize}
 			\item \textbf{line 3509:} \begin{lstlisting}
 			* RESOLVE: What happens, if a field descriptor is null, e.g. for one
@@ -239,7 +242,7 @@
 			\vspace{0.1cm}
 			According to point 52, here it is necessary to handle the exception, as suggested in the comment.
 		\end{itemize}
-		\subsection{prepareUpdateFieldSpecial}
+		\subsection{Method 4: prepareUpdateFieldSpecial}
 		\begin{itemize}
 			\item \textbf{line 3626:} \begin{lstlisting}
 			logger.fine("sqlstore.sqlstatemanager.prepareupdatefieldspl", items);
