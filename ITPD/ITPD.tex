@@ -1,0 +1,59 @@
+\documentclass[18pt,oneside,a4paper, titlepage]{article}
+
+\usepackage[hidelinks]{hyperref}
+\usepackage[pdftex]{graphicx}
+
+\begin{document}
+\begin{figure}[t]
+	\centering
+	\includegraphics[scale=0.35]{logo-polimi.png}
+\end{figure}
+\title{\textbf{myTaxiService}\\\textbf{I}ntegration \textbf{T}est \textbf{P}lan \textbf{D}ocument\\ A.Y. 2015/2016\\
+	Politecnico di Milano \\ Version 1.0}	
+\author{Cattaneo Michela Gaia, matr. 791685\\Barlocco Mattia, matr. 792735 }
+\date{January 22, 2016}
+\maketitle
+
+\newpage
+	\tableofcontents
+
+\newpage
+\section{Introduction}
+\subsection{Revision History}
+	% Record all revisions to the document.
+\subsection{Purpose	and	Scope} %	State	the	purpose	and	scope	of	the	document.
+\subsection{List of	Definitions	and	Abbreviations}
+\subsection{List of	Reference Documents}
+%	List	all	reference	documents,	for	instance:
+%• The	project	description
+%• The	RASD
+%• The	Design	document
+%• The	documentation	of	any	tool	you	plan	to	use	for	testing
+\begin{itemize}
+	\item Project Description and Rules (\url{})
+	\item Requirements Analysis and Specification Document (\url{https://github.com/MichelaCattaneo/myTaxiService/blob/master/Deliveries/RASD_1.1.pdf})
+	\item Design Document (\url{https://github.com/MichelaCattaneo/myTaxiService/blob/master/Deliveries/DD.pdf})
+	\item Integration Test Plan Example (\url{https://beep.metid.polimi.it/documents/3343933/5b3768d0-­‐‑d949-­‐‑4369-­‐‑87e1-­‐‑7a31b6943726})
+\end{itemize}
+	
+\section{Integration Strategy}
+\subsection{Entry Criteria}		
+% Specify	the	criteria	that	must	be	met	before	integration testing of specific	elements	may	begin	(e.g.,	functions	must	have	been	unit tested).
+\subsection{Elements to	be Integrated}
+%Identify	the	components	to	be	integrated,	refer	to	your design	document	to	identify	such	components	in	a	way	that	is	consistent with	your	design.
+\subsection{Integration Testing Strategy}
+% Describe	the	integration testing approach (top-down,	bottom-up,functional	groupings,	etc.)	and	the	rationale for	the	choosing that approach.
+\subsection{Sequence of	Component/Function Integration}
+% NOTE:	 The structure	of	this	section	may	vary	depending	on	the	integration	strategy	you	select	in	Section	2.3. Use the structure proposed	below	as	a	non	mandatory	guide.	
+\subsubsection{Software	Integration	Sequence}
+% For	each	subsystem: Identify	the	sequence	in	which	the	software	components will	be	integrated within	the	subsystem.	Relate	this	sequence	to	any	product	features/functions	that	are	being	built	up.	
+\subsubsection{Subsystem Integration Sequence}
+% Identify	the	order	in which	subsystems	will	be	integrated. If	you	have	a	single	subsystem,	2.4.1	and	2.4.2	are	to	be	merged	in a	single	section.	You	can	refer	to	Section	2.2	of	the	test	plan example [1] as	an	example	of	what	we	expect.
+\section{Individual	Steps	and	Test	Description}
+% For	each	step	of	the	integration	process	identified	above,	describe	the	 type	of	tests	that	will	be	used	to	verify	that	the	elements	integrated	in	this step	perform	as	expected.	Describe	in general	the	expected	results	of	the	 test	set.	You	may	refer	to	Chapter	3	and	Chapter	4	of	the	test	plan example	[1]	as	an	example	of	what	we	expect. (NOTE:	This	is	not	a	detailed	description	of	test	protocols.	Think	of	this	as the	test	design	phase.	Specific	protocols	will	be	written	to	fulfill	the	goals of	the	tests	identified	in	this	section.)
+\section{Tools	and	Test	Equipment	Required}
+% Identify	all	tools	and	test	equipment	needed	to	accomplish	the	 integration.	Refer	to	the	tools	presented	during	the	lectures.	Explain	why	 and	how	you	are	going	to	use	them.	Note	that	you	may	also	use	manual	testing	for	some	part.	Consider manual	testing	as	one	of	the	possible	tools	you	have	available.
+\section{Program	Stubs	and	Test	Data	Required}
+% Based	on	the	testing	strategy	and	test	design,	identify	any	program	stubs or	special	test	data	required	for	each	integration	step.
+
+\end{document}
