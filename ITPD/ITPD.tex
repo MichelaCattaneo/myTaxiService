@@ -19,41 +19,88 @@
 
 \newpage
 \section{Introduction}
-\subsection{Revision History}
-	% Record all revisions to the document.
-\subsection{Purpose	and	Scope} %	State	the	purpose	and	scope	of	the	document.
-\subsection{List of	Definitions	and	Abbreviations}
-\subsection{List of	Reference Documents}
-%	List	all	reference	documents,	for	instance:
-%• The	project	description
-%• The	RASD
-%• The	Design	document
-%• The	documentation	of	any	tool	you	plan	to	use	for	testing
-\begin{itemize}
-	\item Project Description and Rules (\url{})
-	\item Requirements Analysis and Specification Document (\url{https://github.com/MichelaCattaneo/myTaxiService/blob/master/Deliveries/RASD_1.1.pdf})
-	\item Design Document (\url{https://github.com/MichelaCattaneo/myTaxiService/blob/master/Deliveries/DD.pdf})
-	\item Integration Test Plan Example (\url{https://beep.metid.polimi.it/documents/3343933/5b3768d0-­‐‑d949-­‐‑4369-­‐‑87e1-­‐‑7a31b6943726})
-\end{itemize}
-	
+	\subsection{Revision History}
+		% Record all revisions to the document.
+	\subsection{Purpose	and	Scope}
+		% State	the	purpose	and	scope of the document.
+		This document represents the Integration Test Plan Document. It aims at specifying the plan for the integration testing of myTaxiService application, ensuring that all its modules interacts properly.\\
+		This document is intended for the development team, that needs to know what it is needed to test, in which sequence it should occur and with which tools.\\
+		myTaxiService is an application that simplifies the access of the customers to the taxi service, managing also the taxi driver's distribution over the city and the queues of the areas. The customer can use the mobile application or the web app to request or reserve a taxi and a notification is forwarded to the designated taxi driver, who is going to answer. This system should always be responsive and reliable, in order to keep up with all the requests of the passenger and the notifications forwarding.\\ This is the reason why the components that comprise the myTaxiService system are meant to be well integrated and tested.
+	\subsection{List of	Definitions	and	Abbreviations}
+		\begin{itemize}
+			\item \textbf{Definitions}
+			\item[-] \textbf{User}: a person who requests a service from the system. It can be a visitor or a passenger.
+			\item[-] \textbf{Visitor}: a person who is not registered in the application.
+			\item[-] \textbf{Passenger}: a person who is registered in the application.
+			\item[-] \textbf{Taxi driver}: a taxi driver who access the application with a specific ID.
+			\item[-] \textbf{Request}: the request of a taxi in a certain area and position in the city made by a user.
+			\item[-] \textbf{Reservation}: the reservation of a taxi in a certain area, place and time that can be made only by passengers.
+			
+			\item \textbf{Acronyms and abbreviations}
+			\item[-] \textbf{RASD}: Requirement Analysis and Specification Document
+			\item[-] \textbf{DBMS}: Database Management System
+			\item[-] \textbf{JEE}: Java Enterprise Edition
+			\item[-] \textbf{API}: Application Programming Interface
+			\item[-] \textbf{UML}: Unified Modeling Language
+			\item[-] \textbf{RMI}: Remote Method Invocation
+			\item[-] \textbf{HTTP}: HyperText Transfer Protocol
+			\item[-] \textbf{UX}: User eXperience
+			
+		\end{itemize}
+	\subsection{List of	Reference Documents}
+		%	List	all	reference	documents,	for	instance:
+		%• The	project	description
+		%• The	RASD
+		%• The	Design	document
+		%• The	documentation	of	any	tool	you	plan	to	use	for	testing
+		\begin{itemize}
+			\item Project Description and Rules (\url{https://github.com/MichelaCattaneo/myTaxiService/blob/master/Project\%20Description\%20And\%20Rules.pdf})
+			\item Requirements Analysis and Specification Document (\url{https://github.com/MichelaCattaneo/myTaxiService/blob/master/Deliveries/RASD_1.1.pdf})
+			\item Design Document (\url{https://github.com/MichelaCattaneo/myTaxiService/blob/master/Deliveries/DD.pdf})
+			\item Integration Test Plan Example (\url{https://beep.metid.polimi.it/documents/3343933/5b3768d0-­‐‑d949-­‐‑4369-­‐‑87e1-­‐‑7a31b6943726})
+		\end{itemize}
+
+\newpage
 \section{Integration Strategy}
-\subsection{Entry Criteria}		
-% Specify	the	criteria	that	must	be	met	before	integration testing of specific	elements	may	begin	(e.g.,	functions	must	have	been	unit tested).
-\subsection{Elements to	be Integrated}
-%Identify	the	components	to	be	integrated,	refer	to	your design	document	to	identify	such	components	in	a	way	that	is	consistent with	your	design.
-\subsection{Integration Testing Strategy}
-% Describe	the	integration testing approach (top-down,	bottom-up,functional	groupings,	etc.)	and	the	rationale for	the	choosing that approach.
-\subsection{Sequence of	Component/Function Integration}
-% NOTE:	 The structure	of	this	section	may	vary	depending	on	the	integration	strategy	you	select	in	Section	2.3. Use the structure proposed	below	as	a	non	mandatory	guide.	
-\subsubsection{Software	Integration	Sequence}
-% For	each	subsystem: Identify	the	sequence	in	which	the	software	components will	be	integrated within	the	subsystem.	Relate	this	sequence	to	any	product	features/functions	that	are	being	built	up.	
-\subsubsection{Subsystem Integration Sequence}
-% Identify	the	order	in which	subsystems	will	be	integrated. If	you	have	a	single	subsystem,	2.4.1	and	2.4.2	are	to	be	merged	in a	single	section.	You	can	refer	to	Section	2.2	of	the	test	plan example [1] as	an	example	of	what	we	expect.
+	\subsection{Entry Criteria}	
+		These are the criteria that must be respected before the integration testing phase may begin:
+		\begin{itemize}
+			\item Requirement Analysis and Specification Document is complete and revised
+			\item Design Document is complete and revised
+			\item Code Inspection Document is complete and revised
+			\item The code is complete and bugs free
+			\item The product satisfies the requirements and the assumptions specified in the RASD
+			\item The product satisfies the architecture and the design specified in the DD
+			\item Test environment, test cases and test data are ready
+		\end{itemize}	
+		% Specify	the	criteria	that	must	be	met	before	integration testing of specific	elements	may	begin	(e.g.,	functions	must	have	been	unit tested).
+	\subsection{Elements to	be Integrated}
+		%Identify	the	components	to	be	integrated,	refer	to	your design	document	to	identify	such	components	in	a	way	that	is	consistent with	your	design.
+		These components refer to the ones specified in the Component View in chapter 2.3 of the DD. This diagram shows how these components have to be integrated and the order of integration, according to the strategy adopted.
+	\subsection{Integration Testing Strategy}
+		% Describe	the	integration testing approach (top-down,	bottom-up,functional	groupings,	etc.)	and	the	rationale for	the	choosing that approach.
+		The main advantage of the Bottom-Up approach is that bugs are more easily found. With Top-Down, it is easier to find a missing branch link.
+		da database a moduli client
+		La parte più critica è quella piu bassa!(che contiene la logica del sistema) meglio bottom up.
+		cosi evitiamo di fare gli stub ma facciamo i driver che sono più semplici.
+		basic functionalities are tested at the beginning
+	\subsection{Sequence of	Component/Function Integration}
+		% NOTE:	 The structure	of	this	section	may	vary	depending	on	the	integration	strategy	you	select	in	Section	2.3. Use the structure proposed	below	as	a	non	mandatory	guide.	
+		\subsubsection{Software	Integration	Sequence}
+			% For	each	subsystem: Identify	the	sequence	in	which	the	software	components will	be	integrated within	the	subsystem.	Relate	this	sequence	to	any	product	features/functions	that	are	being	built	up.	
+		\subsubsection{Subsystem Integration Sequence}
+			% Identify	the	order	in which	subsystems	will	be	integrated. If	you	have	a	single	subsystem,	2.4.1	and	2.4.2	are	to	be	merged	in a	single	section.	You	can	refer	to	Section	2.2	of	the	test	plan example [1] as	an	example	of	what	we	expect.
+
+\newpage
 \section{Individual	Steps	and	Test	Description}
-% For	each	step	of	the	integration	process	identified	above,	describe	the	 type	of	tests	that	will	be	used	to	verify	that	the	elements	integrated	in	this step	perform	as	expected.	Describe	in general	the	expected	results	of	the	 test	set.	You	may	refer	to	Chapter	3	and	Chapter	4	of	the	test	plan example	[1]	as	an	example	of	what	we	expect. (NOTE:	This	is	not	a	detailed	description	of	test	protocols.	Think	of	this	as the	test	design	phase.	Specific	protocols	will	be	written	to	fulfill	the	goals of	the	tests	identified	in	this	section.)
+	% For	each	step	of	the	integration	process	identified	above,	describe	the	 type	of	tests	that	will	be	used	to	verify	that	the	elements	integrated	in	this step	perform	as	expected.	Describe	in general	the	expected	results	of	the	 test	set.	You	may	refer	to	Chapter	3	and	Chapter	4	of	the	test	plan example	[1]	as	an	example	of	what	we	expect. (NOTE:	This	is	not	a	detailed	description	of	test	protocols.	Think	of	this	as the	test	design	phase.	Specific	protocols	will	be	written	to	fulfill	the	goals of	the	tests	identified	in	this	section.)
+
+\newpage
 \section{Tools	and	Test	Equipment	Required}
-% Identify	all	tools	and	test	equipment	needed	to	accomplish	the	 integration.	Refer	to	the	tools	presented	during	the	lectures.	Explain	why	 and	how	you	are	going	to	use	them.	Note	that	you	may	also	use	manual	testing	for	some	part.	Consider manual	testing	as	one	of	the	possible	tools	you	have	available.
+	% Identify	all	tools	and	test	equipment	needed	to	accomplish	the	 integration.	Refer	to	the	tools	presented	during	the	lectures.	Explain	why	 and	how	you	are	going	to	use	them.	Note	that	you	may	also	use	manual	testing	for	some	part.	Consider manual	testing	as	one	of	the	possible	tools	you	have	available.
+
+\newpage
 \section{Program	Stubs	and	Test	Data	Required}
-% Based	on	the	testing	strategy	and	test	design,	identify	any	program	stubs or	special	test	data	required	for	each	integration	step.
+	% Based	on	the	testing	strategy	and	test	design,	identify	any	program	stubs or	special	test	data	required	for	each	integration	step.
 
 \end{document}
