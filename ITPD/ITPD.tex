@@ -87,12 +87,76 @@
 	\subsection{Sequence of	Component/Function Integration}
 		% NOTE:	 The structure	of	this	section	may	vary	depending	on	the	integration	strategy	you	select	in	Section	2.3. Use the structure proposed	below	as	a	non	mandatory	guide.	
 		\subsubsection{Software	Integration	Sequence}
+			\textbf{Integration Test of the "Server" subsystem }
+			qui metteremo l'immagine
+			\begin{center}
+				\centering
+				\begin{tabular}{|c| c| c|}
+					\hline \textbf{ID} & \textbf{Integration Test} & \textbf{Paragraphs} \\
+					\hline		I1 & RequestManager $\rightarrow$ Database & 3.1\\
+					\hline		I2 & PassengerAreaManager $\rightarrow$ Database & 3.2 \\
+					\hline		I3 & TaxiDriverAreaManager $\rightarrow$ Database & 3.3\\
+					\hline		I4 & AccessManager $\rightarrow$ Database & 3.4 \\
+					\hline		I5 & RequestManager $\rightarrow$ PaymentManager & 3.5 \\
+					\hline
+				\end{tabular}
+			\end{center}
+			\textbf{Integration Test of the "Taxi Driver Client" subsystem }
+			qui metteremo l'immagine
+			\begin{center}
+				\centering
+				\begin{tabular}{|c| c| c|}
+					\hline \textbf{ID} & \textbf{Integration Test} & \textbf{Paragraphs} \\
+					\hline		I6 & Notification $\rightarrow$ RequestManager & 3.6\\
+					\hline		I7 & TaxiDriverArea $\rightarrow$ Notification & 3.7 \\
+					\hline		I8 & TaxiDriverArea $\rightarrow$ TaxiDriverAreaManager & 3.8\\
+					\hline		I9 & AccessManager $\rightarrow$ TaxiDriverArea & 3.9 \\
+					\hline		I10 & Access $\rightarrow$ AccessManager & 3.10 \\
+					\hline
+				\end{tabular}
+			\end{center}
+			\textbf{Integration Test of the "Passenger Client" subsystem}
+			qui metteremo l'immagine
+			\begin{center}
+				\centering
+				\begin{tabular}{|c| c| c|}
+					\hline \textbf{ID} & \textbf{Integration Test} & \textbf{Paragraphs} \\
+					\hline		I11 & ChoosePaymentMethod $\rightarrow$ PaymentManager & 3.11\\
+					\hline		I12 & RequestManager $\rightarrow$ ChoosePaymentMethod & 3.12 \\
+					\hline		I13 & MakeReservation $\rightarrow$ RequestManager & 3.13\\
+					\hline		I14 & RequestTaxi $\rightarrow$ RequestMager & 3.14\\
+					\hline		I15 & PassengerArea $\rightarrow$ RequestTaxi & 3.15 \\
+					\hline		I16 & PassengerArea $\rightarrow$ MakeReservation & 3.16 \\
+					\hline		I17 & PassengerArea $\rightarrow$ PassengerAreaManager & 3.17\\
+					\hline		I18 & AccessManager $\rightarrow$ PassengerArea & 3.18 \\
+					\hline		I19 & Access $\rightarrow$ AccessManager & 3.19 \\
+					\hline
+				\end{tabular}
+			\end{center}
 			% For	each	subsystem: Identify	the	sequence	in	which	the	software	components will	be	integrated within	the	subsystem.	Relate	this	sequence	to	any	product	features/functions	that	are	being	built	up.	
 		\subsubsection{Subsystem Integration Sequence}
+			The subsystems will be integrated in this order:
+			\begin{enumerate}
+				\item \textbf{Server}: According to the strategy adopted, Bottom-up, this is the first subsystem that will be integrated, because it is the lower level of our system and if this part doesn't work, the other ones can't be tested
+				\item \textbf{Taxi Driver Client}: This is the second subsystem that will be integrated.
+				\item \textbf{Passenger Client}: This is the last subsystem that will be integrated.
+			\end{enumerate}
 			% Identify	the	order	in which	subsystems	will	be	integrated. If	you	have	a	single	subsystem,	2.4.1	and	2.4.2	are	to	be	merged	in a	single	section.	You	can	refer	to	Section	2.2	of	the	test	plan example [1] as	an	example	of	what	we	expect.
 
 \newpage
 \section{Individual	Steps	and	Test	Description}
+	\subsection{Integration Test case I1}
+	\begin{center}
+		\centering
+		\begin{tabular}{| c| c|}
+			\hline 		\textbf{Test case identifier} & I1 \\
+			\hline		\textbf{Test item(s)}  & RequestManager $\rightarrow$ Database \\
+			\hline		\textbf{Input specification} & \\
+			\hline		\textbf{Output specification} & \\
+			\hline		\textbf{Environmental needs} & \\
+			\hline
+			\end{tabular}
+			\end{center}
 	% For	each	step	of	the	integration	process	identified	above,	describe	the	 type	of	tests	that	will	be	used	to	verify	that	the	elements	integrated	in	this step	perform	as	expected.	Describe	in general	the	expected	results	of	the	 test	set.	You	may	refer	to	Chapter	3	and	Chapter	4	of	the	test	plan example	[1]	as	an	example	of	what	we	expect. (NOTE:	This	is	not	a	detailed	description	of	test	protocols.	Think	of	this	as the	test	design	phase.	Specific	protocols	will	be	written	to	fulfill	the	goals of	the	tests	identified	in	this	section.)
 
 \newpage
