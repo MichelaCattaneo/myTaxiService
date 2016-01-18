@@ -1,0 +1,188 @@
+\documentclass[18pt,oneside,a4paper, titlepage]{article}
+
+\usepackage[hidelinks]{hyperref}
+\usepackage[pdftex]{graphicx}
+
+\begin{document}
+\section{Individual	Steps	and	Test	Description}
+	\subsection{Integration Test case I1}
+		\begin{tabular}{ l l}
+			\hline 		\textbf{Test case identifier} & I1 \\
+			\hline		\textbf{Test item(s)}  & Database $\rightarrow$ AccessManager \\
+			\hline		\textbf{Input specification} & The database sends to the AccessManager the data \\ & that it has requested by a query or by an INSERT \\ & or by an UPDATE. \\
+			\hline		\textbf{Output specification} & Check if the INSERT and UPDATE have been done\\ & correctly, check if the result of the query is what\\ &  we expect and check if the result is computed correctly\\ & by the AccessManager.\\
+			\hline		\textbf{Environmental needs} & Database data available.\\
+			\hline
+		\end{tabular}
+	\subsection{Integration Test case I2}
+		\begin{tabular}{ l l}
+			\hline 		\textbf{Test case identifier} & I2 \\
+			\hline		\textbf{Test item(s)}  & Database $\rightarrow$ TaxiDriverAreaManager \\
+			\hline		\textbf{Input specification} & The database sends to the TaxiDriverAreaManager the\\ & data that it has requested by a query or by an INSERT \\ & or by an UPDATE.\\
+			\hline		\textbf{Output specification} &  Check if the INSERT and UPDATE have been done\\ & correctly, check if the result of the query is what\\ &  we expect and check if the result is computed correctly\\ & by the TaxiDriverAreaManager.\\
+			\hline		\textbf{Environmental needs} & Database data available.\\
+			\hline
+		\end{tabular}
+	\subsection{Integration Test case I3}
+		\begin{tabular}{ l l}
+			\hline 		\textbf{Test case identifier} & I3 \\
+			\hline		\textbf{Test item(s)}  & Database $\rightarrow$ PassengerAreaManager \\
+			\hline		\textbf{Input specification} & The database sends to the PassengerAreaManager the\\ & data that it has requested by a query or by an INSERT \\ & or by an UPDATE.\\
+			\hline		\textbf{Output specification} & Check if the INSERT and UPDATE have been done\\ & correctly, check if the result of the query is what\\ &  we expect and check if the result is computed correctly\\ & by the PassengerAreaManager.\\
+			\hline		\textbf{Environmental needs} &  Database data available.\\
+			\hline
+		\end{tabular}
+	\subsection{Integration Test case I4}
+		\begin{tabular}{ l l}
+			\hline 		\textbf{Test case identifier} & I4 \\
+			\hline		\textbf{Test item(s)}  & Database $\rightarrow$ RequestManager \\
+			\hline		\textbf{Input specification} & The database sends to the RequestManager the data\\ & that it has requested by a query or by an INSERT \\ & or by an UPDATE.\\
+			\hline		\textbf{Output specification} &  Check if the INSERT and UPDATE have been done\\ & correctly, check if the result of the query is what\\ &  we expect and check if the result is computed correctly\\ & by the RequestManager.\\
+			\hline		\textbf{Environmental needs} & Database data available.\\
+			\hline
+		\end{tabular}
+	\subsection{Integration Test case I5}
+		\begin{tabular}{ l l}
+			\hline 		\textbf{Test case identifier} & I5 \\
+			\hline		\textbf{Test item(s)}  & Database $\rightarrow$ PaymentManager \\
+			\hline		\textbf{Input specification} & The database sends to the PaymentManager the data\\ & that it has requested by a query or by an INSERT \\ & or by an UPDATE.\\
+			\hline		\textbf{Output specification} &  Check if the INSERT and UPDATE have been done\\ & correctly, check if the result of the query is what\\ &  we expect and check if the result is computed correctly\\ & by the PaymentManager.\\
+			\hline		\textbf{Environmental needs} & Database data available.\\
+			\hline
+		\end{tabular}
+	\subsection{Integration Test case I6}
+		\begin{tabular}{ l l}
+			\hline 		\textbf{Test case identifier} & I6 \\
+			\hline		\textbf{Test item(s)}  & PaymentManager $\rightarrow$ RequestManager \\
+			\hline		\textbf{Input specification} & The PaymentManager sends to the RequestManager the \\ & data about how the Passenger wants to pay the ride.\\
+			\hline		\textbf{Output specification} & Check if the Payment method is managed correctly.\\
+			\hline		\textbf{Environmental needs} & I5 succeeded\\
+			\hline
+		\end{tabular}
+	\subsection{Integration Test case I7}
+		\begin{tabular}{ l l}
+			\hline 		\textbf{Test case identifier} & I7 \\
+			\hline		\textbf{Test item(s)}  & RequestManager $\rightarrow$ Notification \\
+			\hline		\textbf{Input specification} & The RequestManager sends to the Notification all \\ & the notifies of a specific Taxi driver.\\
+			\hline		\textbf{Output specification} & Check if the notifies are of the correct Taxi driver.\\
+			\hline		\textbf{Environmental needs} & I4 succeeded\\
+			\hline
+		\end{tabular}
+	\subsection{Integration Test case I8}
+		\begin{tabular}{ l l}
+			\hline 		\textbf{Test case identifier} & I8 \\
+			\hline		\textbf{Test item(s)}  & Notification $\rightarrow$ TaxiDriverArea \\
+			\hline		\textbf{Input specification} & The Notification sends an alert message to the \\ & TaxiDriverArea if a notify is detected.\\
+			\hline		\textbf{Output specification} & Check if the message is computed correctly by the\\ & TaxiDriverArea.\\
+			\hline		\textbf{Environmental needs} & I7 succeeded\\
+			\hline
+		\end{tabular}
+	\subsection{Integration Test case I9}
+		\begin{tabular}{ l l}
+			\hline 		\textbf{Test case identifier} & I9 \\
+			\hline		\textbf{Test item(s)}  & TaxiDriverAreaManager $\rightarrow$ TaxiDriverArea \\
+			\hline		\textbf{Input specification} & The TaxiDriverAreaManager sends to the TaxiDriverArea\\ & the profile information of the Taxi driver requested.\\
+			\hline		\textbf{Output specification} & Check if the correct information have been sent.\\
+			\hline		\textbf{Environmental needs} & I2 succeeded\\
+			\hline
+		\end{tabular}
+	\subsection{Integration Test case I10}
+		\begin{tabular}{ l l}
+			\hline 		\textbf{Test case identifier} & I10 \\
+			\hline		\textbf{Test item(s)}  & AccessManager $\rightarrow$ TaxiDriverArea \\
+			\hline		\textbf{Input specification} & The AccessManager sends to the TaxiDriverArea the\\ & identification data of the Taxi driver logged in.\\
+			\hline		\textbf{Output specification} & Check if the TaxiDriverArea has built the profile\\ & page of the correct Taxi driver logged in.\\
+			\hline		\textbf{Environmental needs} & I9 succeeded\\
+			\hline
+		\end{tabular}
+	\subsection{Integration Test case I11}
+		\begin{tabular}{ l l}
+			\hline 		\textbf{Test case identifier} & I11 \\
+			\hline		\textbf{Test item(s)}  & Access $\rightarrow$ AccessManager \\
+			\hline		\textbf{Input specification} & The Access sends to the AccessManager the data\\ & that the client has inserted in the input form of \\ & the registration or the log in.\\
+			\hline		\textbf{Output specification} & Check if the AccessManager computes the inputs\\ & correctly.\\
+			\hline		\textbf{Environmental needs} & I1 succeeded\\
+			\hline
+		\end{tabular}
+	\subsection{Integration Test case I12}
+		\begin{tabular}{ l l}
+			\hline 		\textbf{Test case identifier} & I12 \\
+			\hline		\textbf{Test item(s)}  & PaymentManager $\rightarrow$ ChoosePaymentMethod \\
+			\hline		\textbf{Input specification} & The PaymentManager sends to the ChoosePaymentMethod \\ & the data of the Passenger's credit card.\\
+			\hline		\textbf{Output specification} & Check if the ChoosePaymentMethod computes the inputs \\ & correctly.\\
+			\hline		\textbf{Environmental needs} & I5 succeeded\\
+			\hline
+		\end{tabular}
+	\subsection{Integration Test case I13}
+		\begin{tabular}{ l l}
+			\hline 		\textbf{Test case identifier} & I13 \\
+			\hline		\textbf{Test item(s)}  & ChoosePaymentMethod $\rightarrow$ RequestManager \\
+			\hline		\textbf{Input specification} & The ChoosePaymentMethod sends to the \\ & RequestManager the choice of the Passenger.\\
+			\hline		\textbf{Output specification} & Check if the RequestManager computes the\\ & input correctly.\\
+			\hline		\textbf{Environmental needs} & I12 succeeded\\
+			\hline
+		\end{tabular}
+	\subsection{Integration Test case I14}
+		\begin{tabular}{ l l}
+			\hline 		\textbf{Test case identifier} & I14 \\
+			\hline		\textbf{Test item(s)}  & RequestManager $\rightarrow$ MakeReservation \\
+			\hline		\textbf{Input specification} & The RequestManager searches a taxi for a reservation\\ & and it sends to the MakeReservation the results.\\
+			\hline		\textbf{Output specification} & Check if the MakeReservation computes the inputs\\ & correctly.\\
+			\hline		\textbf{Environmental needs} & I4 succeeded\\
+			\hline
+		\end{tabular}
+	\subsection{Integration Test case I15}
+		\begin{tabular}{ l l}
+			\hline 		\textbf{Test case identifier} & I15 \\
+			\hline		\textbf{Test item(s)}  & RequestManager $\rightarrow$ RequestTaxi \\
+			\hline		\textbf{Input specification} & The RequestManager searches a taxi for a reservation\\ & and it sends to the RequestTaxi the results.\\
+			\hline		\textbf{Output specification} & Check if the RequestTaxi computes the inputs\\ & correctly.\\
+			\hline		\textbf{Environmental needs} & I4 succeeded\\
+			\hline
+		\end{tabular}
+	\subsection{Integration Test case I16}
+		\begin{tabular}{ l l}
+			\hline 		\textbf{Test case identifier} & I16 \\
+			\hline		\textbf{Test item(s)}  & RequestTaxi $\rightarrow$ PassengerArea \\
+			\hline		\textbf{Input specification} & The RequestTaxi sends an alert message to the\\ & PassengerArea when a taxi is found.\\
+			\hline		\textbf{Output specification} & Check if the PassengerArea computes the message\\ & correctly.\\
+			\hline		\textbf{Environmental needs} & I15 succeeded\\
+			\hline
+		\end{tabular}
+	\subsection{Integration Test case I17}
+		\begin{tabular}{ l l}
+			\hline 		\textbf{Test case identifier} & I17 \\
+			\hline		\textbf{Test item(s)}  & MakeReservation $\rightarrow$ PassengerArea \\
+			\hline		\textbf{Input specification} & The MakeReservation sends an alert message to the\\ & PassengerArea when a taxi is found.\\
+			\hline		\textbf{Output specification} &  Check if the PassengerArea computes the message\\ & correctly.\\
+			\hline		\textbf{Environmental needs} & I14 succeeded\\
+			\hline
+		\end{tabular}
+	\subsection{Integration Test case I18}
+		\begin{tabular}{ l l}
+			\hline 		\textbf{Test case identifier} & I18 \\
+			\hline		\textbf{Test item(s)}  & PassengerAreaManager $\rightarrow$ PassengerArea \\
+			\hline		\textbf{Input specification} & The PassengerAreaManager sends to the PassengerArea\\ & the profile information of the Passenger requested.\\
+			\hline		\textbf{Output specification} & Check if the correct information have been sent.\\
+			\hline		\textbf{Environmental needs} & I3 succeeded\\
+			\hline
+		\end{tabular}
+	\subsection{Integration Test case I19}
+		\begin{tabular}{ l l}
+			\hline 		\textbf{Test case identifier} & I19 \\
+			\hline		\textbf{Test item(s)}  & AccessManager $\rightarrow$ PassengerArea \\
+			\hline		\textbf{Input specification} &  The AccessManager sends to the PassengerArea the\\ & identification data of the Passenger logged in.\\
+			\hline		\textbf{Output specification} & Check if the PassengerArea has built the profile\\ & page of the correct Passenger logged in.\\
+			\hline		\textbf{Environmental needs} & I1 succeeded\\
+			\hline
+		\end{tabular}
+	\subsection{Integration Test case I20}
+		\begin{tabular}{ l l}
+			\hline 		\textbf{Test case identifier} & I20 \\
+			\hline		\textbf{Test item(s)}  & Access $\rightarrow$ AccessManager \\
+			\hline		\textbf{Input specification} & The Access sends to the AccessManager the data\\ & that the client has inserted in the input form of \\ & the registration or the log in.\\
+			\hline		\textbf{Output specification} & Check if the AccessManager computes the inputs\\ & correctly.\\
+			\hline		\textbf{Environmental needs} & I19 succeeded\\
+			\hline
+		\end{tabular}
+\end{document}
