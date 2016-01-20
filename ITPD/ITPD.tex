@@ -2,6 +2,7 @@
 
 \usepackage[hidelinks]{hyperref}
 \usepackage[pdftex]{graphicx}
+\usepackage{adjustbox}
 
 \begin{document}
 \begin{figure}[t]
@@ -24,7 +25,7 @@
 	\subsection{Purpose	and	Scope}
 		% State	the	purpose	and	scope of the document.
 		\subsubsection{Purpose}
-		This document represents the Integration Test Plan Document. It aims at specifying the plan for the integration testing of myTaxiService application, ensuring that all its modules interacts properly.\\
+		This document represents the Integration Test Plan Document. It aims at specifying the plan for the integration testing of myTaxiService application, ensuring that all its modules interacts properly. There are also specifications about the integration strategy and the sequence of the integration of the components of the system already defined, along with an justification of the tools that are needed for the testing.\\
 		This document is intended for the development team, that needs to know what it is needed to test, in which sequence it should occur and with which tools.
 		\subsubsection{Scope}
 		myTaxiService is an application that simplifies the access of the customers to the taxi service, managing also the taxi driver's distribution over the city and the queues of the areas. The customer can use the mobile application or the web app to request or reserve a taxi and a notification is forwarded to the designated taxi driver, who is going to answer.\\ This system should always be responsive and reliable, in order to keep up with all the requests of the passenger and the notifications forwarding.\\ This is the reason why the components that comprise the myTaxiService system are meant to be well integrated and tested.
@@ -36,8 +37,8 @@
 			\item[-] \textbf{Request}: the request of a taxi in a certain area and position in the city made by a user.
 			\item[-] \textbf{Reservation}: the reservation of a taxi in a certain area, place and time that can be made only by passengers.
 			\item[-] \textbf{Component}: a modular part of a system with encapsulated content and whose manifestation is replaceable within its environment.
-			\item[-] \textbf{Subsystem}: a behavioral unit in the physical system, and hence in the model, and to serve as a specification unit for the behavior of its contained model elements.
-						
+			\item[-] \textbf{Subsystem}: a behavioral unit in the physical system, and hence in the model.
+		\newpage	
 			\item \textbf{Acronyms and abbreviations}
 			\item[-] \textbf{RASD}: Requirement Analysis and Specification Document
 			\item[-] \textbf{DD}: Design Document
@@ -72,9 +73,19 @@
 			\item Test environment, test cases and test data are ready
 		\end{itemize}	
 		% Specify	the	criteria	that	must	be	met	before	integration testing of specific	elements	may	begin	(e.g.,	functions	must	have	been	unit tested).
+	\newpage
 	\subsection{Elements to	be Integrated}
 		%Identify	the	components	to	be	integrated,	refer	to	your design	document	to	identify	such	components	in	a	way	that	is	consistent with	your	design.
 		These components refer to the ones specified in the Component View in chapter 2.3 of the DD. This diagram shows how these components have to be integrated and the order of integration, according to the strategy adopted.
+		
+		\vspace{0.5cm}
+		
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.6]{ElementsToBeIntegrated.png}
+		\end{figure}
+		
+		\vspace{0.5cm}
 	\subsection{Integration Testing Strategy}
 		% Describe	the	integration testing approach (top-down,	bottom-up,functional	groupings,	etc.)	and	the	rationale for	the	choosing that approach.
 		The integration testing strategy that has been chosen exploits the bottom-up approach. This strategy is the most suitable for the myTaxiService system, in fact it makes it easier to find bugs, starting from the most critical components. The bottom-up approach starts from the lowest layers of the system, testing the basic functionalities at the beginning, then moving forward the most abstract layers, such as the client interfaces modules.\\ In this case, it is only necessary to use drivers, in order to simulate the top layers during the testing, which are a lot easier to produce with respect to the stubs used in the top-down approach.
@@ -88,52 +99,76 @@
 				
 				
 				\item \textbf{Integration Test of the "Manager" subsystem }
-					qui metteremo l'immagine
+					\vspace{1cm}
 					\begin{center}
 						\centering
 						\begin{tabular}{c c c}
 							\hline \textbf{ID} & \textbf{Integration Test} & \textbf{Paragraph} \\
-							\hline		I1 & RequestManager $\rightarrow$ Database & \hyperlink{chapter 3.1}{3.1}\\
-							\hline		I2 & PassengerAreaManager $\rightarrow$ Database & 3.2 \\
-							\hline		I3 & TaxiDriverAreaManager $\rightarrow$ Database & 3.3\\
-							\hline		I4 & AccessManager $\rightarrow$ Database & 3.4 \\
-							\hline		I5 & RequestManager $\rightarrow$ PaymentManager & 3.5 \\
+							\hline		I1 &  Database $\rightarrow$ AccessManager & \hyperlink{chapter 3.1}{3.1}\\
+							\hline		I2 & Database $\rightarrow$ TaxiDriverAreaManager & \hyperlink{chapter 3.2}{3.2} \\
+							\hline		I3 & Database $\rightarrow$ PassengerAreaManager & \hyperlink{chapter 3.3}{3.3}\\
+							\hline		I4 & Database $\rightarrow$ RequestManager & \hyperlink{chapter 3.4}{3.4} \\
+							\hline		I5 & Database $\rightarrow$ PaymentManager & \hyperlink{chapter 3.5}{3.5} \\
 							\hline
 						\end{tabular}
 					\end{center}
+					
+					
+					\begin{figure}[h]
+						\centering
+						\includegraphics[scale=0.5]{ManagerSubsystem.png}
+					\end{figure}
+					
+					\vspace{1cm}
+					
 				\item \textbf{Integration Test of the "Taxi Driver Client" subsystem }
-					qui metteremo l'immagine
+					
+					\vspace{1cm}
 					\begin{center}
 						\centering
 						\begin{tabular}{c c c}
 							\hline \textbf{ID} & \textbf{Integration Test} & \textbf{Paragraph} \\
-							\hline		I6 & Notification $\rightarrow$ RequestManager & 3.6\\
-							\hline		I7 & TaxiDriverArea $\rightarrow$ Notification & 3.7 \\
-							\hline		I8 & TaxiDriverArea $\rightarrow$ TaxiDriverAreaManager & 3.8\\
-							\hline		I9 & AccessManager $\rightarrow$ TaxiDriverArea & 3.9 \\
-							\hline		I10 & Access $\rightarrow$ AccessManager & 3.10 \\
+							\hline		I6T1 & RequestManager $\rightarrow$ Notification & \hyperlink{chapter 3.6}{3.6}\\
+							\hline		I6T2 & TaxiDriverAreaManager $\rightarrow$ Notification & \hyperlink{chapter 3.6}{3.6} \\
+							\hline		I7T1 & TaxiDriverAreaManager $\rightarrow$ TaxiDriverArea & \hyperlink{chapter 3.7}{3.7}\\
+							\hline		I7T2 & AccessManager $\rightarrow$ TaxiDriverArea & \hyperlink{chapter 3.7}{3.7} \\
+							\hline		I8 & AccessManager $\rightarrow$ Access (Taxi Driver) & \hyperlink{chapter 3.8}{3.8} \\
 							\hline
 						\end{tabular}
 					\end{center}
+					
+					\begin{figure}[h]
+						\centering
+						\includegraphics[scale=0.49]{TaxiDriverSubsystem.png}
+					\end{figure}
+				\newpage
 				\item \textbf{Integration Test of the "Passenger Client" subsystem}
-					qui metteremo l'immagine
+				
+					\vspace{1cm}
 					\begin{center}
 						\centering
 						\begin{tabular}{c c c}
 							\hline \textbf{ID} & \textbf{Integration Test} & \textbf{Paragraph} \\
-							\hline		I11 & ChoosePaymentMethod $\rightarrow$ PaymentManager & 3.11\\
-							\hline		I12 & RequestManager $\rightarrow$ ChoosePaymentMethod & 3.12 \\
-							\hline		I13 & MakeReservation $\rightarrow$ RequestManager & 3.13\\
-							\hline		I14 & RequestTaxi $\rightarrow$ RequestMager & 3.14\\
-							\hline		I15 & PassengerArea $\rightarrow$ RequestTaxi & 3.15 \\
-							\hline		I16 & PassengerArea $\rightarrow$ MakeReservation & 3.16 \\
-							\hline		I17 & PassengerArea $\rightarrow$ PassengerAreaManager & 3.17\\
-							\hline		I18 & AccessManager $\rightarrow$ PassengerArea & 3.18 \\
-							\hline		I19 & Access $\rightarrow$ AccessManager & 3.19 \\
+							\hline		I9 & RequestManager $\rightarrow$ PaymentManager & \hyperlink{chapter 3.9}{3.9}\\
+							\hline		I10T1 & RequestManager $\rightarrow$ MakeReservation & \hyperlink{chapter 3.10}{3.10} \\
+							\hline		I10T2 & PassengerAreaManager $\rightarrow$ MakeReservation & \hyperlink{chapter 3.10}{3.10}\\
+							\hline		I11T1 & RequestManager $\rightarrow$ RequestTaxi & \hyperlink{chapter 3.11}{3.11}\\
+							\hline		I11T2 & PassengerAreaManager $\rightarrow$ RequestTaxi & \hyperlink{chapter 3.11}{3.11} \\
+							\hline		I12T1 & PassengerAreaManager $\rightarrow$ PassengerArea & \hyperlink{chapter 3.12}{3.12} \\
+							\hline		I12T2 & AccessManager $\rightarrow$ PassengerArea & \hyperlink{chapter 3.12}{3.12}\\
+							\hline		I13 & AccessManager $\rightarrow$ Access (Passenger) & \hyperlink{chapter 3.13}{3.13} \\
+							\hline		I14 & PaymentManager $\rightarrow$ ChoosePaymentMethod & \hyperlink{chapter 3.14}{3.14} \\
 							\hline
 						\end{tabular}
 					\end{center}
+					
+					
+					\begin{figure}[h]
+						\centering
+						\includegraphics[scale=0.4]{PassengerSubsystem.png}
+					\end{figure}
 			\end{itemize}
+			\vspace{1cm}
 			
 		\subsubsection{Subsystem Integration Sequence}
 			% Identify	the	order	in which	subsystems	will	be	integrated. If	you	have	a	single	subsystem,	2.4.1	and	2.4.2	are	to	be	merged	in a	single	section.	You	can	refer	to	Section	2.2	of	the	test	plan example [1] as	an	example	of	what	we	expect.
@@ -148,58 +183,54 @@
 		
 
 \newpage
-\section{Individual	Steps	and	Test	Description}
-	\hypertarget{chapter 3.1}{ }
-	\subsection{Integration Test case I1}
-	\begin{center}
-		\centering
-		
-		\begin{tabular}{| c| c|}
-			\hline 		\textbf{Test case identifier} & I1 \\
-			\hline		\textbf{Test item(s)}  & RequestManager $\rightarrow$ Database \\
-			\hline		\textbf{Input specification} & \\
-			\hline		\textbf{Output specification} & \\
-			\hline		\textbf{Environmental needs} & \\
-			\hline
-			\end{tabular}
-			\end{center}
+
+\include{IndividualSteps}
 	% For	each	step	of	the	integration	process	identified	above,	describe	the	 type	of	tests	that	will	be	used	to	verify	that	the	elements	integrated	in	this step	perform	as	expected.	Describe	in general	the	expected	results	of	the	 test	set.	You	may	refer	to	Chapter	3	and	Chapter	4	of	the	test	plan example	[1]	as	an	example	of	what	we	expect. (NOTE:	This	is	not	a	detailed	description	of	test	protocols.	Think	of	this	as the	test	design	phase.	Specific	protocols	will	be	written	to	fulfill	the	goals of	the	tests	identified	in	this	section.)
 
 \newpage
 \section{Tools	and	Test	Equipment	Required}
 	% Identify	all	tools	and	test	equipment	needed	to	accomplish	the	 integration.	Refer	to	the	tools	presented	during	the	lectures.	Explain	why	 and	how	you	are	going	to	use	them.	Note	that	you	may	also	use	manual	testing	for	some	part.	Consider manual	testing	as	one	of	the	possible	tools	you	have	available.
-	Integration testing is usually performed after unit testing has been done.  Once all the individual units are created and tested, it is necessary to start combining these modules one by one and test their behavior as a combined unit.\\
-	Therefore, unit testing is needed to accomplish the integration, in order to already have a visual feedback and all the possible problems sorted out. A tool that can be used is \textbf{Mockito}, to create unit testing mockups useful for having dependencies identified and results predicted. For the actual tests on the parts of code, \textbf{JUnit} and \textbf{testNG} are good solution frameworks for Java programming language.\\
-	As regards the proper integration testing tools, there are some possible solutions, presented in the following sections.
+	\subsection{Unit Testing and JUnit}
+		Integration testing is usually performed after unit testing has been finished. Unit testing is usually done in the first part of the development and, once all the individual units are created and tested, it is necessary to start combining these modules one by one and test their behavior as a combined unit.\\
+		Therefore, unit testing is done in order to already have a visual feedback and all the possible problems sorted out, but all the classes are tested separately, so it will be necessary to check if they integrate properly with an integration testing afterwards.\\
+		In fact, in this phase all the classes are tested with each test case independent from the others, allowing to find both bugs in the programmer's implementation and flaws or missing parts of the specification. \\
+		JUnit is a unit testing framework for the Java programming language and is the tool usually used for performing unit testing. It will be employed to write and run repeatable tests on the classes and methods of the myTaxiService application.
+		
+	\subsection{Mockito}
+		In unit testing, mock objects can simulate the behavior of complex, real objects, so they are useful when a real object is impractical or impossible to incorporate into a unit test.\\ They are also useful, as they allow developers to focus their tests on the behavior of the system without worrying about its dependencies and having a predictable results.\\
+		A tool that can be exploited is Mockito, a simple mocking framework widely used for Java, to create unit testing mockups. \\
+		It will be used for producing mock objects out of the Database component, or out of objects that supplies non-deterministic results or whose states are difficult to reproduce.
 	
 	\subsection{Arquillian and ShrinkWrap.}
-	Arquillian is an innovative, highly extensible and flexible testing platform for the JVM.\\ It enables developers to easily create automated integration, functional and acceptance tests for Java middlewares. \\In fact it combines a unit testing framework (JUnit or TestNG), ShrinkWrap, and one or more supported target containers (Java EE container, servlet container, etc) to provide a simple, flexible and pluggable integration testing environment, with no need of any special configuration.\\
-	Its extensibility can be found in the different modules and extension it offers, that provide very useful functionalities for every aspect of the software system.
-	\vspace{0.5cm}
-	\begin{figure}[h]
-		\centering
-		\includegraphics[scale=0.55]{Arquillian.jpg}
-	\end{figure}
-		
-	\vspace{0.5cm}
+		Arquillian is an innovative, highly extensible and flexible testing platform for the JVM.\\ It enables developers to easily create automated integration, functional and acceptance tests for Java middlewares. \\In fact it combines a unit testing framework (JUnit or TestNG), ShrinkWrap, and one or more supported target containers (Java EE container, servlet container, etc) to provide a simple, flexible and pluggable integration testing environment, with no need of any special configuration.
 	\newpage
-	Arquillian will be mainly used for:
-	\begin{itemize}
-		\item Managing the lifecycle of one or more containers
-		\item Bundling the test case, dependent classes and resources into a ShrinkWrap archive
-		\item Deploying the archive to the container
-		\item Enriching the test case by providing dependency injection and other declarative services
-		\item Executing the tests inside (or against) the container
-		\item Capturing the results and returning them to the test runner for reporting
-	\end{itemize}
+	\noindent
+		Its extensibility can be found in the different modules and extension it offers, that provide very useful functionalities for every aspect of the software system.
+		\vspace{0.5cm}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{Arquillian.jpg}
+		\end{figure}
+			
+		\vspace{0.5cm}
 	
+		Arquillian will be mainly used for:
+		\begin{itemize}
+			\item Managing the lifecycle of one or more containers
+			\item Bundling the test case, dependent classes and resources into a ShrinkWrap archive
+			\item Deploying the archive to the container
+			\item Enriching the test case by providing dependency injection and other declarative services
+			\item Executing the tests inside (or against) the container
+			\item Capturing the results and returning them to the test runner for reporting
+		\end{itemize}
 		
-	\vspace{0.5cm}
+			
+		\vspace{0.5cm}
+			
+		ShrinkWrap is the simplest way to create and define custom archives in Java, that encapsulate the test class and its dependent resources, powering the Arquillian deployment mechanism. In fact, the test case is dispatched to the container's environment through coordination with ShrinkWrap: Arquillian packages the ShrinkWrap-defined archive at runtime and deploys it to the target container.
 		
-	ShrinkWrap is the simplest way to create and define custom archives in Java, that encapsulate the test class and its dependent resources, powering the Arquillian deployment mechanism. In fact, the test case is dispatched to the container's environment through coordination with ShrinkWrap: Arquillian packages the ShrinkWrap-defined archive at runtime and deploys it to the target container.
-		
-	\subsection{Manual testing.} Manual testing can be considered a valid solution, depending on the application to be tested.\\ In this case a tester ensures the correct behaviors of the components, by following a test plan that allows him to find the most important use cases, without any support from tools or scripts.\\ This is used in alternative of the automated tests, which is more quickly, less expensive and more accurate, because in some particular scenarios it is necessary to exploit human observation, logic and experience.
-	\subsection{Maven failsafe (?)}
+	\subsection{Manual testing.}
+		Manual testing can be considered a valid solution, depending on the application to be tested.\\ In this case a tester ensures the correct behaviors of the components, by following a test plan that allows him to find the most important use cases, without any support from tools or scripts.\\ This is used in alternative of the automated tests, which is more quickly, less expensive and more accurate, because in some particular scenarios it is necessary to exploit human observation, logic and experience.
 
 \newpage
 \section{Program	Stubs	and	Test	Data	Required}

@@ -14,8 +14,22 @@
 \BOOKMARK [3][-]{subsubsection.2.4.2}{Subsystem Integration Sequence}{subsection.2.4}% 14
 \BOOKMARK [1][-]{section.3}{Individual Steps and Test Description}{}% 15
 \BOOKMARK [2][-]{subsection.3.1}{Integration Test case I1}{section.3}% 16
-\BOOKMARK [1][-]{section.4}{Tools and Test Equipment Required}{}% 17
-\BOOKMARK [2][-]{subsection.4.1}{Arquillian and ShrinkWrap.}{section.4}% 18
-\BOOKMARK [2][-]{subsection.4.2}{Manual testing.}{section.4}% 19
-\BOOKMARK [2][-]{subsection.4.3}{Maven failsafe \(?\)}{section.4}% 20
-\BOOKMARK [1][-]{section.5}{Program Stubs and Test Data Required}{}% 21
+\BOOKMARK [2][-]{subsection.3.2}{Integration Test case I2}{section.3}% 17
+\BOOKMARK [2][-]{subsection.3.3}{Integration Test case I3}{section.3}% 18
+\BOOKMARK [2][-]{subsection.3.4}{Integration Test case I4}{section.3}% 19
+\BOOKMARK [2][-]{subsection.3.5}{Integration Test case I5}{section.3}% 20
+\BOOKMARK [2][-]{subsection.3.6}{Integration Test case I6}{section.3}% 21
+\BOOKMARK [2][-]{subsection.3.7}{Integration Test case I7}{section.3}% 22
+\BOOKMARK [2][-]{subsection.3.8}{Integration Test case I8}{section.3}% 23
+\BOOKMARK [2][-]{subsection.3.9}{Integration Test case I9}{section.3}% 24
+\BOOKMARK [2][-]{subsection.3.10}{Integration Test case I10}{section.3}% 25
+\BOOKMARK [2][-]{subsection.3.11}{Integration Test case I11}{section.3}% 26
+\BOOKMARK [2][-]{subsection.3.12}{Integration Test case I12}{section.3}% 27
+\BOOKMARK [2][-]{subsection.3.13}{Integration Test case I13}{section.3}% 28
+\BOOKMARK [2][-]{subsection.3.14}{Integration Test case I14}{section.3}% 29
+\BOOKMARK [1][-]{section.4}{Tools and Test Equipment Required}{}% 30
+\BOOKMARK [2][-]{subsection.4.1}{Unit Testing and JUnit}{section.4}% 31
+\BOOKMARK [2][-]{subsection.4.2}{Mockito}{section.4}% 32
+\BOOKMARK [2][-]{subsection.4.3}{Arquillian and ShrinkWrap.}{section.4}% 33
+\BOOKMARK [2][-]{subsection.4.4}{Manual testing.}{section.4}% 34
+\BOOKMARK [1][-]{section.5}{Program Stubs and Test Data Required}{}% 35

@@ -7,15 +7,29 @@
 \contentsline {subsection}{\numberline {1.4}List of Reference Documents}{3}{subsection.1.4}
 \contentsline {section}{\numberline {2}Integration Strategy}{4}{section.2}
 \contentsline {subsection}{\numberline {2.1}Entry Criteria}{4}{subsection.2.1}
-\contentsline {subsection}{\numberline {2.2}Elements to be Integrated}{4}{subsection.2.2}
-\contentsline {subsection}{\numberline {2.3}Integration Testing Strategy}{4}{subsection.2.3}
-\contentsline {subsection}{\numberline {2.4}Sequence of Component/Function Integration}{5}{subsection.2.4}
-\contentsline {subsubsection}{\numberline {2.4.1}Software Integration Sequence}{5}{subsubsection.2.4.1}
-\contentsline {subsubsection}{\numberline {2.4.2}Subsystem Integration Sequence}{5}{subsubsection.2.4.2}
-\contentsline {section}{\numberline {3}Individual Steps and Test Description}{7}{section.3}
-\contentsline {subsection}{\numberline {3.1}Integration Test case I1}{7}{subsection.3.1}
-\contentsline {section}{\numberline {4}Tools and Test Equipment Required}{8}{section.4}
-\contentsline {subsection}{\numberline {4.1}Arquillian and ShrinkWrap.}{8}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}Manual testing.}{9}{subsection.4.2}
-\contentsline {subsection}{\numberline {4.3}Maven failsafe (?)}{9}{subsection.4.3}
-\contentsline {section}{\numberline {5}Program Stubs and Test Data Required}{10}{section.5}
+\contentsline {subsection}{\numberline {2.2}Elements to be Integrated}{5}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Integration Testing Strategy}{5}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}Sequence of Component/Function Integration}{6}{subsection.2.4}
+\contentsline {subsubsection}{\numberline {2.4.1}Software Integration Sequence}{6}{subsubsection.2.4.1}
+\contentsline {subsubsection}{\numberline {2.4.2}Subsystem Integration Sequence}{7}{subsubsection.2.4.2}
+\contentsline {section}{\numberline {3}Individual Steps and Test Description}{8}{section.3}
+\contentsline {subsection}{\numberline {3.1}Integration Test case I1}{8}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Integration Test case I2}{8}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Integration Test case I3}{8}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}Integration Test case I4}{9}{subsection.3.4}
+\contentsline {subsection}{\numberline {3.5}Integration Test case I5}{9}{subsection.3.5}
+\contentsline {subsection}{\numberline {3.6}Integration Test case I6}{9}{subsection.3.6}
+\contentsline {subsection}{\numberline {3.7}Integration Test case I7}{10}{subsection.3.7}
+\contentsline {subsection}{\numberline {3.8}Integration Test case I8}{10}{subsection.3.8}
+\contentsline {subsection}{\numberline {3.9}Integration Test case I9}{10}{subsection.3.9}
+\contentsline {subsection}{\numberline {3.10}Integration Test case I10}{10}{subsection.3.10}
+\contentsline {subsection}{\numberline {3.11}Integration Test case I11}{11}{subsection.3.11}
+\contentsline {subsection}{\numberline {3.12}Integration Test case I12}{11}{subsection.3.12}
+\contentsline {subsection}{\numberline {3.13}Integration Test case I13}{12}{subsection.3.13}
+\contentsline {subsection}{\numberline {3.14}Integration Test case I14}{12}{subsection.3.14}
+\contentsline {section}{\numberline {4}Tools and Test Equipment Required}{13}{section.4}
+\contentsline {subsection}{\numberline {4.1}Unit Testing and JUnit}{13}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Mockito}{13}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Arquillian and ShrinkWrap.}{13}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}Manual testing.}{14}{subsection.4.4}
+\contentsline {section}{\numberline {5}Program Stubs and Test Data Required}{16}{section.5}
