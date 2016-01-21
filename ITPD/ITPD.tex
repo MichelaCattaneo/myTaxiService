@@ -12,7 +12,7 @@
 \title{\textbf{myTaxiService}\\\textbf{I}ntegration \textbf{T}est \textbf{P}lan \textbf{D}ocument\\ A.Y. 2015/2016\\
 	Politecnico di Milano \\ Version 1.0}	
 \author{Cattaneo Michela Gaia, matr. 791685\\Barlocco Mattia, matr. 792735 }
-\date{January 22, 2016}
+\date{January 21, 2016}
 \maketitle
 
 \newpage
@@ -21,11 +21,20 @@
 \newpage
 \section{Introduction}
 	\subsection{Revision History}
+		\begin{center}
+			\centering
+			\begin{tabular}{l l l l}
+				\hline		\textbf{Authors} & \textbf{Version} & \textbf{Description} & \textbf{Date}\\
+				\hline		Barlocco Mattia & 1.0 & Document creation & 21/01/2016\\
+				      Cattaneo Michela & & & \\
+				\hline
+			\end{tabular}
+		\end{center}
 		% Record all revisions to the document.
 	\subsection{Purpose	and	Scope}
 		% State	the	purpose	and	scope of the document.
 		\subsubsection{Purpose}
-		This document represents the Integration Test Plan Document. It aims at specifying the plan for the integration testing of myTaxiService application, ensuring that all its modules interacts properly. There are also specifications about the integration strategy and the sequence of the integration of the components of the system already defined, along with an justification of the tools that are needed for the testing.\\
+		This document represents the Integration Test Plan Document. It aims at specifying the plan for the integration testing of myTaxiService application, ensuring that all its modules interacts properly. There are also specifications about the integration strategy and the sequence of the integration of the components of the system already defined, along with a justification of the tools that are needed for the testing.\\
 		This document is intended for the development team, that needs to know what it is needed to test, in which sequence it should occur and with which tools.
 		\subsubsection{Scope}
 		myTaxiService is an application that simplifies the access of the customers to the taxi service, managing also the taxi driver's distribution over the city and the queues of the areas. The customer can use the mobile application or the web app to request or reserve a taxi and a notification is forwarded to the designated taxi driver, who is going to answer.\\ This system should always be responsive and reliable, in order to keep up with all the requests of the passenger and the notifications forwarding.\\ This is the reason why the components that comprise the myTaxiService system are meant to be well integrated and tested.
@@ -197,7 +206,7 @@
 		JUnit is a unit testing framework for the Java programming language and is the tool usually used for performing unit testing. It will be employed to write and run repeatable tests on the classes and methods of the myTaxiService application.
 		
 	\subsection{Mockito}
-		In unit testing, mock objects can simulate the behavior of complex, real objects, so they are useful when a real object is impractical or impossible to incorporate into a unit test.\\ They are also useful, as they allow developers to focus their tests on the behavior of the system without worrying about its dependencies and having a predictable results.\\
+		In unit testing, mock objects can simulate the behavior of complex, real objects, so they are useful when a real object is impractical or impossible to incorporate into a unit test.\\ They are also useful, as they allow developers to focus their tests on the behavior of the system without worrying about its dependencies and having  predictable results.\\
 		A tool that can be exploited is Mockito, a simple mocking framework widely used for Java, to create unit testing mockups. \\
 		It will be used for producing mock objects out of the Database component, or out of objects that supplies non-deterministic results or whose states are difficult to reproduce.
 	
