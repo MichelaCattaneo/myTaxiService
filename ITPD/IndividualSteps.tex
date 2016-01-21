@@ -81,8 +81,8 @@
 			\begin{tabular}{ l l}
 				\hline 		\textbf{Test case identifier} & I6T2 \\
 				\hline		\textbf{Test item(s)} & TaxiDriverAreaManager $\rightarrow$ Notification \\
-				\hline		\textbf{Input specification} & The TaxiDriverAreaManager sends an alert \\ & message to the Notification component if a\\& notification is detected.\\
-				\hline		\textbf{Output specification} & Check if the message is computed correctly by \\ & the TaxiDriverAreaManager.\\
+				\hline		\textbf{Input specification} & The Notification component sends the information\\& about the taxi requests to the TaxiDriverAreaManager.\\
+				\hline		\textbf{Output specification} & Check if the message is computed correctly by the\\ & TaxiDriverAreaManager.\\
 				\hline		\textbf{Environmental needs} & Notification driver and I2 succeeded\\
 				\hline
 			\end{tabular}
@@ -119,8 +119,8 @@
 		\begin{adjustbox}{max width=\textwidth}
 			\begin{tabular}{ l l}
 				\hline 		\textbf{Test case identifier} & I8 \\
-				\hline		\textbf{Test item(s)}  & AccessManager $\rightarrow$ Access \\
-				\hline		\textbf{Input specification} & The Access component sends to the AccessManager \\ & the data that the client has inserted in the registration \\ & or login input form.\\
+				\hline		\textbf{Test item(s)}  & AccessManager $\rightarrow$ Access (Taxi Driver) \\
+				\hline		\textbf{Input specification} & The Access component sends to the AccessManager \\ & the data that the taxi driver has inserted in the log\\& in input form.\\
 				\hline		\textbf{Output specification} & Check if the AccessManager computes the inputs\\ & correctly.\\
 				\hline		\textbf{Environmental needs} & Access driver and I1 succeeded\\
 				\hline
@@ -159,8 +159,8 @@
 			\begin{tabular}{ l l}
 				\hline 		\textbf{Test case identifier} & I10T2 \\
 				\hline		\textbf{Test item(s)}  & PassengerAreaManager $\rightarrow$ MakeReservation \\
-				\hline		\textbf{Input specification} & The PassengerAreaManager sends an alert message\\ & to the MakeReservation component when a taxi is \\ & found.\\
-				\hline		\textbf{Output specification} &  Check if the MakeReservation component computes \\ & the message correctly.\\
+				\hline		\textbf{Input specification} & The MakeReservation component sends the\\& information about the reservation to the\\& PassengerAreaManager.\\
+				\hline		\textbf{Output specification} &  Check if the PassengerAreaManager component\\& computes the message correctly.\\
 				\hline		\textbf{Environmental needs} & MakeReservation driver and I3 succeeded\\
 				\hline
 			\end{tabular}
@@ -186,8 +186,8 @@
 			\begin{tabular}{ l l}
 				\hline 		\textbf{Test case identifier} & I11T2 \\
 				\hline		\textbf{Test item(s)}  & PassengerAreaManager $\rightarrow$ RequestTaxi \\
-				\hline		\textbf{Input specification} & The PassengerAreaManager sends an alert \\ & message to the RequestTaxi component when\\ & a taxi is found.\\
-				\hline		\textbf{Output specification} & Check if the RequestTaxi component computes\\ & the  message correctly.\\
+				\hline		\textbf{Input specification} & The RequestTaxi component sends the\\& information about the request to the\\& PassengerAreaManager.\\
+				\hline		\textbf{Output specification} & Check if the PassengerAreaManager component\\& computes the  message correctly.\\
 				\hline		\textbf{Environmental needs} & RequestTaxi driver I3 succeeded\\
 				\hline
 			\end{tabular}
@@ -224,7 +224,7 @@
 		\begin{adjustbox}{max width=\textwidth}
 			\begin{tabular}{ l l}
 				\hline 		\textbf{Test case identifier} & I13 \\
-				\hline		\textbf{Test item(s)}  & AccessManager $\rightarrow$ Access \\
+				\hline		\textbf{Test item(s)}  & AccessManager $\rightarrow$ Access (Passenger) \\
 				\hline		\textbf{Input specification} & The Access component sends to the AccessManager \\ & the data that the client has inserted in the input \\ & form of  the registration or the log in.\\
 				\hline		\textbf{Output specification} & Check if the AccessManager computes the inputs\\ & correctly.\\
 				\hline		\textbf{Environmental needs} & Access driver and I1 succeeded\\
@@ -238,8 +238,8 @@
 			\begin{tabular}{ l l}
 				\hline 		\textbf{Test case identifier} & I14 \\
 				\hline		\textbf{Test item(s)}  & PaymentManager $\rightarrow$ ChoosePaymentMethod \\
-				\hline		\textbf{Input specification} & The PaymentManager sends to the\\ &  ChoosePaymentMethod component the  data \\ & of the Passenger's credit card.\\
-				\hline		\textbf{Output specification} & Check if the ChoosePaymentMethod component\\ &  computes the inputs correctly.\\
+				\hline		\textbf{Input specification} & The ChoosePaymentMethod component sends \\& the choice of the passenger to the PaymentManager.\\
+				\hline		\textbf{Output specification} & Check if the PaymentManager component\\ &  computes the inputs correctly.\\
 				\hline		\textbf{Environmental needs} & ChoosePaymentMethod driver and I5 succeeded\\
 				\hline
 			\end{tabular}

@@ -33,3 +33,13 @@
 \BOOKMARK [2][-]{subsection.4.3}{Arquillian and ShrinkWrap.}{section.4}% 33
 \BOOKMARK [2][-]{subsection.4.4}{Manual testing.}{section.4}% 34
 \BOOKMARK [1][-]{section.5}{Program Stubs and Test Data Required}{}% 35
+\BOOKMARK [2][-]{subsection.5.1}{Notification driver}{section.5}% 36
+\BOOKMARK [2][-]{subsection.5.2}{TaxiDriverArea driver}{section.5}% 37
+\BOOKMARK [2][-]{subsection.5.3}{Access driver}{section.5}% 38
+\BOOKMARK [2][-]{subsection.5.4}{PassengerArea driver}{section.5}% 39
+\BOOKMARK [2][-]{subsection.5.5}{MakeReservation driver}{section.5}% 40
+\BOOKMARK [2][-]{subsection.5.6}{RequestTaxi driver}{section.5}% 41
+\BOOKMARK [2][-]{subsection.5.7}{ChoosePaymentMethod driver}{section.5}% 42
+\BOOKMARK [1][-]{section.6}{Appendix}{}% 43
+\BOOKMARK [2][-]{subsection.6.1}{Software and tool used}{section.6}% 44
+\BOOKMARK [2][-]{subsection.6.2}{Hours of work}{section.6}% 45

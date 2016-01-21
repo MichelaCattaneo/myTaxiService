@@ -99,7 +99,7 @@
 				
 				
 				\item \textbf{Integration Test of the "Manager" subsystem }
-					\vspace{1cm}
+					\vspace{0.5cm}
 					\begin{center}
 						\centering
 						\begin{tabular}{c c c}
@@ -123,7 +123,7 @@
 					
 				\item \textbf{Integration Test of the "Taxi Driver Client" subsystem }
 					
-					\vspace{1cm}
+					\vspace{0.5cm}
 					\begin{center}
 						\centering
 						\begin{tabular}{c c c}
@@ -144,7 +144,7 @@
 				\newpage
 				\item \textbf{Integration Test of the "Passenger Client" subsystem}
 				
-					\vspace{1cm}
+					\vspace{0.5cm}
 					\begin{center}
 						\centering
 						\begin{tabular}{c c c}
@@ -209,7 +209,7 @@
 		\vspace{0.5cm}
 		\begin{figure}[h]
 			\centering
-			\includegraphics[scale=0.55]{Arquillian.jpg}
+			\includegraphics[scale=0.45]{Arquillian.jpg}
 		\end{figure}
 			
 		\vspace{0.5cm}
@@ -235,5 +235,34 @@
 \newpage
 \section{Program	Stubs	and	Test	Data	Required}
 	% Based	on	the	testing	strategy	and	test	design,	identify	any	program	stubs or	special	test	data	required	for	each	integration	step.
+	Here is presented the drivers used for the simulation of the interfaces, essentials for testing the integration between them and the other components.
+	\subsection{Notification driver}
+		This driver simulates the behaviour of the Notification component.\\ Its duty is to receive the notifications of the taxi driver that wants to see this panel in his taxi driver area. Moreover, it receives and displays the notifications managed by the TaxiDriverAreaManager, when he is selected for a taxi request by a passenger.
+	\subsection{TaxiDriverArea driver}
+		This driver simulates the behaviour of the TaxiDriverArea component.\\ Once the taxi driver requests it, the TaxiDriverArea receives the profile information sent from the TaxiDriverAreaManager and the identification data sent from the AccessManager when he logs in.
+	\subsection{Access driver}
+		This driver simulates the behaviour of the Access component.\\ This driver simulates the registration or log in of a passenger or of a taxi driver, sending the data of the input form to the AccessManager, in order to see if it can compute them properly.
+	\subsection{PassengerArea driver}
+		This driver simulates the behaviour of the PassengerArea component.\\ When the passenger wants to see or edit his profile, the PassengerAreaManager sends the profile information to the PassengerArea, so that it can display it. Additionally, it receives from the AccessManager the identification data of a user that has just logged in, so that it can display his personal area.
+	\subsection{MakeReservation driver}
+		This driver simulates the behaviour of the MakeReservation component.\\ The RequestManager expects from this component the data of the input form of the reservation, checking if the information inserted is correct. It also displays the reservation data in the passenger area, sending them to the PassengerAreaMananger right after the reservation has been done.
+	\subsection{RequestTaxi driver}
+		This driver simulates the behaviour of the RequestTaxi component.\\ It receives the result of the search of a taxi made from the RequestManager and the previous requests are displayed in the passenger personal area, once they are sent to the PassengerAreaManager.
+	\subsection{ChoosePaymentMethod driver}
+		This driver simulates the behaviour of the ChoosePaymentMethod component.\\ The passenger chooses the payment method he prefers and the answer is sent to the PaymentManager.
+	\newpage
+	\section{Appendix}
+	\subsection{Software and tool used}
+		\begin{itemize}
+			\item TeXstudio (\url{http://www.texstudio.org/}): to redact and to format this document.
+			\item draw.io (\url{https://www.draw.io/}):to create diagrams of the components to be integrated.
+		\end{itemize}
+	
+	\subsection{Hours of work}
+		Time spent redacting this document:
+		\begin{itemize}
+			\item Cattaneo Michela Gaia: {\raise.17ex\hbox{$\scriptstyle\sim$}}10 hours of work.
+			\item Barlocco Mattia: {\raise.17ex\hbox{$\scriptstyle\sim$}}10 hours of work.
+		\end{itemize}
 
 \end{document}
