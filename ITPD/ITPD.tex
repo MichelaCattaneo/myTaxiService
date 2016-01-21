@@ -34,10 +34,10 @@
 	\subsection{Purpose	and	Scope}
 		% State	the	purpose	and	scope of the document.
 		\subsubsection{Purpose}
-		This document represents the Integration Test Plan Document. It aims at specifying the plan for the integration testing of myTaxiService application, ensuring that all its modules interacts properly. There are also specifications about the integration strategy and the sequence of the integration of the components of the system already defined, along with a justification of the tools that are needed for the testing.\\
+		This document represents the Integration Test Plan Document. It aims at specifying the plan for the integration testing of myTaxiService application, ensuring that all its modules interacts properly. There are also specifications about the integration strategy and the sequence of the integration of the components of the system already defined, along with an explanation of the tools that are needed for the testing.\\
 		This document is intended for the development team, that needs to know what it is needed to test, in which sequence it should occur and with which tools.
 		\subsubsection{Scope}
-		myTaxiService is an application that simplifies the access of the customers to the taxi service, managing also the taxi driver's distribution over the city and the queues of the areas. The customer can use the mobile application or the web app to request or reserve a taxi and a notification is forwarded to the designated taxi driver, who is going to answer.\\ This system should always be responsive and reliable, in order to keep up with all the requests of the passenger and the notifications forwarding.\\ This is the reason why the components that comprise the myTaxiService system are meant to be well integrated and tested.
+		myTaxiService is an application that simplifies the access of the customers to the taxi service, managing also the taxi driver's distribution over the city and the queues of the areas. The customer can use the mobile application or the web app to request or reserve a taxi and a notification is forwarded to the designated taxi driver, who is going to answer.\\ This system should always be responsive and reliable, in order to keep up with all the requests of the passengers and the notifications forwarded.\\ This is the reason why the components that comprise the myTaxiService system are meant to be well integrated and tested.
 	\subsection{List of	Definitions	and	Abbreviations}
 		\begin{itemize}
 			\item \textbf{Definitions}
@@ -184,7 +184,7 @@
 			
 			The subsystems will be integrated in this order:
 			\begin{enumerate}
-				\item \textbf{Manager}: According to the strategy adopted, this is the first subsystem that is going to be integrated, as it is the lowest level of the myTaxiService system. It is necessary to test this part first, as long as this part manages the other components and it is crucial that this part does integrates perfectly with the others.
+				\item \textbf{Manager}: According to the strategy adopted, this is the first subsystem that is going to be integrated, as it is the lowest level of the myTaxiService system. It is necessary to test this part first, as long as it manages the other components and it is crucial that this part does integrates perfectly with the others.
 				\item \textbf{Taxi Driver Client}: This is the second subsystem that will be integrated.
 				\item \textbf{Passenger Client}: This is the last subsystem that will be integrated.
 			\end{enumerate}
@@ -200,21 +200,21 @@
 \section{Tools	and	Test	Equipment	Required}
 	% Identify	all	tools	and	test	equipment	needed	to	accomplish	the	 integration.	Refer	to	the	tools	presented	during	the	lectures.	Explain	why	 and	how	you	are	going	to	use	them.	Note	that	you	may	also	use	manual	testing	for	some	part.	Consider manual	testing	as	one	of	the	possible	tools	you	have	available.
 	\subsection{Unit Testing and JUnit}
-		Integration testing is usually performed after unit testing has been finished. Unit testing is usually done in the first part of the development and, once all the individual units are created and tested, it is necessary to start combining these modules one by one and test their behavior as a combined unit.\\
+		Integration testing is usually performed after unit testing has been finished. Unit testing is usually done in the first part of the development and, once all the individual units are created and tested, it is necessary to start combining these modules one by one, testing their behavior as a combined unit.\\
 		Therefore, unit testing is done in order to already have a visual feedback and all the possible problems sorted out, but all the classes are tested separately, so it will be necessary to check if they integrate properly with an integration testing afterwards.\\
-		In fact, in this phase all the classes are tested with each test case independent from the others, allowing to find both bugs in the programmer's implementation and flaws or missing parts of the specification. \\
+		In fact, in this phase all the classes are tested with each test case independent from the others, which allows to find both bugs in the programmer's implementation and flaws or missing parts of the specification. \\
 		JUnit is a unit testing framework for the Java programming language and is the tool usually used for performing unit testing. It will be employed to write and run repeatable tests on the classes and methods of the myTaxiService application.
 		
 	\subsection{Mockito}
-		In unit testing, mock objects can simulate the behavior of complex, real objects, so they are useful when a real object is impractical or impossible to incorporate into a unit test.\\ They are also useful, as they allow developers to focus their tests on the behavior of the system without worrying about its dependencies and having  predictable results.\\
-		A tool that can be exploited is Mockito, a simple mocking framework widely used for Java, to create unit testing mockups. \\
+		In unit testing, mock objects can simulate the behavior of complex, real objects: they are useful when a real object is impractical or impossible to incorporate into a unit test.\\ They are also useful for the developers, who have to focus their tests on the behavior of the system without worrying about its dependencies and having  predictable results.\\
+		A tool that can be exploited is Mockito, a simple mocking framework widely used for Java for the creation of unit testing mockups. \\
 		It will be used for producing mock objects out of the Database component, or out of objects that supplies non-deterministic results or whose states are difficult to reproduce.
 	
 	\subsection{Arquillian and ShrinkWrap.}
-		Arquillian is an innovative, highly extensible and flexible testing platform for the JVM.\\ It enables developers to easily create automated integration, functional and acceptance tests for Java middlewares. \\In fact it combines a unit testing framework (JUnit or TestNG), ShrinkWrap, and one or more supported target containers (Java EE container, servlet container, etc) to provide a simple, flexible and pluggable integration testing environment, with no need of any special configuration.
+		Arquillian is an innovative, highly extensible and flexible testing platform for the JVM.\\ It enables developers to easily create automated integration, functional and acceptance tests for Java middlewares. \\In fact, it combines a unit testing framework, ShrinkWrap, and one or more supported target containers to provide a simple, flexible and pluggable integration testing environment, with no need of any special configuration.
 	\newpage
 	\noindent
-		Its extensibility can be found in the different modules and extension it offers, that provide very useful functionalities for every aspect of the software system.
+		Its extensibility can be found in the different modules and extensions it offers, that provide very useful functionalities for every aspect of the software system.
 		\vspace{0.5cm}
 		\begin{figure}[h]
 			\centering
@@ -244,7 +244,7 @@
 \newpage
 \section{Program	Stubs	and	Test	Data	Required}
 	% Based	on	the	testing	strategy	and	test	design,	identify	any	program	stubs or	special	test	data	required	for	each	integration	step.
-	Here is presented the drivers used for the simulation of the interfaces, essentials for testing the integration between them and the other components.
+	Here are presented the drivers used for the simulation of the interfaces, essentials for testing the integration between them and the other components.
 	\subsection{Notification driver}
 		This driver simulates the behaviour of the Notification component.\\ Its duty is to receive the notifications of the taxi driver that wants to see this panel in his taxi driver area. Moreover, it receives and displays the notifications managed by the TaxiDriverAreaManager, when he is selected for a taxi request by a passenger.
 	\subsection{TaxiDriverArea driver}
@@ -264,7 +264,7 @@
 	\subsection{Software and tool used}
 		\begin{itemize}
 			\item TeXstudio (\url{http://www.texstudio.org/}): to redact and to format this document.
-			\item draw.io (\url{https://www.draw.io/}):to create diagrams of the components to be integrated.
+			\item draw.io (\url{https://www.draw.io/}): to create diagrams of the components to be integrated.
 		\end{itemize}
 	
 	\subsection{Hours of work}
