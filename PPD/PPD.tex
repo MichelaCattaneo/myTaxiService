@@ -65,23 +65,26 @@
 		\item \textbf{T5} Requirements: in this task we develop the logic of the requirements on the server side (for example: the AccessManager component that manages the login and the registration, the RequestManager that manages the requests, the reservations and the notifications)
 		\item \textbf{T6} Code Inspection: check if the code is well formatted.
 		\item \textbf{T7} Code Inspection Document: in this task we write document of the code inspection.
-		\item \textbf{T8} Integration Test Document: in this task we write the document related on the strategy we adopt for the integration test.
-		\item \textbf{T9} Integration Test: based on what we wrote on the integration test document, in this task we test all the code of the project.
+		\item \textbf{T8} Test Document: in this task we write the document related on the strategy we adopt for the unit testing, the integration testing and the system testing.
+		\item \textbf{T9} Unit Testing: based on what we wrote on the  test document, in this task we do the unit testing.
+		\item \textbf{T10} Integration Testing: based on what we wrote on the test document, in this task we do the integration test.
+		\item \textbf{T11} System Testing: based on what we wrote on the  test document, in this task we do the system testing.
 	\end{itemize}
-	We suppose to work 8 hours per day to this project during the days.
 	\begin{center}
 		\centering
-		\begin{tabular}{|c |c |c | c|}
-			\hline \textbf{Task} & \textbf{Effort(person)} &\textbf{Duration (days)} & \textbf{Dependencies} \\
-			\hline		T1 & 2 & 5 & -\\
-			\hline		T2 & 1 & 5 & T1\\
-			\hline		T3 & 1 & 3 & T1\\
-			\hline		T4 & 1 & 10 & T2\\
-			\hline		T5 & 1 & 10 & T3\\
-			\hline		T6 & 2 & 10 & T4,T5\\
-			\hline		T7 & 1 & 2 & T6\\
-			\hline		T8 & 2 & 2 & T7\\
-			\hline		T9 & 2 & 10 & T8\\
+		\begin{tabular}{|c |c |c |}
+			\hline \textbf{Task} & \textbf{Effort(person)} & \textbf{Dependencies} \\
+			\hline		T1 & 2 & -\\
+			\hline		T2 & 1 & T1\\
+			\hline		T3 & 1 & T1\\
+			\hline		T4 & 1 & T2\\
+			\hline		T5 & 1 & T3\\
+			\hline		T6 & 2 & T4,T5\\
+			\hline		T7 & 1 & T6\\
+			\hline		T8 & 1 & T6\\
+			\hline		T9 & 1 & T8\\
+			\hline		T10 & 1 & T8\\
+			\hline		T11 & 2 & T10,T9\\
 			\hline
 		\end{tabular}
 	\end{center}
@@ -89,6 +92,11 @@
 	
 \newpage
 \section{Resources Allocation}
+	The members of the team can be allocated to the tasks in this way:
+	\begin{itemize}
+		\item \textbf{Task 1}: we can allocate all the resources (two people) to this task because without it we cannot start the next tasks. In fact we allocate all the resources to the RASD to accelerate it and to start as soon as possible the other tasks.
+		\item \textbf{Task 2}: we allocate one person to the Design Document
+	\end{itemize}
 	% Allocate the resources (all memebers of your group) to the various tasks. In defining the allocation, take into account your actual availability for the project.
 
 \newpage
