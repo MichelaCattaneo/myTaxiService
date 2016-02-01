@@ -18,42 +18,10 @@
 \tableofcontents
 
 \newpage
-\section{Introduction}
-	\subsection{Purpose}
-		This document represents the Project Plan Document.\\ It specifies the effort and cost estimation of the myTaxiService project, by using the Function Points and COCOMO algorithmic techniques. Moreover, there is the explanation of the organization of the resources and of the tasks needed.\\
-		The intended audience of this document is the project stakeholders and the development team.
-	\subsection{Definitions and abbreviations}
-		\begin{itemize}
-			\item \textbf{Definitions}
-			\item[-] \textbf{Passenger}: a person who is registered in the application.
-			\item[-] \textbf{Taxi driver}: a taxi driver who access the application with a specific ID.
-			\item[-] \textbf{Request}: the request of a taxi in a certain area and position in the city made by a user.
-			\item[-] \textbf{Reservation}: the reservation of a taxi in a certain area, place and time that can be made only by passengers.
-	
-			\item \textbf{Acronyms and abbreviations}
-			\item[-] \textbf{RASD}: Requirement Analysis and Specification Document
-			\item[-] \textbf{DD}: Design Document
-			\item[-] \textbf{JVM}: Java Virtual Machine
-			\item[-] \textbf{FP}: Function Points
-			\item[-] \textbf{COCOMO}: COnstructive COst MOdel
-			
-		\end{itemize}
-	\subsection{Reference documents}
-		\begin{itemize}
-			\item Project Description and Rules (\url{https://github.com/MichelaCattaneo/myTaxiService/blob/master/Project\%20Description\%20And\%20Rules.pdf})
-			\item Requirements Analysis and Specification Document (\url{https://github.com/MichelaCattaneo/myTaxiService/blob/master/Deliveries/RASD_1.1.pdf})
-			\item Design Document (\url{https://github.com/MichelaCattaneo/myTaxiService/blob/master/Deliveries/DD.pdf})
-			\item Code Inspection Document(\url{https://github.com/MichelaCattaneo/myTaxiService/blob/master/Deliveries/CodeInspection.pdf})
-			\item Integration Test Document (\url{https://github.com/MichelaCattaneo/myTaxiService/blob/master/Deliveries/ITPD.pdf})
-		\end{itemize}
+	\include{PPDintroduction}
 
 \newpage
-\section{Effort and Cost Estimation}
-	%Apply Function Points to the project size and then COCOMO to estimate effort and cost
-
-	\subsection{Function Points}
-	\subsection{COCOMO}
-	
+	\include{PPDestimation}
 \newpage
 \section{Task Scheduling}
 	The tasks for our project are:
@@ -70,13 +38,18 @@
 		\item \textbf{T10} Integration Testing: based on what we wrote on the test document, in this task we do the integration test.
 		\item \textbf{T11} System Testing: based on what we wrote on the  test document, in this task we do the system testing.
 	\end{itemize}
+	The project starts on October 2015, COCOMO estimate that we could finish the project in 9 months, but it overestimates and we estimate that we could finish it in 6 months.
+	% Identify the tasks for your project and their schedule. Do so retrospectively, assuming that the project has started in October 2015, as it really happened.
+	
+\newpage
+\section{Resources Allocation}
 	\begin{center}
 		\centering
 		\begin{tabular}{|c |c |c |}
 			\hline \textbf{Task} & \textbf{Effort(person)} & \textbf{Dependencies} \\
 			\hline		T1 & 2 & -\\
-			\hline		T2 & 1 & T1\\
-			\hline		T3 & 1 & T1\\
+			\hline		T2 & 2 & T1\\
+			\hline		T3 & 1 & T2\\
 			\hline		T4 & 1 & T2\\
 			\hline		T5 & 1 & T3\\
 			\hline		T6 & 2 & T4,T5\\
@@ -88,21 +61,24 @@
 			\hline
 		\end{tabular}
 	\end{center}
-	% Identify the tasks for your project and their schedule. Do so retrospectively, assuming that the project has started in October 2015, as it really happened.
-	
-\newpage
-\section{Resources Allocation}
 	The members of the team can be allocated to the tasks in this way:
 	\begin{itemize}
-		\item \textbf{Task 1}: we can allocate all the resources (two people) to this task because without it we cannot start the next tasks. In fact we allocate all the resources to the RASD to accelerate it and to start as soon as possible the other tasks.
-		\item \textbf{Task 2}: we allocate one person to the Design Document
+		\item \textbf{T1 RASD}: we can allocate all the resources (two people) to this task because without it we cannot start the next tasks. In fact we allocate all the resources to the RASD to accelerate it and to start as soon as possible the other tasks.
+		\item \textbf{T2 DD}: we allocate all the resources (two people) to the Design Document because it continues the description of our project.
+		\item \textbf{T3 DATABASE}: we allocate one person to the creation of the database.
+		\item \textbf{T4 INTERFACES}: we allocate one person to the development of the interfaces during the creation of the database because this task don't need the database.
+		\item \textbf{T5 REQUIREMENTS}: we allocate one person to the development of the server side of the system (requirements). The person that we allocate to this task is the same that we allocated to the task 3 because this task needs a database to be developed.
+		\item \textbf{T6 CODE INSPECTION}: when T4 and T5 are done, we allocate all the resources (two people) to this task because it is a long work and the time can be reduced with two people.
+		\item \textbf{T7 CODE INSPECTION DOCUMENT}: after T6, we allocate one person to write the code inspection document.
+		\item \textbf{T8 TEST DOCUMENT}: after T6, we allocate the other person to write the test document.
+		\item \textbf{T9 UNIT TESTING}: after T8, we allocate one person to do the unit test.
+		\item \textbf{T10 INTEGRATION TEST}: during T9, the other person can be allocated to the integration test.
+		\item \textbf{T11 SYSTEM TESTING}: when T9 and T10 are done, we allocate all the resources for the last test.
 	\end{itemize}
 	% Allocate the resources (all memebers of your group) to the various tasks. In defining the allocation, take into account your actual availability for the project.
 
 \newpage
-\section{Risks and Recoveries}
-	% Define the risks for the project, their relevance and the associated recovery actions.
-
+	\include{PPDrisks}
 \newpage
 \section{Appendix}
 
