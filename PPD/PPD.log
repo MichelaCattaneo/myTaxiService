@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.10.23)  2 FEB 2016 15:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.10.23)  2 FEB 2016 17:11
 entering extended mode
 **PPD.tex
 (PPD.tex
@@ -280,7 +280,7 @@ github . com / MichelaCattaneo / myTaxiService /$
 
 
 ] [5]
-Underfull \hbox (badness 10000) in paragraph at lines 79--80
+Underfull \hbox (badness 10000) in paragraph at lines 78--79
 
  []
 
@@ -343,7 +343,7 @@ m/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.p
 fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on PPD.pdf (13 pages, 342401 bytes).
+Output written on PPD.pdf (13 pages, 342378 bytes).
 PDF statistics:
  237 PDF objects out of 1000 (max. 8388607)
  34 named destinations out of 1000 (max. 500000)

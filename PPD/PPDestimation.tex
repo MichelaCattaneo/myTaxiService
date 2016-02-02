@@ -58,16 +58,15 @@
 		\subsubsection{ILF}
 			The application stores information about:
 			\begin{itemize}
-				\item passengers
-				\item taxi drivers
-				\item city areas
-				\item taxi queues
-				\item requests
-				\item reservations
+				\item passenger
+				\item taxi driver
+				\item city area
+				\item request
+				\item reservation
 			\end{itemize}
-			All these entities has a simple structure in a database, in fact their table is composed of a few fields. Therefore we can decide to use a simple weight for all of them.
+			All these entities has a simple structure in a database, in fact their table is composed of a few fields. Therefore we can decide to use a simple weight for all of them except for the city area table that can be considered of medium complexity because it has to store also the information about the taxi queues.
 			\begin{center}
-				\textbf{ILF: 6 x 7 = 42 FPs}
+				\textbf{ILF: 4 x 7 + 1 x 10= 38 FPs}
 			\end{center}
 		\subsubsection{EIF}
 			The application manages the interaction with three external systems:
@@ -89,9 +88,9 @@
 					\hline	N. Inputs & & & 27 \\[0.05cm]
 						N. Outputs & & & 19  \\[0.05cm]
 						N. Inquiry & & & 14  \\[0.05cm]
-						N. ILF & & & 42  \\[0.05cm]
+						N. ILF & & & 38  \\[0.05cm]
 						N. EIF & & & 17  \\[0.05cm]
-					\hline Total FPs & & & 119\\[0.05cm]
+					\hline Total FPs & & & 115\\[0.05cm]
 					\hline
 				\end{tabular}
 			\end{center}
@@ -103,7 +102,7 @@
 		\vspace{0.5cm}	
 		\begin{center}
 			\begin{math}
-				SLOC = FP * 46 = 119 * 46 = 5474
+				SLOC = FP * 46 = 115 * 46 = 5290
 			\end{math}
 		\end{center}
 		\vspace{0.5cm}
@@ -116,7 +115,7 @@
 		\end{center}
 		\begin{center}
 			\begin{math}
-				effort = 2.94*1.00*(5.474)^{1.0997} = 19.066 Person/months
+				effort = 2.94*1.00*(5.29)^{1.0997} = 18.36 Person/months
 			\end{math}
 		\end{center}
 		\vspace{0.5cm}
@@ -129,7 +128,7 @@
 		\end{center}
 		\begin{center}
 			\begin{math}
-				Duration = 3.67*(19.066)^{0.3179} = 9.37 Months
+				Duration = 3.67*(18.36)^{0.3179} = 9.25 Months
 			\end{math}
 		\end{center}
 		\vspace{0.5cm}
@@ -142,7 +141,7 @@
 		\end{center}
 		\begin{center}
 			\begin{math}
-				N. people = 19.066 / 9.37 = 2,034 people
+				N. people = 18.36 / 9.25 = 1.98 people
 			\end{math}
 		\end{center}
 		\vspace{0.5cm}
