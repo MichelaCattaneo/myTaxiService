@@ -24,21 +24,25 @@
 	\include{PPDestimation}
 \newpage
 \section{Task Scheduling}
-	The tasks for our project are:
+	We divide our project in the most relevant tasks and we give them an estimate of the time that we should spend:
 	\begin{itemize}
-		\item \textbf{T1} RASD: this is the first task to do. It describes what exactly we have to do: requirements, interfaces, model of the Database and how our application should work.
-		\item \textbf{T2} Design Document: it describes the architectural design of our system and it could be done at the same time of the T3.
-		\item \textbf{T3} Database: based on the model descried on the RASD, in this task we create all the tables in the database.
-		\item \textbf{T4} Interfaces: based on what we wrote on the RASD, in this task we create the interfaces for the client side.
-		\item \textbf{T5} Requirements: in this task we develop the logic of the requirements on the server side (for example: the AccessManager component that manages the login and the registration, the RequestManager that manages the requests, the reservations and the notifications)
-		\item \textbf{T6} Code Inspection: check if the code is well formatted.
-		\item \textbf{T7} Code Inspection Document: in this task we write document of the code inspection.
-		\item \textbf{T8} Test Document: in this task we write the document related on the strategy we adopt for the unit testing, the integration testing and the system testing.
-		\item \textbf{T9} Unit Testing: based on what we wrote on the  test document, in this task we do the unit testing.
-		\item \textbf{T10} Integration Testing: based on what we wrote on the test document, in this task we do the integration test.
-		\item \textbf{T11} System Testing: based on what we wrote on the  test document, in this task we do the system testing.
+		\item \textbf{T1} RASD: this is the first task to do. It describes what exactly we have to do: requirements, interfaces, model of the Database and how our application should work. Without this document we can't start the project.\\ \textit{We estimate about 10 days to complete this task}.\\ \textit{Dependencies: -}.
+		\item \textbf{T2} Design Document: it describes the architectural design of our system. This task has to be done after the RASD and before the project starts.\\ \textit{We estimate about 10 days to complete this task}.\\ \textit{Dependencies: T1}.
+		\item \textbf{T3} Database: based on the model descried in the RASD and in the Design Document, in this task we create all the tables in the database.\\ \textit{We estimate about 15 days to complete this task}.\\ \textit{Dependencies: T2}.
+		\item \textbf{T4} Interfaces: based on what we wrote in the RASD and in the Design Document, in this task we write the code of the interfaces for the client side.\\ \textit{We estimate about 2 months to complete this task}.\\ \textit{Dependencies: T2}.
+		\item \textbf{T5} Requirements: in this task we develop the logic of the application on the server side (for example: the AccessManager component that manages the login and the registration, the RequestManager that manages the requests, the reservations and the notifications).\\ \textit{We estimate about 2 months to complete this task}.\\ \textit{Dependencies: T3}.
+		\item \textbf{T6} Code Inspection: when the application is done, we can check that the code is well structured.\\ \textit{We estimate about 1 month to complete this task}.\\ \textit{Dependencies: T4,T5}.
+		\item \textbf{T7} Code Inspection Document: when the code inspection is done, we write the document of it.\\ \textit{We estimate about 5 days to complete this task}.\\ \textit{Dependencies: T6}.
+		\item \textbf{T8} Test Document: before starting the testing of the entire code, in this task we have to write the document related on the strategy we will adopt for the unit testing, the integration testing and the system testing.\\ \textit{We estimate about 10 days to complete this task}.\\ \textit{Dependencies: T6}.
+		\item \textbf{T9} Unit Testing: based on what we wrote on the  test document, in this task we do the unit testing.\\ \textit{We estimate about 20 days to complete this task}.\\ \textit{Dependencies: T8}.
+		\item \textbf{T10} Integration Testing: based on what we wrote on the test document, in this task we do the integration test.\\ \textit{We estimate about 20 days to complete this task}.\\ \textit{Dependencies: T8}.
+		\item \textbf{T11} System Testing: based on what we wrote on the  test document, in this task we do the system testing.\\ \textit{We estimate about 20 days to complete this task}.\\ \textit{Dependencies: T9,T10}.
 	\end{itemize}
-	The project starts on October 2015, COCOMO estimate that we could finish the project in 9 months, but it overestimates and we estimate that we could finish it in 6 months.
+	The project starts on October 2015 and based on what we have estimated and how we allocate the resources to all the tasks, we should finish the project in about 6 months on March 2016. COCOMO estimates that we should finish the project in about 9 months on June 2016, but this tool can overestimate the cost of this project because it is based on mathematical models.\\ This is an example of our task schedule:\\
+	\begin{center}
+	\centering
+	\includegraphics[scale=0.7]{scheduleTask.png}
+	\end{center}
 	% Identify the tasks for your project and their schedule. Do so retrospectively, assuming that the project has started in October 2015, as it really happened.
 	
 \newpage
@@ -61,19 +65,19 @@
 			\hline
 		\end{tabular}
 	\end{center}
-	The members of the team can be allocated to the tasks in this way:
+	Based on our schedule and the availability of our resources, the members of the team can be allocated to the tasks in this way:
 	\begin{itemize}
-		\item \textbf{T1 RASD}: we can allocate all the resources (two people) to this task because without it we cannot start the next tasks. In fact we allocate all the resources to the RASD to accelerate it and to start as soon as possible the other tasks.
-		\item \textbf{T2 DD}: we allocate all the resources (two people) to the Design Document because it continues the description of our project.
-		\item \textbf{T3 DATABASE}: we allocate one person to the creation of the database.
-		\item \textbf{T4 INTERFACES}: we allocate one person to the development of the interfaces during the creation of the database because this task don't need the database.
-		\item \textbf{T5 REQUIREMENTS}: we allocate one person to the development of the server side of the system (requirements). The person that we allocate to this task is the same that we allocated to the task 3 because this task needs a database to be developed.
-		\item \textbf{T6 CODE INSPECTION}: when T4 and T5 are done, we allocate all the resources (two people) to this task because it is a long work and the time can be reduced with two people.
-		\item \textbf{T7 CODE INSPECTION DOCUMENT}: after T6, we allocate one person to write the code inspection document.
-		\item \textbf{T8 TEST DOCUMENT}: after T6, we allocate the other person to write the test document.
-		\item \textbf{T9 UNIT TESTING}: after T8, we allocate one person to do the unit test.
-		\item \textbf{T10 INTEGRATION TEST}: during T9, the other person can be allocated to the integration test.
-		\item \textbf{T11 SYSTEM TESTING}: when T9 and T10 are done, we allocate all the resources for the last test.
+		\item \textbf{T1}: we can allocate all the resources (two people) to this task because without it we cannot start the next tasks. In fact we allocate all the resources to the RASD to accelerate it and to start as soon as possible the other tasks.
+		\item \textbf{T2}: we allocate all the resources (two people) to the Design Document because it continues the description of our project.
+		\item \textbf{T3}: we allocate one person to the creation of the database after the T2.
+		\item \textbf{T4}: we allocate one person to the development of the interfaces during the creation of the database because this task don't need the database.
+		\item \textbf{T5}: we allocate one person to the development of the server side of the system (requirements). The person that we allocate to this task is the same that we allocated to the task 3 because this task needs a database to be developed.
+		\item \textbf{T6}: when T4 and T5 are done, we allocate all the resources (two people) to this task because it is a long work and the time can be reduced with two people.
+		\item \textbf{T7}: after T6, we allocate one person to write the code inspection document.
+		\item \textbf{T8}: after T6 and during T7, we can allocate the other person to write the test document.
+		\item \textbf{T9}: after T8, we allocate one person to do the unit test.
+		\item \textbf{T10}: during T9, the other person can be allocated to the integration test.
+		\item \textbf{T11}: when T9 and T10 are done, we allocate all the resources for the last test.
 	\end{itemize}
 	% Allocate the resources (all memebers of your group) to the various tasks. In defining the allocation, take into account your actual availability for the project.
 
