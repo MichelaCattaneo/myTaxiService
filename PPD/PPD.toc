@@ -14,7 +14,7 @@
 \contentsline {subsection}{\numberline {2.3}Conclusions}{7}{subsection.2.3}
 \contentsline {section}{\numberline {3}Task Scheduling}{8}{section.3}
 \contentsline {section}{\numberline {4}Resources Allocation}{10}{section.4}
-\contentsline {section}{\numberline {5}Risks and Recoveries}{11}{section.5}
-\contentsline {section}{\numberline {6}Appendix}{12}{section.6}
-\contentsline {subsection}{\numberline {6.1}Software and tool used}{12}{subsection.6.1}
-\contentsline {subsection}{\numberline {6.2}Hours of work}{12}{subsection.6.2}
+\contentsline {section}{\numberline {5}Risks and Recoveries}{12}{section.5}
+\contentsline {section}{\numberline {6}Appendix}{13}{section.6}
+\contentsline {subsection}{\numberline {6.1}Software and tool used}{13}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Hours of work}{13}{subsection.6.2}
